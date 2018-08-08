@@ -1,4 +1,4 @@
-* vega-stats version:
+* altair_recipes version:
 * Python version:
 * Operating System:
 

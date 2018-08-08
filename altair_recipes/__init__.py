@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Top-level package for vega-stats."""
+"""Top-level package for altair_recipes."""
 from .autocorrelation import autocorrelation
 from .boxplot import boxplot
 from .histogram import histogram, layered_histogram

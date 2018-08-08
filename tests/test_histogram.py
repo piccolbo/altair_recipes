@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from vega_datasets import data
-import vega_stats as vs
+import altair_recipes as vs
 
 source = data.movies()
 

@@ -1,5 +1,5 @@
 from vega_datasets import data
-import vega_stats as vs
+import altair_recipes as vs
 
 vs.scatter(
     data.iris(),

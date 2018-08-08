@@ -1,21 +1,21 @@
 ==========
-vega-stats
+altair_recipes
 ==========
 
 
-.. image:: https://img.shields.io/pypi/v/vega_stats.svg
-        :target: https://pypi.python.org/pypi/vega_stats
+.. image:: https://img.shields.io/pypi/v/altair_recipes.svg
+        :target: https://pypi.python.org/pypi/altair_recipes
 
-.. image:: https://img.shields.io/travis/piccolbo/vega_stats.svg
-        :target: https://travis-ci.org/piccolbo/vega_stats
+.. image:: https://img.shields.io/travis/piccolbo/altair_recipes.svg
+        :target: https://travis-ci.org/piccolbo/altair_recipes
 
-.. image:: https://readthedocs.org/projects/vega-stats/badge/?version=latest
-        :target: https://vega-stats.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/altair_recipes/badge/?version=latest
+        :target: https://altair_recipes.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/piccolbo/vega_stats/shield.svg
-     :target: https://pyup.io/repos/github/piccolbo/vega_stats/
+.. image:: https://pyup.io/repos/github/piccolbo/altair_recipes/shield.svg
+     :target: https://pyup.io/repos/github/piccolbo/altair_recipes/
      :alt: Updates
 
 
@@ -24,7 +24,7 @@ A collection of advanced statistical graphics for vega
 
 
 * Free software: BSD license
-* Documentation: https://vega-stats.readthedocs.io.
+* Documentation: https://altair_recipes.readthedocs.io.
 
 
 Features

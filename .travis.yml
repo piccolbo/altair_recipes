@@ -25,5 +25,5 @@ deploy:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: piccolbo/vega_stats
+    repo: piccolbo/altair_recipes
     python: 3.6

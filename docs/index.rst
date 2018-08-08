@@ -1,4 +1,4 @@
-Welcome to vega-stats's documentation!
+Welcome to altair_recipes's documentation!
 ======================================
 
 .. toctree::

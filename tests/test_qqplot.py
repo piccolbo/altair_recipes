@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import vega_stats as vs
+import altair_recipes as vs
 
 df = pd.DataFrame({
     'Trial A': np.random.normal(0, 0.8, 1000),

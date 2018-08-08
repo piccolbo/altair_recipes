@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install vega-stats, run this command in your terminal:
+To install altair_recipes, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install vega_stats
+    $ pip install altair_recipes
 
-This is the preferred method to install vega-stats, as it will always install the most recent stable release.
+This is the preferred method to install altair_recipes, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for vega-stats can be downloaded from the `Github repo`_.
+The sources for altair_recipes can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/piccolbo/vega_stats
+    $ git clone git://github.com/piccolbo/altair_recipes
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/piccolbo/vega_stats/tarball/master
+    $ curl  -OL https://github.com/piccolbo/altair_recipes/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/piccolbo/vega_stats
-.. _tarball: https://github.com/piccolbo/vega_stats/tarball/master
+.. _Github repo: https://github.com/piccolbo/altair_recipes
+.. _tarball: https://github.com/piccolbo/altair_recipes/tarball/master

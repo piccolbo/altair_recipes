@@ -1,6 +1,6 @@
 import pandas as pd
 from vega_datasets import data
-import vega_stats as vs
+import altair_recipes as vs
 
 iris = data.iris()
 vs.boxplot(iris, "species", "petalLength")

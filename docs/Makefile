@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = vega_stats
+SPHINXPROJ    = altair_recipes
 SOURCEDIR     = .
 BUILDDIR      = _build
 

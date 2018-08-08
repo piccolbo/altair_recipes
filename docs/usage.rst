@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use vega-stats in a project::
+To use altair_recipes in a project::
 
-    import vega_stats
+    import altair_recipes
