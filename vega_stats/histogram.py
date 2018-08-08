@@ -1,7 +1,5 @@
 import altair as alt
-from vega_datasets import data
 import pandas as pd
-import numpy as np
 
 
 def histogram(data, variable):
@@ -34,16 +32,3 @@ def layered_histogram(data,
             alt.Y("count()", stack=None),
             alt.Color(color_variable + ":N", scale=color_scale),
         ))
-
-
-source = data.movies()
-
-histogram(source, "IMDB_Rating")
-
-df = pd.DataFrame({
-    'Trial A': np.random.normal(0, 0.8, 1000),
-    'Trial B': np.random.normal(-2, 1, 1000),
-    'Trial C': np.random.normal(3, 2, 1000)
-})
-
-layered_histogram(df, ["Trial A", "Trial B", "Trial C"])

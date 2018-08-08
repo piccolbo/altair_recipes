@@ -1,6 +1,6 @@
+"""Boxplot implementation"""
 import altair as alt
 import pandas as pd
-from vega_datasets import data
 
 
 def boxplot(data, x="x", y="y"):
@@ -27,11 +27,3 @@ def boxplot(data, x="x", y="y"):
     rule = chart.mark_rule().encode(
         x=x, y=alt.Y(min_y, axis=alt.Axis(title=y)), y2=max_y)
     return q1_bar + q3_bar + min_tick + max_tick + rule
-
-
-iris = data.iris()
-boxplot(iris, "species", "petalLength")
-iris.columns.name = "vars"
-
-boxplot(iris, pd.Series(["petalLength", "sepalLength"], name="lengths"),
-        "length")

@@ -1,7 +1,4 @@
 import altair as alt
-import supersmoother as supsmu
-import pandas as pd
-import numpy as np
 
 
 def smoother(data, x="x", y="y", window=None, interquartile_area=True):
@@ -18,9 +15,3 @@ def smoother(data, x="x", y="y", window=None, interquartile_area=True):
         return chart_line + chart_area
     else:
         return chart_line
-
-
-x = np.random.uniform(size=100)
-data = pd.DataFrame(dict(x=x, y=np.random.uniform(size=100) + 10 * x))
-
-smoother(data) + alt.Chart(data).mark_point().encode(x="x", y="y")
