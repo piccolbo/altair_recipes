@@ -1,13 +1,13 @@
 from vega_datasets import data
-import altair_recipes as vs
+import altair_recipes as ar
 
-vs.scatter(
+ar.scatter(
     data.iris(),
     x="petalWidth",
     y='petalLength',
     color="sepalWidth",
     tooltip="species")
 
-vs.multiscatter(data.iris())
-vs.multiscatter(
+ar.multiscatter(data.iris())
+ar.multiscatter(
     data.iris(), variables=data.iris().columns[:-1], color="species")

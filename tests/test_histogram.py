@@ -1,11 +1,11 @@
 import numpy as np
 import pandas as pd
 from vega_datasets import data
-import altair_recipes as vs
+import altair_recipes as ar
 
 source = data.movies()
 
-vs.histogram(source, "IMDB_Rating")
+ar.histogram(source, "IMDB_Rating")
 
 df = pd.DataFrame({
     'Trial A': np.random.normal(0, 0.8, 1000),
@@ -13,4 +13,4 @@ df = pd.DataFrame({
     'Trial C': np.random.normal(3, 2, 1000)
 })
 
-vs.layered_histogram(df, ["Trial A", "Trial B", "Trial C"])
+ar.layered_histogram(df, ["Trial A", "Trial B", "Trial C"])

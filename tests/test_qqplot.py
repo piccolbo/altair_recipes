@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import altair_recipes as vs
+import altair_recipes as ar
 
 df = pd.DataFrame({
     'Trial A': np.random.normal(0, 0.8, 1000),
@@ -8,4 +8,4 @@ df = pd.DataFrame({
     'Trial C': np.random.uniform(3, 2, 1000)
 })
 
-vs.qqplot(df, x='Trial A', y='Trial C')
+ar.qqplot(df, x='Trial A', y='Trial C')
