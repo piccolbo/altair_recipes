@@ -6,7 +6,7 @@ from vega_datasets import data
 def boxplot(data, x="x", y="y"):
     if type(x) is not str:
         cols = x
-        x = x.name or "variables"
+        x = "variables" if x is None else x.name
         data = pd.melt(
             data,
             id_vars=data.index.name,

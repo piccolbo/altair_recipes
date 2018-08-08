@@ -6,7 +6,7 @@ variable = "x"
 
 
 def autocorrelation(data, variable, max_lag=None):
-    max_lag = max_lag or data.shape[0] - 1
+    max_lag = data.shape[0] - 1 if max_lag is None else int(max_lag)
     lags = np.arange(0, max_lag + 1)
     _data = pd.DataFrame(
         dict(
@@ -19,4 +19,4 @@ def autocorrelation(data, variable, max_lag=None):
 
 data = pd.DataFrame(dict(x=np.random.uniform(size=100)))
 
-autocorrelation(data, "x", max_lag=15).mark_bar(color = "grey")
+autocorrelation(data, "x", max_lag=15).mark_bar(color="grey")

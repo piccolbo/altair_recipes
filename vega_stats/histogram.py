@@ -16,10 +16,10 @@ def layered_histogram(data,
                       x_label=None,
                       y_label=None):
     if len(count_variables) == 1:
-        x_label = x_label or count_variables[0]
+        x_label = count_variables[0] if x_label is None else str(x_label)
         assert color_variable is not None
     else:
-        x_label = x_label or "Value"
+        x_label = "Value" if x_label is None else str(x_label)
         color_variable = "__color__"
         data = pd.melt(
             data,
