@@ -1,7 +1,15 @@
-from vega_datasets import data
 import altair_recipes as ar
+from altair_recipes.common import viz_reg_test
+from vega_datasets import data
 
+# sc = scatter1(
+#     data.iris(),
+#     mark_args=dict(size=20),
+#     encode_args=dict(x='petalWidth', y='petalLength', color='petalLength'))
+#
+# sc.to_json()
 
+@viz_reg_test
 def test_scatter():
     return ar.scatter(
         data.iris(),
@@ -10,11 +18,11 @@ def test_scatter():
         color="sepalWidth",
         tooltip="species")
 
-
+@viz_reg_test
 def test_multiscatter_defaults():
     return ar.multiscatter(data.iris())
 
-
+@viz_reg_test
 def test_multiscatter_args():
     return ar.multiscatter(
         data.iris(), variables=data.iris().columns[:-1], color="species")

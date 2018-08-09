@@ -1,8 +1,10 @@
+import altair_recipes as ar
+from altair_recipes.common import viz_reg_test
 import numpy as np
 import pandas as pd
-import altair_recipes as ar
 
 
+@viz_reg_test
 def test_qqplot():
     df = pd.DataFrame({
         'Trial A': np.random.normal(0, 0.8, 1000),

@@ -1,13 +1,16 @@
+import altair_recipes as ar
+from altair_recipes.common import viz_reg_test
 import numpy as np
 import pandas as pd
 from vega_datasets import data
-import altair_recipes as ar
 
 
+@viz_reg_test
 def test_histogram():
     return ar.histogram(data.movies(), "IMDB_Rating")
 
 
+@viz_reg_test
 def test_layered_histogram():
     df = pd.DataFrame({
         'Trial A': np.random.normal(0, 0.8, 1000),

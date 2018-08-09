@@ -1,8 +1,11 @@
+import altair_recipes as ar
+from altair_recipes.common import viz_reg_test
 import numpy as np
 import pandas as pd
-import altair_recipes as ar
 
 
+@viz_reg_test
 def test_autocorrelation():
+    np.random.seed(0)
     data = pd.DataFrame(dict(x=np.random.uniform(size=100)))
     return ar.autocorrelation(data, "x", max_lag=15)
