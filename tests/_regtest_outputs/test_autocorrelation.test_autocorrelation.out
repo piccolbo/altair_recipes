@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.4.3.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "Autocorrelation": 1.0,
+        "Lag": 0
+      },
+      {
+        "Autocorrelation": -0.07051583228220215,
+        "Lag": 1
+      },
+      {
+        "Autocorrelation": 0.2825921981910393,
+        "Lag": 2
+      },
+      {
+        "Autocorrelation": -0.12163420132397065,
+        "Lag": 3
+      },
+      {
+        "Autocorrelation": 0.0745877924560898,
+        "Lag": 4
+      },
+      {
+        "Autocorrelation": -0.07349594858870877,
+        "Lag": 5
+      },
+      {
+        "Autocorrelation": 0.07101066702233691,
+        "Lag": 6
+      },
+      {
+        "Autocorrelation": -0.05056864883617815,
+        "Lag": 7
+      },
+      {
+        "Autocorrelation": 0.05543712871851885,
+        "Lag": 8
+      },
+      {
+        "Autocorrelation": -0.17478516829165622,
+        "Lag": 9
+      },
+      {
+        "Autocorrelation": 0.23721796363578532,
+        "Lag": 10
+      },
+      {
+        "Autocorrelation": -0.12159149087355296,
+        "Lag": 11
+      },
+      {
+        "Autocorrelation": 0.12712984228112265,
+        "Lag": 12
+      },
+      {
+        "Autocorrelation": -0.04220100445795956,
+        "Lag": 13
+      },
+      {
+        "Autocorrelation": 0.11602305290330872,
+        "Lag": 14
+      },
+      {
+        "Autocorrelation": 0.041769627025596,
+        "Lag": 15
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "Lag",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "Autocorrelation",
+      "type": "quantitative"
+    }
+  },
+  "mark": "bar"
+}
