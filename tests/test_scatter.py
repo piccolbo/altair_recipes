@@ -2,12 +2,6 @@ import altair_recipes as ar
 from altair_recipes.common import viz_reg_test
 from vega_datasets import data
 
-# sc = scatter1(
-#     data.iris(),
-#     mark_args=dict(size=20),
-#     encode_args=dict(x='petalWidth', y='petalLength', color='petalLength'))
-#
-# sc.to_json()
 
 @viz_reg_test
 def test_scatter():
