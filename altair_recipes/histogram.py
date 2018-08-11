@@ -1,5 +1,4 @@
 import altair as alt
-import pandas as pd
 from altair_recipes.common import to_dataframe, gather
 
 
