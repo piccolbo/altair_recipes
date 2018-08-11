@@ -1,4 +1,7 @@
 import altair as alt
+import pandas as pd
+
+
 def viz_reg_test(test_f):
     def fun(regtest):
         plot = test_f()
@@ -26,3 +29,10 @@ def default(*args):
 #     return d1
 
 
+def gather(data, key, value, columns):
+    return pd.melt(
+        data,
+        id_vars=[col for col in data.columns if col not in columns],
+        value_vars=columns,
+        var_name=key,
+        value_name=value)
