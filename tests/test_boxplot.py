@@ -1,6 +1,5 @@
 import altair_recipes as ar
 from altair_recipes.common import viz_reg_test
-import pandas as pd
 from vega_datasets import data
 
 
