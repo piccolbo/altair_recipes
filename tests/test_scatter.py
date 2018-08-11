@@ -9,8 +9,8 @@ def test_scatter():
         data.iris(),
         x="petalWidth",
         y='petalLength',
-        color="sepalWidth",
-        tooltip="species")
+        encoding=dict(color="sepalWidth", tooltip="species"))
+
 
 @viz_reg_test
 def test_multiscatter_defaults():
