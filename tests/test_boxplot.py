@@ -6,7 +6,7 @@ from vega_datasets import data
 
 @viz_reg_test
 def test_boxplot_melted():
-    return ar.boxplot(data.iris(), "species", "petalLength")
+    return ar.boxplot(data.iris(), "petalLength", "species")
 
 
 @viz_reg_test
