@@ -16,3 +16,5 @@ def to_dataframe(data):
     return alt.Chart(data).data
 
 
+def default(*args):
+    return next(x for x in args if x is not None)
