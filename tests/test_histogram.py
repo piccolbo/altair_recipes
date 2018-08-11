@@ -1,5 +1,5 @@
 import altair_recipes as ar
-from altair_recipes.common import viz_reg_test
+from altair_recipes.common import viz_reg_test, gather
 import numpy as np
 import pandas as pd
 from vega_datasets import data
@@ -11,10 +11,25 @@ def test_histogram():
 
 
 @viz_reg_test
-def test_layered_histogram():
+def test_layered_histogram_wide():
+    np.random.seed(0)
     df = pd.DataFrame({
         'Trial A': np.random.normal(0, 0.8, 1000),
         'Trial B': np.random.normal(-2, 1, 1000),
         'Trial C': np.random.normal(3, 2, 1000)
     })
     return ar.layered_histogram(df, ["Trial A", "Trial B", "Trial C"])
+
+
+@viz_reg_test
+def test_layered_histogram_long():
+    np.random.seed(0)
+    data = pd.DataFrame({
+        'Trial A': np.random.normal(0, 0.8, 1000),
+        'Trial B': np.random.normal(-2, 1, 1000),
+        'Trial C': np.random.normal(3, 2, 1000)
+    })
+    columns = list(data.columns)
+
+    ldata = gather(data, key="key", value="value", columns=columns)
+    return ar.layered_histogram(ldata, "value", "key")
