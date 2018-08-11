@@ -1,3 +1,4 @@
+import altair as alt
 def viz_reg_test(test_f):
     def fun(regtest):
         plot = test_f()
@@ -8,3 +9,10 @@ def viz_reg_test(test_f):
         return plot
 
     return fun
+
+
+def to_dataframe(data):
+    #this is an undocumented hack
+    return alt.Chart(data).data
+
+
