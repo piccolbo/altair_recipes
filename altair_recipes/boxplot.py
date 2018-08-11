@@ -3,6 +3,8 @@ import altair as alt
 from altair_recipes.common import default, gather, to_dataframe
 
 
+#TODO: inject addional option into graph
+#TODO: unclear how to do it with complex graphics such as this, if there is a way
 def boxplot(data, columns, group_by=None, mark={}, encoding={}, properties={}):
     data = to_dataframe(data)
     assert type(columns) == str or len(columns) == 1 or group_by is None
