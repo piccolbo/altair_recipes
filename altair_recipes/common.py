@@ -18,3 +18,11 @@ def to_dataframe(data):
 
 def default(*args):
     return next(x for x in args if x is not None)
+
+
+# unused should kill?
+# def update(d1, d2):
+#     d1.update(d2)
+#     return d1
+
+
