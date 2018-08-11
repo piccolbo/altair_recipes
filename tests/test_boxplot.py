@@ -12,8 +12,4 @@ def test_boxplot_melted():
 @viz_reg_test
 def test_boxplot_cast():
     iris = data.iris()
-    iris.columns.name = "vars"
-    return ar.boxplot(iris,
-                      pd.Series(
-                          ["petalLength", "sepalLength"], name="lengths"),
-                      "length")
+    return ar.boxplot(iris, list(iris.columns[:-1]), None)
