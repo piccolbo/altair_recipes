@@ -16,7 +16,12 @@ def test_scatter():
 def test_multiscatter_defaults():
     return ar.multiscatter(data.iris())
 
+
 @viz_reg_test
 def test_multiscatter_args():
     return ar.multiscatter(
-        data.iris(), variables=data.iris().columns[:-1], color="species")
+        data.iris(),
+        variables=data.iris().columns[:-1],
+        mark=dict(size=2),
+        encoding=dict(color="species"),
+        properties=dict(height=100, width=100))
