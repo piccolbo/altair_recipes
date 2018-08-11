@@ -1078,7 +1078,6 @@
       ]
     },
     "encoding": {
-      "color": {},
       "x": {
         "field": {
           "repeat": "column"
@@ -1092,8 +1091,6 @@
         "type": "quantitative"
       }
     },
-    "height": 320,
-    "mark": "point",
-    "width": 320
+    "mark": "point"
   }
 }
