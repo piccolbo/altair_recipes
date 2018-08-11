@@ -1,9 +1,10 @@
 """Boxplot implementation"""
 import altair as alt
-from altair_recipes.common import default, gather
+from altair_recipes.common import default, gather, to_dataframe
 
 
 def boxplot(data, columns, group_by=None, mark={}, encoding={}, properties={}):
+    data = to_dataframe(data)
     assert type(columns) == str or len(columns) == 1 or group_by is None
     # we are doing wide or long format but not both
     if group_by is None:  #convert wide to long

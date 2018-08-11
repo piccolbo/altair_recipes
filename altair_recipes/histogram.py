@@ -1,5 +1,6 @@
 import altair as alt
 import pandas as pd
+from altair_recipes.common import to_dataframe, gather
 
 
 def histogram(data, variable):
@@ -16,6 +17,7 @@ def layered_histogram(data,
     if len(count_variables) == 1:
         x_label = count_variables[0] if x_label is None else str(x_label)
         assert color_variable is not None
+    data = to_dataframe(data)
     else:
         x_label = "Value" if x_label is None else str(x_label)
         color_variable = "__color__"
