@@ -22,10 +22,12 @@ def layered_histogram(data,
         value = "value"
         data = gather(data, key=key, value=value, columns=columns)
     else:
-    return (alt.Chart(data).mark_area(
-        opacity=1 / len(data[color_variable].unique()),
-        interpolate="step").encode(
-            alt.X(x_label + ":Q", bin=True),
-            alt.Y("count()", stack=None),
-            alt.Color(color_variable + ":N", scale=color_scale),
-        ))
+        key = group_by
+        value = columns if type(columns) is str else columns[0]
+    return alt.Chart(data).mark_area(
+        opacity=1 / (len(data[group_by].unique())
+                     if group_by is not None else len(columns)),
+        interpolate="step",
+        **mark).encode(
+            alt.X(value + ":Q", bin=True), alt.Y("count()", stack=None),
+            alt.Color(key + ":N"), **encoding).properties(**properties)
