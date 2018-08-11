@@ -1,5 +1,5 @@
 import altair as alt
-from altair_recipes.common import default
+from .common import default
 
 
 def scatter(data, x="x", y="y", mark={}, encoding={}, properties={}):

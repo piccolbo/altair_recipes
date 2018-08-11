@@ -1,7 +1,7 @@
 import altair as alt
 import numpy as np
 import pandas as pd
-from altair_recipes.common import to_dataframe
+from .common import to_dataframe
 
 
 def autocorrelation(data,

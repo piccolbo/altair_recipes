@@ -1,6 +1,6 @@
 import altair as alt
 import numpy as np
-from altair_recipes.common import to_dataframe
+from .common import to_dataframe
 
 
 def qqplot(data, x="x", y="y", mark={}, encoding={}, properties={}):

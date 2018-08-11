@@ -1,5 +1,5 @@
 import altair as alt
-from altair_recipes.common import to_dataframe, gather
+from .common import to_dataframe, gather
 
 
 def histogram(data, column, mark={}, encoding={}, properties={}):

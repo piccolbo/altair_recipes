@@ -1,6 +1,6 @@
 """Boxplot implementation"""
 import altair as alt
-from altair_recipes.common import default, gather, to_dataframe
+from .common import default, gather, to_dataframe
 
 
 #TODO: inject addional option into graph
