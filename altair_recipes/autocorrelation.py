@@ -16,7 +16,7 @@ def autocorrelation(data,
     _data = pd.DataFrame(
         dict(
             Lag=lags,
-            Autocorrelation=[data[variable].autocorr(lag=lag)
-                             for lag in lags]))
-    return alt.Chart(_data).mark_bar().encode(
-        x="Lag:O", y="Autocorrelation" + ":Q")
+            Autocorrelation=[data[column].autocorr(lag=lag) for lag in lags]))
+    return alt.Chart(_data).mark_bar(**mark).encode(
+        x="Lag:O", y="Autocorrelation" + ":Q",
+        **encoding).properties(**properties)
