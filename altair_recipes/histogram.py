@@ -2,9 +2,10 @@ import altair as alt
 from altair_recipes.common import to_dataframe, gather
 
 
-def histogram(data, variable):
-    return (alt.Chart(data).mark_bar().encode(
-        alt.X(variable + ":Q", bin=True), alt.Y("count()")))
+def histogram(data, column, mark={}, encoding={}, properties={}):
+    return alt.Chart(data).mark_bar(**mark).encode(
+        alt.X(column + ":Q", bin=True), alt.Y("count()"),
+        **encoding).properties(**properties)
 
 
 def layered_histogram(data,
