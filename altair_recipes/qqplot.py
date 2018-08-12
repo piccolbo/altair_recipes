@@ -1,8 +1,10 @@
+from .common import to_dataframe, BivariateRecipe
 import altair as alt
+from autosig import autosig
 import numpy as np
-from .common import to_dataframe
 
 
+@autosig(BivariateRecipe)
 def qqplot(data, x="x", y="y", mark={}, encoding={}, properties={}):
     data = to_dataframe(data)
     n = data.shape[0]

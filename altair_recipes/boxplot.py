@@ -1,10 +1,12 @@
 """Boxplot implementation"""
+from .common import default, gather, to_dataframe, MultivariateRecipe
 import altair as alt
-from .common import default, gather, to_dataframe
+from autosig import autosig
 
 
 #TODO: inject addional option into graph
 #TODO: unclear how to do it with complex graphics such as this, if there is a way
+@autosig(MultivariateRecipe)
 def boxplot(data, columns, group_by=None, mark={}, encoding={}, properties={}):
     data = to_dataframe(data)
     assert type(columns) == str or len(columns) == 1 or group_by is None

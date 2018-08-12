@@ -1,5 +1,34 @@
 import altair as alt
+from autosig import signature, Signature, param
 import pandas as pd
+
+
+@signature
+class Recipe(Signature):
+    data = param()
+    mark = param(default={}, convert=dict)
+    encoding = param(default={}, convert=dict)
+    properties = param(default={}, convert=dict)
+
+
+@signature
+class UnivariateRecipe(Recipe):
+    column = param(default=0)
+
+
+@signature
+class BivariateRecipe(Recipe):
+    x = param(default="x")
+    y = param(default="y")
+
+
+@signature
+class MultivariateRecipe(Recipe):
+    columns = param(default=None)
+    group_by = param(default=None)
+
+    def validate(self):
+        if self.columns is None: columns = list(self.data.columns)
 
 
 def viz_reg_test(test_f):

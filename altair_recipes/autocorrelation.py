@@ -1,17 +1,26 @@
+from .common import to_dataframe, UnivariateRecipe
 import altair as alt
+from autosig import autosig, signature, param
 import numpy as np
 import pandas as pd
-from .common import to_dataframe
 
 
+@signature
+class Autocorrelation(UnivariateRecipe):
+    max_lag = param(default=None)
+
+
+@autosig(Autocorrelation)
 def autocorrelation(data,
-                    column,
+                    column=0,
                     max_lag=None,
                     mark={},
                     encoding={},
                     properties={}):
     data = to_dataframe(data)
     max_lag = data.shape[0] - 1 if max_lag is None else int(max_lag)
+    if type(column) is int:
+        column = data.columns[0]
     lags = np.arange(0, max_lag + 1)
     _data = pd.DataFrame(
         dict(

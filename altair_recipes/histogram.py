@@ -1,13 +1,16 @@
+from .common import to_dataframe, gather, UnivariateRecipe, MultivariateRecipe
 import altair as alt
-from .common import to_dataframe, gather
+from autosig import autosig
 
 
+@autosig(UnivariateRecipe)
 def histogram(data, column, mark={}, encoding={}, properties={}):
     return alt.Chart(data).mark_bar(**mark).encode(
         alt.X(column + ":Q", bin=True), alt.Y("count()"),
         **encoding).properties(**properties)
 
 
+@autosig(MultivariateRecipe)
 def layered_histogram(data,
                       columns,
                       group_by=None,
