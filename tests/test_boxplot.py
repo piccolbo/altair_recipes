@@ -5,10 +5,10 @@ from vega_datasets import data
 
 @viz_reg_test
 def test_boxplot_melted():
-    return ar.boxplot(data.iris(), "petalLength", "species")
+    return ar.boxplot(data.iris(), columns="petalLength", group_by="species")
 
 
 @viz_reg_test
 def test_boxplot_cast():
     iris = data.iris()
-    return ar.boxplot(iris, list(iris.columns[:-1]), None)
+    return ar.boxplot(iris, columns=list(iris.columns[:-1]))

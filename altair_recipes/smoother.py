@@ -9,8 +9,15 @@ class Smoother(BivariateRecipe):
     interquartile_area = param(default=True)
 
 
-@autosig(BivariateRecipe)
-def smoother(data, x="x", y="y", window=None, interquartile_area=True):
+@autosig(Smoother)
+def smoother(data,
+             x="x",
+             y="y",
+             window=None,
+             interquartile_area=True,
+             mark={},
+             encoding={},
+             properties={}):
     window = data.shape[0] // 4 if window is None else int(window)
     _data = data.sort_values(by="x")
     _data["x"] = _data["x"].rolling(window).median()

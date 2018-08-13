@@ -28,7 +28,9 @@ class MultivariateRecipe(Recipe):
     group_by = param(default=None)
 
     def validate(self):
-        if self.columns is None: columns = list(self.data.columns)
+        if self.columns is None:
+            self.columns = list(self.data.columns)
+        return True
 
 
 def viz_reg_test(test_f):

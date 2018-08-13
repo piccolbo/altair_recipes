@@ -10,7 +10,13 @@ def scatter(data, x="x", y="y", mark={}, encoding={}, properties={}):
 
 
 @autosig(MultivariateRecipe)
-def multiscatter(data, columns=None, mark={}, encoding={}, properties={}):
+def multiscatter(data,
+                 columns=None,
+                 group_by=None,
+                 mark={},
+                 encoding={},
+                 properties={}):
+    assert group_by is None, "Not supported yet"
     columns = list(default(columns, data.columns))
     return alt.Chart(data).mark_point(**mark).encode(
         alt.X(alt.repeat("column"), type='quantitative'),
