@@ -50,7 +50,8 @@ def make_docstring(func, summary, additional_params={}):
     docstrings_.update(additional_params)
     params = list(map(lambda x: docstrings_[x], getfullargspec(func).args))
     returns = docstrings['returns']
-    return ".\n".join([summary, "\nParameters\n---------"] + params + [
+    return "\n".join([summary + ".", "\nParameters\n---------"] + [
+        ".\n".join(params),
         "\nReturns\n-------",
         returns,
     ]) + "."
