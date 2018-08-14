@@ -20,7 +20,7 @@ altair_recipes
 
 
 
-A collection of advanced statistical graphics for vega
+A collection of ready-made statistical graphics for vega.
 
 
 * Free software: BSD license
@@ -30,7 +30,13 @@ A collection of advanced statistical graphics for vega
 Features
 --------
 
-* TODO
+* autocorrelation plot
+* boxplot
+* histogram, in a simple and multi-variable version
+* qqplot
+* scatter, in the simple and all-vs-all versions
+* smoother, smoothing line with IRQ range shading
+
 
 Credits
 -------
