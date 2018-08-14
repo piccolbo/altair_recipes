@@ -28,10 +28,10 @@ def smoother(data,
 
 
 smoother.__doc__ = make_docstring(
+    smoother,
     summary="Generate a smooth line plot with optional IRQ shading area",
-    params=[
-        "data", "x", "y", """window: int
-    The size of the smoothing window""", """interquartile_area: bool
-    Whether to plot the IRQ as an area""", "mark", "encoding", "properties"
-    ],
-    returns="returns")
+    additional_params=dict(
+        window="""window: int
+    The size of the smoothing window""",
+        interquartile_area="""interquartile_area: bool
+    Whether to plot the IRQ as an area"""))

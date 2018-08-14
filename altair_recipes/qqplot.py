@@ -1,7 +1,8 @@
+"""Generate qqplots."""
 import altair as alt
 import numpy as np
 from .common import to_dataframe
-from .docstrings import make_docstring, Docstring as D
+from .docstrings import make_docstring
 
 
 def qqplot(data, x, y, mark={}, encoding={}, properties={}):
@@ -14,5 +15,4 @@ def qqplot(data, x, y, mark={}, encoding={}, properties={}):
 
 
 qqplot.__doc__ = make_docstring(
-    summary="Generate a quantile-quantile plot.",
-    params=[D.data, D.x, D.y, D.mark, D.encoding, D.properties])
+    qqplot, summary="Generate a quantile-quantile plot")

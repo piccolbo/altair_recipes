@@ -1,7 +1,7 @@
 """Boxplot implementation."""
 import altair as alt
 from .common import multivariate_preprocess
-from .docstrings import make_docstring, Docstring as D
+from .docstrings import make_docstring
 
 
 #TODO: inject addional option into graph
@@ -31,6 +31,4 @@ def boxplot(data,
     return q1_bar + q3_bar + min_tick + max_tick + rule
 
 
-boxplot.__doc__ = make_docstring(
-    summary="Generate a boxplot",
-    params=[D.data, D.columns, D.group_by, D.mark, D.encoding, D.properties])
+boxplot.__doc__ = make_docstring(boxplot, summary="Generate a boxplot")

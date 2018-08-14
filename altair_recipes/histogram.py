@@ -1,7 +1,7 @@
 """Generate histograms."""
 import altair as alt
 from .common import multivariate_preprocess
-from .docstrings import make_docstring, Docstring as D
+from .docstrings import make_docstring
 
 
 def histogram(data, column, mark={}, encoding={}, properties={}):
@@ -11,9 +11,7 @@ def histogram(data, column, mark={}, encoding={}, properties={}):
         **encoding).properties(**properties)
 
 
-histogram.__doc__ = make_docstring(
-    summary="Generate a histogram.",
-    params=[D.column, D.mark, D.encoding, D.properties])
+histogram.__doc__ = make_docstring(histogram, summary="Generate a histogram")
 
 
 def layered_histogram(data,
@@ -34,5 +32,4 @@ def layered_histogram(data,
 
 
 layered_histogram.__doc__ = make_docstring(
-    "Generate multiple overlapping histograms.",
-    params=[D.columns, D.group_by, D.mark, D.encoding, D.properties])
+    layered_histogram, "Generate multiple overlapping histograms")

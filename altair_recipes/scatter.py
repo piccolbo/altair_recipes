@@ -1,7 +1,7 @@
 """Scatter plots."""
 import altair as alt
 from .common import default
-from .docstrings import make_docstring, Docstring as D
+from .docstrings import make_docstring
 
 
 def scatter(data, x, y, mark={}, encoding={}, properties={}):
@@ -11,9 +11,7 @@ def scatter(data, x, y, mark={}, encoding={}, properties={}):
         x=x, y=y, **encoding).properties(**properties)
 
 
-scatter.__doc__ = make_docstring(
-    summary="Generate a scatter plot.",
-    params=[D.data, D.x, D.y, D.mark, D.encoding, D.properties])
+scatter.__doc__ = make_docstring(scatter, summary="Generate a scatter plot")
 
 
 def multiscatter(data,
@@ -34,6 +32,6 @@ def multiscatter(data,
 
 
 multiscatter.__doc__ = make_docstring(
+    multiscatter,
     summary="Generate many scatter plots, all vs. all,\
-     from several columns(default all)",
-    params=[D.data, D.columns, D.group_by, D.mark, D.encoding, D.properties])
+     from several columns(default all)")

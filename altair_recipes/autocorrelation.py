@@ -3,7 +3,7 @@ import altair as alt
 import numpy as np
 import pandas as pd
 from .common import to_dataframe
-from .docstrings import make_docstring, Docstring as D
+from .docstrings import make_docstring
 
 
 def autocorrelation(data,
@@ -26,9 +26,7 @@ def autocorrelation(data,
 
 
 autocorrelation.__doc__ = make_docstring(
+    autocorrelation,
     summary="Generate an autocorrelation plot",
-    params=[
-        D.data, D.column, """max_lag: int
-    Maximum lag to show in the plot, default to number of rows in data.""",
-        D.mark, D.encoding, D.properties
-    ])
+    additional_params=dict(max_lag="""max_lag: int
+    Maximum lag to show in the plot, default to number of rows in data"""))
