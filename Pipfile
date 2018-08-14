@@ -17,3 +17,4 @@ twine = "==1.10.0"
 [packages]
 altair = "*"
 pandas = "*"
+numpy = "*"
