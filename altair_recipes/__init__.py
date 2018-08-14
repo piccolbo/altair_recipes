@@ -14,4 +14,4 @@ __all__ = [
 ]
 __author__ = """Antonio Piccolboni"""
 __email__ = 'antonio@piccolboni.info'
-__version__ = '0.1.1'
+__version__ = '0.1.2'
