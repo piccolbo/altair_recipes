@@ -21,7 +21,7 @@ def test_multiscatter_defaults():
 def test_multiscatter_args():
     return ar.multiscatter(
         data.iris(),
-        variables=data.iris().columns[:-1],
+        columns=data.iris().columns[:-1],
         mark=dict(size=2),
         encoding=dict(color="species"),
         properties=dict(height=100, width=100))

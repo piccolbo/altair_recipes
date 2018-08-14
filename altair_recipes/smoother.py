@@ -1,9 +1,19 @@
+"""Smoother graph."""
 import altair as alt
+from .docstrings import make_docstring
 
 
-def smoother(data, x="x", y="y", window=None, interquartile_area=True):
+def smoother(data,
+             x,
+             y,
+             window=None,
+             interquartile_area=True,
+             mark={},
+             encoding={},
+             properties={}):
+    """See below."""
     window = data.shape[0] // 4 if window is None else int(window)
-    _data = data.sort_values(by="x")
+    _data = data.sort_values(by=x)
     _data["x"] = _data["x"].rolling(window).median()
     _data["median"] = _data["y"].rolling(window).median()
     chart_line = alt.Chart(_data).mark_line().encode(x=x, y="median")
@@ -15,3 +25,13 @@ def smoother(data, x="x", y="y", window=None, interquartile_area=True):
         return chart_line + chart_area
     else:
         return chart_line
+
+
+smoother.__doc__ = make_docstring(
+    summary="Generate a smooth line plot with optional IRQ shading area",
+    params=[
+        "data", "x", "y", """window: int
+    The size of the smoothing window""", """interquartile_area: bool
+    Whether to plot the IRQ as an area""", "mark", "encoding", "properties"
+    ],
+    returns="returns")
