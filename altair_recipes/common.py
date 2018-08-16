@@ -70,6 +70,35 @@ def default(*args):
     return next(x for x in args if x is not None)
 
 
+def update_dict(updatee, updates):
+    """Update a dict without side effects.
+
+    Parameters
+    ----------
+    updatee : dict
+        The starting point.
+    updates : dict
+        The updates to apply.
+
+    Returns
+    -------
+    dict
+        A dict with all the key, value pairs in updatee and updates. Whenever a
+        key is shared, updates takes precedence.
+
+    """
+
+    u = updatee.copy()
+    u.update(updates)
+    return u
+
+
+def update_kwargs(**kwargs):
+    updates = kwargs['updates']
+    del kwargs['updates']
+    return update_dict(kwargs, updates)
+
+
 def gather(data, key, value, columns):
     """Convert wide format data frame to long format.
 
