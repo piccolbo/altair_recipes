@@ -32,6 +32,7 @@ Features
 
 * autocorrelation plot
 * boxplot
+* heatmap
 * histogram, in a simple and multi-variable version
 * qqplot
 * scatter, in the simple and all-vs-all versions
