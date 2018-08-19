@@ -517,11 +517,11 @@
     },
     "x": {
       "field": "x",
-      "type": "ordinal"
+      "type": "quantitative"
     },
     "y": {
       "field": "y",
-      "type": "ordinal"
+      "type": "quantitative"
     }
   },
   "mark": "rect"
