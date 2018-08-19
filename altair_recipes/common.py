@@ -1,6 +1,7 @@
 """Micro-library for all recipes."""
-import altair as alt
+from functools import singledispatch
 import pandas as pd
+import requests
 
 
 def viz_reg_test(test_f):
@@ -35,6 +36,7 @@ def viz_reg_test(test_f):
     return fun
 
 
+@singledispatch
 def to_dataframe(data):
     """Convert altair.Data to pandas.DataFrame.
 
@@ -49,8 +51,17 @@ def to_dataframe(data):
         A DataFrame with the same data as the `data` argument.
 
     """
-    #this is an undocumented hack
-    return alt.Chart(data).data
+    assert False, "Not implemented:" + str(type(data))
+
+
+@to_dataframe.register(pd.DataFrame)
+def _(data):
+    return data
+
+
+@to_dataframe.register(str)
+def _(data):
+    return pd.DataFrame(requests.get(data).json())
 
 
 def default(*args):
