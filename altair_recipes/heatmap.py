@@ -5,13 +5,19 @@ from .common import update_kwargs as uk, to_dataframe
 from math import sqrt
 
 
+def heatmap_preprocess(data, x, y):
+    data = to_dataframe(data)
+    nx = sqrt(data.shape[0])
+    ny = nx
+    return data, nx, ny
+
+
 def heatmap(data, x, y, color, mark={}, encoding={}, properties={}):
     """See below."""
-    data = to_dataframe(data)
-    nrow = data.shape[0]
+    data, nx, ny = heatmap_preprocess(data, x, y)
     return alt.Chart(data).mark_rect(**mark).encode(**uk(
-        x=alt.X(x + ':Q', bin=alt.Bin(maxbins=3 * sqrt(nrow / 18))),
-        y=alt.Y(y + ':Q', bin=alt.Bin(maxbins=2 * sqrt(nrow / 18))),
+        x=alt.X(x + ':Q', bin=alt.Bin(maxbins=nx)),
+        y=alt.Y(y + ':Q', bin=alt.Bin(maxbins=ny)),
         color=alt.Color(
             'average(' + color + '):Q', scale=alt.Scale(scheme='greenblue')),
         updates=encoding)).properties(**properties)
@@ -26,11 +32,10 @@ heatmap.__doc__ = make_docstring(
 
 def binned_heatmap(data, x, y, mark={}, encoding={}, properties={}):
     """See below."""
-    data = to_dataframe(data)
-    nrow = data.shape[0]
+    data, nx, ny = heatmap_preprocess(data, x, y)
     return alt.Chart(data).mark_rect(**mark).encode(**uk(
-        x=alt.X(x + ':Q', bin=alt.Bin(maxbins=3 * sqrt(nrow / 18))),
-        y=alt.Y(y + ':Q', bin=alt.Bin(maxbins=2 * sqrt(nrow / 18))),
+        x=alt.X(x + ':Q', bin=alt.Bin(maxbins=nx)),
+        y=alt.Y(y + ':Q', bin=alt.Bin(maxbins=ny)),
         color=alt.Color(
             'count(' + x + '):Q', scale=alt.Scale(scheme='greenblue')),
         updates=encoding)).properties(**properties)
