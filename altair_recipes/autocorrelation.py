@@ -1,4 +1,4 @@
-from .common import to_dataframe, UnivariateRecipe
+"""Autocorrelation plot."""
 import altair as alt
 from autosig import autosig, signature, param
 import numpy as np
@@ -17,29 +17,7 @@ def autocorrelation(data,
                     mark={},
                     encoding={},
                     properties={}):
-    """Short summary.
-
-    Parameters
-    ----------
-    data : type
-        Description of parameter `data`.
-    column : type
-        Description of parameter `column`.
-    max_lag : type
-        Description of parameter `max_lag`.
-    mark : type
-        Description of parameter `mark`.
-    encoding : type
-        Description of parameter `encoding`.
-    properties : type
-        Description of parameter `properties`.
-
-    Returns
-    -------
-    type
-        Description of returned object.
-
-    """
+    """See below."""
     data = to_dataframe(data)
     max_lag = data.shape[0] - 1 if max_lag is None else int(max_lag)
     if type(column) is int:
@@ -52,3 +30,10 @@ def autocorrelation(data,
     return alt.Chart(_data).mark_bar(**mark).encode(
         x="Lag:O", y="Autocorrelation" + ":Q",
         **encoding).properties(**properties)
+
+
+autocorrelation.__doc__ = make_docstring(
+    autocorrelation,
+    summary="Generate an autocorrelation plot",
+    additional_params=dict(max_lag="""max_lag: int
+    Maximum lag to show in the plot, default to number of rows in data"""))
