@@ -22,6 +22,3 @@ def test_binned_heatmap():
     source = data.movies.url
     return ar.binned_heatmap(
         source, x='IMDB_Rating', y='Rotten_Tomatoes_Rating')
-
-
-test_heatmap(None)
