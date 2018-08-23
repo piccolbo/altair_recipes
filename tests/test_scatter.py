@@ -9,8 +9,8 @@ def test_scatter():
         data.iris(),
         x="petalWidth",
         y='petalLength',
-        mark={},
-        encoding=dict(color="sepalWidth", tooltip="species"))
+        color="sepalWidth",
+        tooltip="species")
 
 
 @viz_reg_test
@@ -21,8 +21,5 @@ def test_multiscatter_defaults():
 @viz_reg_test
 def test_multiscatter_args():
     return ar.multiscatter(
-        data.iris(),
-        columns=data.iris().columns[:-1],
-        mark=dict(size=2),
-        encoding=dict(color="species"),
-        properties=dict(height=100, width=100))
+        data.iris(), columns=data.iris().columns[:-1],
+        color="species").configure_point(size=2)

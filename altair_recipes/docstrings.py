@@ -15,15 +15,6 @@ docstrings = dict(
     group_by="""group_by: `str` or other column selector
     The column to be used to group the data when in long form. When group_by is
     specified columns should point to a single column""",
-    mark="""mark: `dictionary`
-    Additional arguments to pass to the mark method of Chart; See
-    altair.MarkDef for details""",
-    encoding="""encoding: dictionary
-    Additional arguments to the encode method of Chart; See
-    `altair.Chart.encode` for details""",
-    properties="""properties: dictionary
-    Additional arguments to the properties method of Chart; See `altair.Chart`
-    for details""",
     returns="""`altair.Chart`
     The chart described in the summary""")
 

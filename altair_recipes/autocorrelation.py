@@ -13,12 +13,11 @@ class Autocorrelation(UnivariateRecipe):
 
 
 @autosig(Autocorrelation)
-def autocorrelation(data,
-                    column=0,
-                    max_lag=None,
-                    mark={},
-                    encoding={},
-                    properties={}):
+def autocorrelation(
+        data,
+        column=0,
+        max_lag=None,
+):
     """See below."""
     data = to_dataframe(data)
     max_lag = data.shape[0] - 1 if max_lag is None else int(max_lag)
@@ -29,9 +28,10 @@ def autocorrelation(data,
         dict(
             Lag=lags,
             Autocorrelation=[data[column].autocorr(lag=lag) for lag in lags]))
-    return alt.Chart(_data).mark_bar(**mark).encode(
-        x="Lag:O", y="Autocorrelation" + ":Q",
-        **encoding).properties(**properties)
+    return alt.Chart(_data).mark_bar().encode(
+        x="Lag:O",
+        y="Autocorrelation" + ":Q",
+    )
 
 
 autocorrelation.__doc__ = make_docstring(

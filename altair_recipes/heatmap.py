@@ -1,7 +1,7 @@
 """Heatmap implementation."""
 import altair as alt
 from .docstrings import make_docstring
-from .common import update_kwargs as uk, to_dataframe
+from .common import to_dataframe
 from math import sqrt
 
 
@@ -12,15 +12,19 @@ def heatmap_preprocess(data, x, y):
     return data, nx, ny
 
 
-def heatmap(data, x, y, color, mark={}, encoding={}, properties={}):
+def heatmap(
+        data,
+        x,
+        y,
+        color,
+):
     """See below."""
     data, nx, ny = heatmap_preprocess(data, x, y)
-    return alt.Chart(data).mark_rect(**mark).encode(**uk(
+    return alt.Chart(data).mark_rect().encode(
         x=alt.X(x + ':Q', bin=alt.Bin(maxbins=nx)),
         y=alt.Y(y + ':Q', bin=alt.Bin(maxbins=ny)),
         color=alt.Color(
-            'average(' + color + '):Q', scale=alt.Scale(scheme='greenblue')),
-        updates=encoding)).properties(**properties)
+            'average(' + color + '):Q', scale=alt.Scale(scheme='greenblue')))
 
 
 heatmap.__doc__ = make_docstring(
@@ -30,15 +34,18 @@ heatmap.__doc__ = make_docstring(
     The color to be used at each `(x,y)` location"""))
 
 
-def binned_heatmap(data, x, y, mark={}, encoding={}, properties={}):
+def binned_heatmap(
+        data,
+        x,
+        y,
+):
     """See below."""
     data, nx, ny = heatmap_preprocess(data, x, y)
-    return alt.Chart(data).mark_rect(**mark).encode(**uk(
+    return alt.Chart(data).mark_rect().encode(
         x=alt.X(x + ':Q', bin=alt.Bin(maxbins=nx)),
         y=alt.Y(y + ':Q', bin=alt.Bin(maxbins=ny)),
         color=alt.Color(
-            'count(' + x + '):Q', scale=alt.Scale(scheme='greenblue')),
-        updates=encoding)).properties(**properties)
+            'count(' + x + '):Q', scale=alt.Scale(scheme='greenblue')))
 
 
 heatmap.__doc__ = make_docstring(

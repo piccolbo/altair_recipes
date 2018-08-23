@@ -1,36 +1,41 @@
 """Scatter plots."""
 import altair as alt
-from autosig import autosig
-from .common import default, BivariateRecipe, MultivariateRecipe
+from autosig import autosig, signature, param
+from .common import default, BivariateRecipe, MultivariateRecipe, subset_dict
 from .docstrings import make_docstring
 
 
-@autosig(BivariateRecipe)
-def scatter(data, x, y, mark={}, encoding={}, properties={}):
-    """See below."""
+@signature
+class Scatter(BivariateRecipe):
+    color = param(default=None)
+    tooltip = param(default=None)
 
-    return alt.Chart(data).mark_point(**mark).encode(
-        x=x, y=y, **encoding).properties(**properties)
+
+@autosig(Scatter)
+def scatter(data, x, y, color=None, tooltip=None):
+    """See below."""
+    kwargs = subset_dict(locals(), keep_keys=['color', 'tooltip'])
+    return alt.Chart(data).mark_point().encode(x=x, y=y, **kwargs)
 
 
 scatter.__doc__ = make_docstring(scatter, summary="Generate a scatter plot")
 
 
-@autosig(MultivariateRecipe)
-def multiscatter(data,
-                 columns=None,
-                 group_by=None,
-                 mark={},
-                 encoding={},
-                 properties={}):
-    """See below."""
+@signature
+class Multiscatter(MultivariateRecipe):
+    color = param(default=None)
+    tooltip = param(default=None)
 
+
+@autosig(Multiscatter)
+def multiscatter(data, columns=None, group_by=None, color=None, tooltip=None):
+    """See below."""
+    kwargs = subset_dict(locals(), keep_keys=['color', 'tooltip'])
     columns = list(default(columns, data.columns))
     assert group_by is None, "Long format not supported yet"
-    return alt.Chart(data).mark_point(**mark).encode(
+    return alt.Chart(data).mark_point().encode(
         alt.X(alt.repeat("column"), type='quantitative'),
-        alt.Y(alt.repeat("row"), type='quantitative'),
-        **encoding).properties(**properties).repeat(
+        alt.Y(alt.repeat("row"), type='quantitative'), **kwargs).repeat(
             row=columns, column=columns)
 
 

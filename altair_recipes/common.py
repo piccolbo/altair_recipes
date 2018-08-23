@@ -7,9 +7,6 @@ import requests
 @signature
 class Recipe(Signature):
     data = param()
-    mark = param(default={}, convert=dict)
-    encoding = param(default={}, convert=dict)
-    properties = param(default={}, convert=dict)
 
 
 @signature
@@ -209,3 +206,7 @@ def multivariate_preprocess(data, columns, group_by):
         key = group_by
         value = columns if type(columns) is str else columns[0]
     return data, key, value
+
+
+def subset_dict(d, keep_keys, exclude_values=[None]):
+    return {k: d[k] for k in keep_keys if d[k] not in exclude_values}

@@ -12,14 +12,7 @@ class Smoother(BivariateRecipe):
 
 
 @autosig(Smoother)
-def smoother(data,
-             x,
-             y,
-             window=None,
-             interquartile_area=True,
-             mark={},
-             encoding={},
-             properties={}):
+def smoother(data, x, y, window=None, interquartile_area=True):
     """See below."""
     window = data.shape[0] // 4 if window is None else int(window)
     _data = data.sort_values(by=x)
