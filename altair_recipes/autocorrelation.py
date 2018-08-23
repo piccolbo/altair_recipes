@@ -1,4 +1,6 @@
 """Autocorrelation plot."""
+from .common import UnivariateRecipe, to_dataframe
+from .docstrings import make_docstring
 import altair as alt
 from autosig import autosig, signature, param
 import numpy as np
