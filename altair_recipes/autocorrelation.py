@@ -1,6 +1,6 @@
 """Autocorrelation plot."""
-from .common import UnivariateRecipe, to_dataframe
 from .docstrings import make_docstring
+from .signatures import UnivariateRecipe
 import altair as alt
 from autosig import autosig, signature, param
 import numpy as np
@@ -19,10 +19,7 @@ def autocorrelation(
         max_lag=None,
 ):
     """See below."""
-    data = to_dataframe(data)
     max_lag = data.shape[0] - 1 if max_lag is None else int(max_lag)
-    if type(column) is int:
-        column = data.columns[column]
     lags = np.arange(0, max_lag + 1)
     _data = pd.DataFrame(
         dict(

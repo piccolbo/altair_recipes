@@ -1,22 +1,31 @@
 """Heatmap implementation."""
-import altair as alt
 from .docstrings import make_docstring
-from .common import to_dataframe
+from .signatures import BivariateRecipe
+import altair as alt
+from autosig import autosig, signature, param
 from math import sqrt
 
 
 def heatmap_preprocess(data, x, y):
-    data = to_dataframe(data)
     nx = sqrt(data.shape[0])
     ny = nx
     return data, nx, ny
 
 
+@signature
+class Heatmap(BivariateRecipe):
+    color = param(default=3)
+
+    def __attrs_post_init__(self):
+        self.to_column("color")
+
+
+@autosig(Heatmap)
 def heatmap(
         data,
-        x,
-        y,
-        color,
+        x=0,
+        y=1,
+        color=3,
 ):
     """See below."""
     data, nx, ny = heatmap_preprocess(data, x, y)
@@ -34,10 +43,11 @@ heatmap.__doc__ = make_docstring(
     The color to be used at each `(x,y)` location"""))
 
 
+@autosig(BivariateRecipe)
 def binned_heatmap(
         data,
-        x,
-        y,
+        x=0,
+        y=1,
 ):
     """See below."""
     data, nx, ny = heatmap_preprocess(data, x, y)

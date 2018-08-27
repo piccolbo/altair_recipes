@@ -1,34 +1,7 @@
-from autosig import signature, Signature, param
 from functools import singledispatch
 import pandas as pd
 import requests
 
-
-@signature
-class Recipe(Signature):
-    data = param()
-
-
-@signature
-class UnivariateRecipe(Recipe):
-    column = param(default=0)
-
-
-@signature
-class BivariateRecipe(Recipe):
-    x = param(default="x")
-    y = param(default="y")
-
-
-@signature
-class MultivariateRecipe(Recipe):
-    columns = param(default=None)
-    group_by = param(default=None)
-
-    def validate(self):
-        if self.columns is None:
-            self.columns = list(self.data.columns)
-        return True
 
 
 def viz_reg_test(test_f):
@@ -192,10 +165,6 @@ def multivariate_preprocess(data, columns, group_by):
         the variable and the name of of the column holding the values.
 
     """
-    data = to_dataframe(data)
-    columns = default(columns, data.columns)
-    if type(columns) is not str:
-        columns = list(columns)
     assert type(columns) == str or len(
         columns) == 1 or group_by is None, "Wide or long format but not both"
     if group_by is None:  # convert wide to long

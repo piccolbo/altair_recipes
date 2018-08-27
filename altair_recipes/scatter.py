@@ -1,8 +1,9 @@
 """Scatter plots."""
+from .common import default, subset_dict
+from .docstrings import make_docstring
+from .signatures import BivariateRecipe, MultivariateRecipe
 import altair as alt
 from autosig import autosig, signature, param
-from .common import default, BivariateRecipe, MultivariateRecipe, subset_dict
-from .docstrings import make_docstring
 
 
 @signature
@@ -12,7 +13,7 @@ class Scatter(BivariateRecipe):
 
 
 @autosig(Scatter)
-def scatter(data, x, y, color=None, tooltip=None):
+def scatter(data, x=0, y=1, color=None, tooltip=None):
     """See below."""
     kwargs = subset_dict(locals(), keep_keys=['color', 'tooltip'])
     return alt.Chart(data).mark_point().encode(x=x, y=y, **kwargs)

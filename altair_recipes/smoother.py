@@ -1,8 +1,8 @@
 """Smoother graph."""
+from .docstrings import make_docstring
+from .signatures import signature, BivariateRecipe
 import altair as alt
 from autosig import autosig, param
-from .common import signature, BivariateRecipe
-from .docstrings import make_docstring
 
 
 @signature
@@ -12,7 +12,7 @@ class Smoother(BivariateRecipe):
 
 
 @autosig(Smoother)
-def smoother(data, x, y, window=None, interquartile_area=True):
+def smoother(data, x=0, y=1, window=None, interquartile_area=True):
     """See below."""
     window = data.shape[0] // 4 if window is None else int(window)
     _data = data.sort_values(by=x)

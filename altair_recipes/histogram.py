@@ -1,15 +1,15 @@
 """Generate histograms."""
+from .common import multivariate_preprocess
+from .docstrings import make_docstring
+from .signatures import UnivariateRecipe, MultivariateRecipe
 import altair as alt
 from autosig import autosig
-from .common import (multivariate_preprocess, UnivariateRecipe,
-                     MultivariateRecipe)
-from .docstrings import make_docstring
 
 
 @autosig(UnivariateRecipe)
 def histogram(
         data,
-        column,
+        column=0,
 ):
     """See below."""
     return alt.Chart(data).mark_bar().encode(

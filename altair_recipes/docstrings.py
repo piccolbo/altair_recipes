@@ -1,5 +1,5 @@
 """Reusable docstrings elements."""
-from inspect import getfullargspec
+from inspect import signature
 
 docstrings = dict(
     data="""data: `altair.Data` or `pandas.DataFrame` or csv or json file URL
@@ -15,6 +15,10 @@ docstrings = dict(
     group_by="""group_by: `str` or other column selector
     The column to be used to group the data when in long form. When group_by is
     specified columns should point to a single column""",
+    color="""color: `str` or other column selector
+    The column containing the data associated with the color of the mark""",
+    tooltip="""tooltip: `str` or other column selector
+    The column containing the data associated with the tooltip text""",
     returns="""`altair.Chart`
     The chart described in the summary""")
 
@@ -40,7 +44,9 @@ def make_docstring(func, summary, additional_params={}):
     """
     docstrings_ = docstrings.copy()
     docstrings_.update(additional_params)
-    params = list(map(lambda x: docstrings_[x], getfullargspec(func).args))
+    params = list(
+        map(lambda x: docstrings_[x],
+            signature(func).parameters.keys()))
     returns = docstrings['returns']
     return "\n".join([summary + ".", "\nParameters\n---------"] + [
         ".\n".join(params),

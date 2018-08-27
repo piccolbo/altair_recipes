@@ -21,5 +21,4 @@ def test_multiscatter_defaults():
 @viz_reg_test
 def test_multiscatter_args():
     return ar.multiscatter(
-        data.iris(), columns=data.iris().columns[:-1],
-        color="species").configure_point(size=2)
+        data.iris(), columns=data.iris().columns[:-1], color="species")

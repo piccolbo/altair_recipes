@@ -1,8 +1,9 @@
 """Boxplot implementation."""
+from .common import multivariate_preprocess
+from .docstrings import make_docstring
+from .signatures import MultivariateRecipe
 import altair as alt
 from autosig import autosig
-from .common import multivariate_preprocess, MultivariateRecipe
-from .docstrings import make_docstring
 
 
 @autosig(MultivariateRecipe)
