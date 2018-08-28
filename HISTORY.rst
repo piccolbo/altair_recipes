@@ -1,7 +1,7 @@
 =======
 History
 =======
-0.2.0 (2018-08-28)
+0.2.1 (2018-08-28)
 -----------------
 
 * Switch to a simpler, flatter API a la qplot
