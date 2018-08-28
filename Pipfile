@@ -3,18 +3,19 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 
 [dev-packages]
-bumpversion = "==0.5.3"
-wheel = "==0.30.0"
-watchdog = "==0.8.3"
-flake8 = "==3.5.0"
-tox = "==2.9.1"
-coverage = "==4.5.1"
-pytest = "==3.4.2"
-pytest-runner = "==2.11.1"
-Sphinx = "==1.7.1"
-twine = "==1.10.0"
+bumpversion = ">=0.5.3"
+wheel = ">=0.30.0"
+watchdog = ">=0.8.3"
+flake8 = ">=3.5.0"
+tox = ">=2.9.1"
+coverage = ">=4.5.1"
+pytest = ">=3.4.2"
+pytest-runner = ">=2.11.1"
+Sphinx = ">=1.7.1"
+twine = ">=1.10.0"
+"e1839a8" = {path = ".", editable = true}
 
 [packages]
-altair = "*"
-pandas = "*"
-numpy = "*"
+altair = ">=2.2.2"
+pandas = ">=0.23.4"
+numpy = ">=1.5.1"
