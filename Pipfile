@@ -13,9 +13,6 @@ pytest = ">=3.4.2"
 pytest-runner = ">=2.11.1"
 Sphinx = ">=1.7.1"
 twine = ">=1.10.0"
-"e1839a8" = {path = ".", editable = true}
 
 [packages]
-altair = ">=2.2.2"
-pandas = ">=0.23.4"
-numpy = ">=1.5.1"
+"e1839a8" = {path = ".", editable = true}
