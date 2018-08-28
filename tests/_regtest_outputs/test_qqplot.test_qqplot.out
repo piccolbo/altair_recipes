@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.4.3.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "config": {
     "view": {
       "height": 300,
@@ -7,7 +7,10 @@
     }
   },
   "data": {
-    "values": [
+    "name": "data-fbb862e0e511e8685fa33af4d9711c34"
+  },
+  "datasets": {
+    "data-fbb862e0e511e8685fa33af4d9711c34": [
       {
         "Trial A": -2.9920805103614234,
         "Trial B": -5.007437204443558,

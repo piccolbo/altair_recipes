@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.4.3.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
   "config": {
     "view": {
       "height": 300,
@@ -7,7 +7,10 @@
     }
   },
   "data": {
-    "values": [
+    "name": "data-f1cec2bd5d4b8e9235970d656792f792"
+  },
+  "datasets": {
+    "data-f1cec2bd5d4b8e9235970d656792f792": [
       {
         "Creative_Type": null,
         "Director": null,
