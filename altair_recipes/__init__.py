@@ -11,8 +11,16 @@ from .smoother import smoother
 
 # alphabetically ordered exports
 __all__ = [
-    'autocorrelation', 'binned_heatmap', 'boxplot', 'heatmap', 'histogram',
-    'layered_histogram', 'multiscatter', 'qqplot', 'scatter', 'smoother'
+    'autocorrelation',
+    'binned_heatmap',
+    'boxplot',
+    'heatmap',
+    'histogram',
+    'layered_histogram',
+    'multiscatter',
+    'qqplot',
+    'scatter',
+    'smoother',
 ]
 __author__ = """Antonio Piccolboni"""
 __email__ = 'antonio@piccolboni.info'
