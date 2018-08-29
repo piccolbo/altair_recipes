@@ -1,6 +1,6 @@
-==========
+==============
 altair_recipes
-==========
+==============
 
 
 .. image:: https://img.shields.io/pypi/v/altair_recipes.svg
