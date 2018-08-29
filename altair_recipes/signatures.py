@@ -10,9 +10,8 @@ class Recipe(Signature):
 
     def to_columns(self, attribute):
         xx = getattr(self, attribute)
-        setattr(self, attribute,
-                map(lambda x: self.data.columns[x] if type(x) is int else x,
-                    xx))
+        setattr(self, attribute, [xx] if isinstance(xx, str) else list(
+            map(lambda x: self.data.columns[x] if type(x) is int else x, xx)))
 
     data = param(converter=to_dataframe)
 
@@ -42,4 +41,4 @@ class MultivariateRecipe(Recipe):
 
     def __attrs_post_init__(self):
         self.to_columns("columns")
-        self.to_column("column")
+        self.to_column("group_by")

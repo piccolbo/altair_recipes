@@ -4,10 +4,14 @@ language: python
 python:
   - 3.6
   - 3.5
-  - 3.4
+
+env:
+  global:
+    - PIPENV_VENV_IN_PROJECT=1
+    - PIPENV_IGNORE_VIRTUALENVS=1
 
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: make install
+install: make install-dev
 
 # Command to run tests, e.g. python setup.py test
 script: make test

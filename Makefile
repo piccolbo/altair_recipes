@@ -54,7 +54,7 @@ lint: ## check style with flake8
 	flake8 altair_recipes tests
 
 test: ## run tests quickly with the default Python
-	py.test
+	pipenv run -- py.test
 
 test-all: ## run tests on every Python version with tox
 	tox
@@ -87,3 +87,7 @@ dist: clean ## builds source and wheel package
 
 install: clean  ## install the package to the active Python's site-packages
 	python setup.py install
+
+install-dev: clean ## install dev with pipenv
+	pip install pipenv
+	pipenv install --dev --three
