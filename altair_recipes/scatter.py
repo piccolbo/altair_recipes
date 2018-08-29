@@ -11,6 +11,10 @@ class Scatter(BivariateRecipe):
     color = param(default=None)
     tooltip = param(default=None)
 
+    def __attrs_post_init__(self):
+        self.to_column("color")
+        self.to_column("tooltip")
+
 
 @autosig(Scatter)
 def scatter(data, x=0, y=1, color=None, tooltip=None):
@@ -24,8 +28,13 @@ scatter.__doc__ = make_docstring(scatter, summary="Generate a scatter plot")
 
 @signature
 class Multiscatter(MultivariateRecipe):
+    # TODO: dupicates from line 11 in class Scatter
     color = param(default=None)
     tooltip = param(default=None)
+
+    def __attrs_post_init__(self):
+        self.to_column("color")
+        self.to_column("tooltip")
 
 
 @autosig(Multiscatter)

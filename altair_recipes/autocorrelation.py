@@ -35,4 +35,4 @@ autocorrelation.__doc__ = make_docstring(
     autocorrelation,
     summary="Generate an autocorrelation plot",
     additional_params=dict(max_lag="""max_lag: int
-    Maximum lag to show in the plot, default to number of rows in data"""))
+    Maximum lag to show in the plot, defaults to number of rows in data"""))
