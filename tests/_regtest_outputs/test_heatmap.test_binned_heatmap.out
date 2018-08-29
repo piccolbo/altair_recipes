@@ -57642,14 +57642,14 @@
     },
     "x": {
       "bin": {
-        "maxbins": 56.57738063926254
+        "maxbins": 56.5773806392625
       },
       "field": "IMDB_Rating",
       "type": "quantitative"
     },
     "y": {
       "bin": {
-        "maxbins": 56.57738063926254
+        "maxbins": 56.5773806392625
       },
       "field": "Rotten_Tomatoes_Rating",
       "type": "quantitative"

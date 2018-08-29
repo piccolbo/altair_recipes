@@ -1,7 +1,22 @@
+import altair as alt
 from functools import singledispatch
 import pandas as pd
 import requests
 
+
+@singledispatch
+def traverse(xx, transform):
+    return transform(xx)
+
+
+@traverse.register(list)
+def _(xx, transform):
+    return [traverse(x, transform) for x in xx]
+
+
+@traverse.register(dict)
+def _(xx, transform):
+    return {k: traverse(v, transform) for k, v in xx.items()}
 
 
 def viz_reg_test(test_f):
@@ -28,7 +43,12 @@ def viz_reg_test(test_f):
     def fun(regtest):
         plot = test_f()
         if regtest is not None:
-            regtest.write(plot.to_json())
+            regtest.write(
+                alt.Chart.from_dict(
+                    traverse(
+                        plot.to_dict(),
+                        lambda x: round(x, 13) if isinstance(x, float) else x))
+                .to_json())
         plot.save(
             test_f.__code__.co_filename + "_" + test_f.__qualname__ + ".html")
         return plot
