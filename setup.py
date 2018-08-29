@@ -14,6 +14,7 @@ requirements = [
     "altair>=2.2.2",
     "autosig>=0.2.2",
     "pandas>=0.23.4",
+    "requests>=2.18.4",
     "numpy>=1.5.1",
 ]
 
