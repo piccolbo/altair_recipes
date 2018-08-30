@@ -1,15 +1,24 @@
 """Scatter plots."""
 from .common import default, subset_dict
-from .docstrings import make_docstring
 from .signatures import BivariateRecipe, MultivariateRecipe
 import altair as alt
 from autosig import autosig, signature, param
 
+color = param(
+    default=None,
+    docstring="""`str` or `int`
+The column containing the data associated with the color of the mark""")
+
+tooltip = param(
+    default=None,
+    docstring="""`str` or `int`
+The column containing the data associated with the tooltip text""")
+
 
 @signature
 class Scatter(BivariateRecipe):
-    color = param(default=None)
-    tooltip = param(default=None)
+    color = color
+    tooltip = tooltip
 
     def default(self):
         super().default()
@@ -19,19 +28,16 @@ class Scatter(BivariateRecipe):
 
 @autosig(Scatter)
 def scatter(data, x=0, y=1, color=None, tooltip=None):
-    """See below."""
+    """Generate a scatter plot."""
     kwargs = subset_dict(locals(), keep_keys=['color', 'tooltip'])
     return alt.Chart(data).mark_point().encode(x=x, y=y, **kwargs)
-
-
-scatter.__doc__ = make_docstring(scatter, summary="Generate a scatter plot")
 
 
 @signature
 class Multiscatter(MultivariateRecipe):
     # TODO: dupicates from line 11 in class Scatter
-    color = param(default=None)
-    tooltip = param(default=None)
+    color = color
+    tooltip = tooltip
 
     def default(self):
         super().default()
@@ -41,7 +47,9 @@ class Multiscatter(MultivariateRecipe):
 
 @autosig(Multiscatter)
 def multiscatter(data, columns=None, group_by=None, color=None, tooltip=None):
-    """See below."""
+    """Generate many scatter plots.
+
+    Based on several columns, pairwise."""
     kwargs = subset_dict(locals(), keep_keys=['color', 'tooltip'])
     columns = list(default(columns, data.columns))
     assert group_by is None, "Long format not supported yet"
@@ -49,9 +57,3 @@ def multiscatter(data, columns=None, group_by=None, color=None, tooltip=None):
         alt.X(alt.repeat("column"), type='quantitative'),
         alt.Y(alt.repeat("row"), type='quantitative'), **kwargs).repeat(
             row=columns, column=columns)
-
-
-multiscatter.__doc__ = make_docstring(
-    multiscatter,
-    summary="Generate many scatter plots, all vs. all,\
-     from several columns(default all)")

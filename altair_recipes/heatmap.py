@@ -1,5 +1,4 @@
 """Heatmap implementation."""
-from .docstrings import make_docstring
 from .signatures import BivariateRecipe
 import altair as alt
 from autosig import autosig, signature, param
@@ -14,7 +13,10 @@ def heatmap_preprocess(data, x, y):
 
 @signature
 class Heatmap(BivariateRecipe):
-    color = param(default=3)
+    color = param(
+        default=3,
+        docstring="""`str` or `int`
+    The color to be used at each `(x,y)` location""")
 
     def default(self):
         super().default()
@@ -28,7 +30,7 @@ def heatmap(
         y=1,
         color=3,
 ):
-    """See below."""
+    """Generate a heatmap."""
     data, nx, ny = heatmap_preprocess(data, x, y)
     return alt.Chart(data).mark_rect().encode(
         x=alt.X(x + ':Q', bin=alt.Bin(maxbins=nx)),
@@ -37,28 +39,16 @@ def heatmap(
             'average(' + color + '):Q', scale=alt.Scale(scheme='greenblue')))
 
 
-heatmap.__doc__ = make_docstring(
-    heatmap,
-    """Generate a heatmap.""",
-    additional_params=dict(color="""color: `str` or other column selector
-    The color to be used at each `(x,y)` location"""))
-
-
 @autosig(BivariateRecipe)
 def binned_heatmap(
         data,
         x=0,
         y=1,
 ):
-    """See below."""
+    """Create a heatmap of the count of points in each square."""
     data, nx, ny = heatmap_preprocess(data, x, y)
     return alt.Chart(data).mark_rect().encode(
         x=alt.X(x + ':Q', bin=alt.Bin(maxbins=nx)),
         y=alt.Y(y + ':Q', bin=alt.Bin(maxbins=ny)),
         color=alt.Color(
             'count(' + x + '):Q', scale=alt.Scale(scheme='greenblue')))
-
-
-heatmap.__doc__ = make_docstring(
-    binned_heatmap,
-    summary="Create a heatmap of the count of points in each square")

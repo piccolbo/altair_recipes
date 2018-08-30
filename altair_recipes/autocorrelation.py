@@ -1,5 +1,4 @@
 """Autocorrelation plot."""
-from .docstrings import make_docstring
 from .signatures import UnivariateRecipe
 import altair as alt
 from autosig import autosig, signature, param
@@ -9,7 +8,10 @@ import pandas as pd
 
 @signature
 class Autocorrelation(UnivariateRecipe):
-    max_lag = param(default=None)
+    max_lag = param(
+        default=None,
+        docstring="""int
+    Maximum lag to show in the plot, defaults to number of rows in data""")
 
 
 @autosig(Autocorrelation)
@@ -18,7 +20,7 @@ def autocorrelation(
         column=0,
         max_lag=None,
 ):
-    """See below."""
+    """Generate an autocorrelation plot."""
     max_lag = data.shape[0] - 1 if max_lag is None else int(max_lag)
     lags = np.arange(0, max_lag + 1)
     _data = pd.DataFrame(
@@ -29,10 +31,3 @@ def autocorrelation(
         x="Lag:O",
         y="Autocorrelation" + ":Q",
     )
-
-
-autocorrelation.__doc__ = make_docstring(
-    autocorrelation,
-    summary="Generate an autocorrelation plot",
-    additional_params=dict(max_lag="""max_lag: int
-    Maximum lag to show in the plot, defaults to number of rows in data"""))

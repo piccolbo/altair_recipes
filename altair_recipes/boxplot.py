@@ -1,6 +1,5 @@
 """Boxplot implementation."""
 from .common import multivariate_preprocess
-from .docstrings import make_docstring
 from .signatures import MultivariateRecipe
 import altair as alt
 from autosig import autosig
@@ -12,7 +11,7 @@ def boxplot(
         columns=None,
         group_by=None,
 ):
-    """See below."""
+    """Generate a boxplot."""
     data, key, value = multivariate_preprocess(data, columns, group_by)
     #long form assumed from here
     chart = alt.Chart(data)
@@ -29,6 +28,3 @@ def boxplot(
     rule = chart.mark_rule().encode(
         x=key, y=alt.Y(min_value, axis=alt.Axis(title=value)), y2=max_value)
     return (q1_bar + q3_bar + min_tick + max_tick + rule)
-
-
-boxplot.__doc__ = make_docstring(boxplot, summary="Generate a boxplot")
