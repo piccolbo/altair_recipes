@@ -21,6 +21,7 @@ class UnivariateRecipe(Recipe):
     column = param(default=0)
 
     def __attrs_post_init__(self):
+        super().__attrs_post_init__()
         self.to_column("column")
 
 
@@ -30,6 +31,7 @@ class BivariateRecipe(Recipe):
     y = param(default=1)
 
     def __attrs_post_init__(self):
+        super().__attrs_post_init__()
         for attribute in ['x', 'y']:
             self.to_column(attribute)
 
@@ -40,5 +42,6 @@ class MultivariateRecipe(Recipe):
     group_by = param(default=None)
 
     def __attrs_post_init__(self):
+        super().__attrs_post_init__()
         self.to_columns("columns")
         self.to_column("group_by")

@@ -17,6 +17,7 @@ class Heatmap(BivariateRecipe):
     color = param(default=3)
 
     def __attrs_post_init__(self):
+        super().__attrs_post_init__()
         self.to_column("color")
 
 
