@@ -11,8 +11,8 @@ class Scatter(BivariateRecipe):
     color = param(default=None)
     tooltip = param(default=None)
 
-    def __attrs_post_init__(self):
-        super().__attrs_post_init__()
+    def default(self):
+        super().default()
         self.to_column("color")
         self.to_column("tooltip")
 
@@ -33,8 +33,8 @@ class Multiscatter(MultivariateRecipe):
     color = param(default=None)
     tooltip = param(default=None)
 
-    def __attrs_post_init__(self):
-        super().__attrs_post_init__()
+    def default(self):
+        super().default()
         self.to_column("color")
         self.to_column("tooltip")
 

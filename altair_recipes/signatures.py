@@ -7,11 +7,20 @@ class Recipe(Signature):
     def to_column(self, attribute):
         x = getattr(self, attribute)
         setattr(self, attribute, self.data.columns[x] if type(x) is int else x)
+        return getattr(self, attribute)
 
     def to_columns(self, attribute):
         xx = getattr(self, attribute)
-        setattr(self, attribute, [xx] if isinstance(xx, str) else list(
-            map(lambda x: self.data.columns[x] if type(x) is int else x, xx)))
+        setattr(
+            self,
+            attribute,
+            list(self.data.columns)
+            if xx is None
+            else (
+                [self.to_column(attribute)]
+                if isinstance(xx, (int, str))
+                else list(
+                    map(lambda x: self.data.columns[x] if type(x) is int else x, xx))))  # yapf: disable
 
     data = param(converter=to_dataframe)
 
@@ -20,8 +29,8 @@ class Recipe(Signature):
 class UnivariateRecipe(Recipe):
     column = param(default=0)
 
-    def __attrs_post_init__(self):
-        super().__attrs_post_init__()
+    def default(self):
+        super().default()
         self.to_column("column")
 
 
@@ -30,9 +39,9 @@ class BivariateRecipe(Recipe):
     x = param(default=0)
     y = param(default=1)
 
-    def __attrs_post_init__(self):
-        super().__attrs_post_init__()
-        for attribute in ['x', 'y']:
+    def default(self):
+        super().default()
+        for attribute in ["x", "y"]:
             self.to_column(attribute)
 
 
@@ -41,7 +50,7 @@ class MultivariateRecipe(Recipe):
     columns = param(None)
     group_by = param(default=None)
 
-    def __attrs_post_init__(self):
-        super().__attrs_post_init__()
+    def default(self):
+        super().default()
         self.to_columns("columns")
         self.to_column("group_by")
