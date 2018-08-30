@@ -13,9 +13,10 @@ with open('HISTORY.rst') as history_file:
 requirements = [
     "altair>=2.2.2",
     "autosig>=0.2.2",
+    "boltons>=18.0.0",
+    "numpy>=1.5.1",
     "pandas>=0.23.4",
     "requests>=2.18.4",
-    "numpy>=1.5.1",
 ]
 
 setup_requirements = ['pytest-runner']
@@ -30,10 +31,6 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],

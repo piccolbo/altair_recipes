@@ -1,22 +1,8 @@
 import altair as alt
+from boltons.iterutils import remap
 from functools import singledispatch
 import pandas as pd
 import requests
-
-
-@singledispatch
-def traverse(xx, transform):
-    return transform(xx)
-
-
-@traverse.register(list)
-def _(xx, transform):
-    return [traverse(x, transform) for x in xx]
-
-
-@traverse.register(dict)
-def _(xx, transform):
-    return {k: traverse(v, transform) for k, v in xx.items()}
 
 
 def viz_reg_test(test_f):
@@ -45,12 +31,16 @@ def viz_reg_test(test_f):
         if regtest is not None:
             regtest.write(
                 alt.Chart.from_dict(
-                    traverse(
+                    remap(
                         plot.to_dict(),
-                        lambda x: round(x, 13) if isinstance(x, float) else x))
-                .to_json())
-        plot.save(
-            test_f.__code__.co_filename + "_" + test_f.__qualname__ + ".html")
+                        lambda p, k, v: (k, round(v, 13))
+                        if isinstance(v, float)
+                        else (k, v),
+                    )
+                ).to_json()
+            )
+            plot.save(test_f.__code__.co_filename + "_" + test_f.__qualname__ +
+                      ".html")
         return plot
 
     return fun
@@ -125,8 +115,8 @@ def update_dict(updatee, updates):
 
 
 def update_kwargs(**kwargs):
-    updates = kwargs['updates']
-    del kwargs['updates']
+    updates = kwargs["updates"]
+    del kwargs["updates"]
     return update_dict(kwargs, updates)
 
 
@@ -159,7 +149,8 @@ def gather(data, key, value, columns):
         id_vars=[col for col in data.columns if col not in columns],
         value_vars=columns,
         var_name=key,
-        value_name=value)
+        value_name=value,
+    )
 
 
 # TODO: this doesn't cover multiscatter which is a multivariate viz but does
@@ -185,8 +176,8 @@ def multivariate_preprocess(data, columns, group_by):
         the variable and the name of of the column holding the values.
 
     """
-    assert type(columns) == str or len(
-        columns) == 1 or group_by is None, "Wide or long format but not both"
+    assert (type(columns) == str or len(columns) == 1
+            or group_by is None), "Wide or long format but not both"
     if group_by is None:  # convert wide to long
         key = default(data.columns.name, "variable")
         value = "value"
