@@ -3,6 +3,12 @@ History
 =======
 
 
+0.2.4 (2018-08-29)
+-----------------
+
+* One more issue with col resolution
+* Switch to using docstring support in autosig
+
 0.2.3 (2018-08-29)
 -----------------
 
