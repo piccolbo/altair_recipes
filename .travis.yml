@@ -16,6 +16,10 @@ install: make install-dev
 # Command to run tests, e.g. python setup.py test
 script: make test
 
+after_success:
+  - pipenv run codecov
+
+  
 # Assuming you have installed the travis-ci CLI tool, after you
 # create the Github repo and add it to Travis, run the
 # following command to finish PyPI deployment setup:
