@@ -23,5 +23,5 @@ __all__ = [
     'smoother',
 ]
 __author__ = """Antonio Piccolboni"""
-__email__ = 'antonio@piccolboni.info'
+__email__ = 'altair_recipes@piccolboni.info'
 __version__ = '0.2.4'
