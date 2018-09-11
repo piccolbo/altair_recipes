@@ -629,14 +629,14 @@
     },
     "x": {
       "bin": {
-        "maxbins": 11.0
+        "maxbins": 14.0
       },
       "field": "x",
       "type": "quantitative"
     },
     "y": {
       "bin": {
-        "maxbins": 11.0
+        "maxbins": 8.0
       },
       "field": "y",
       "type": "quantitative"

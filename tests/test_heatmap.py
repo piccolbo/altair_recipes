@@ -18,7 +18,7 @@ def test_heatmap():
 
 
 @viz_reg_test
-def test_binned_heatmap():
+def test_count_heatmap():
     source = data.movies.url
-    return ar.binned_heatmap(
+    return ar.count_heatmap(
         source, x='IMDB_Rating', y='Rotten_Tomatoes_Rating')
