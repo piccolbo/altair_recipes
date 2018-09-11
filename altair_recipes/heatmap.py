@@ -48,9 +48,3 @@ def count_heatmap(
 ):
     """Create a heatmap of the count of points in each square."""
     return heatmap(data, x=x, y=y, color='x', aggregate='count')
-    # data, nx, ny = maxbins(data)
-    # return alt.Chart(data).mark_rect().encode(
-    #     x=alt.X(x, bin=alt.Bin(maxbins=nx)),
-    #     y=alt.Y(y, bin=alt.Bin(maxbins=ny)),
-    #     color=alt.Color(
-    #         'count(' + x + '):Q', scale=alt.Scale(scheme='greenblue')))
