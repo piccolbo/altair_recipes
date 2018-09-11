@@ -5,14 +5,16 @@ altair_recipes
 
 .. image:: https://img.shields.io/pypi/v/altair_recipes.svg
         :target: https://pypi.python.org/pypi/altair_recipes
+        :alt: Version
 
 .. image:: https://img.shields.io/travis/piccolbo/altair_recipes.svg
         :target: https://travis-ci.org/piccolbo/altair_recipes
+        :alt: Build Status
 
-.. image:: https://codecov.io/gh/piccolbo/altair_recipes/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/piccolbo/altair_recipes/graph/badge.svg
         :target: https://codecov.io/gh/piccolbo/altair_recipes
-
-        ..
+        :alt: Code Coverage
+        
 .. image:: https://readthedocs.org/projects/altair_recipes/badge/?version=latest
         :target: https://altair_recipes.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
