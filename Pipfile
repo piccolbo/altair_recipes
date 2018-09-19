@@ -14,8 +14,11 @@ twine = ">=1.10.0"
 vega-datasets = ">=0.5.0"
 watchdog = ">=0.8.3"
 wheel = ">=0.30.0"
-pytest-cov = "*"
-codecov = "*"
+pytest-cov = ">=2.6.0"
+codecov = ">=2.0.15"
+ipython = ">=6.5.0"
+
+
 
 [packages]
 "e1839a8" = {path = ".", editable = true}
