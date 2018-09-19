@@ -1,7 +1,11 @@
 import altair_recipes as ar
 from altair_recipes.common import viz_reg_test
+from altair_recipes.display_altair import show_test
 import numpy as np
 import pandas as pd
+
+#' ##  Qqplot
+#+ results='raw'
 
 
 @viz_reg_test
@@ -12,3 +16,5 @@ def test_qqplot():
         'Trial C': np.random.uniform(3, 2, 1000)
     })
     return ar.qqplot(df, x='Trial A', y='Trial C')
+
+show_test(test_qqplot)
