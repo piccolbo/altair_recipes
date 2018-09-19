@@ -1,6 +1,6 @@
 import altair as alt
 from boltons.iterutils import remap
-from functools import singledispatch, wraps
+from functools import singledispatch
 import pandas as pd
 import requests
 
@@ -26,7 +26,6 @@ def viz_reg_test(test_f):
 
     """
 
-    @wraps(test_f)
     def fun(regtest):
         plot = test_f()
         if regtest is not None:
