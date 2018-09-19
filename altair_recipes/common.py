@@ -27,21 +27,22 @@ def viz_reg_test(test_f):
     """
 
     def fun(regtest):
-        plot = test_f()
-        if regtest is not None:
-            regtest.write(
-                alt.Chart.from_dict(
-                    remap(
-                        plot.to_dict(),
-                        lambda p, k, v: (k, round(v, 20))
-                        if isinstance(v, float)
-                        else (k, v),
-                    )
-                ).to_json()
-            )
-            plot.save(test_f.__code__.co_filename + "_" + test_f.__qualname__ +
-                      ".html")
-        return plot
+        with alt.data_transformers.enable(consolidate_datasets=False):
+            plot = test_f()
+            if regtest is not None:
+                regtest.write(
+                    alt.Chart.from_dict(
+                        remap(
+                            plot.to_dict(),
+                            lambda p, k, v: (k, round(v, 13))
+                            if isinstance(v, float)
+                            else (k, v),
+                        )
+                    ).to_json()
+                )
+                plot.save(test_f.__code__.co_filename + "_" + test_f.__qualname__ +
+                          ".html")
+            return plot
 
     return fun
 

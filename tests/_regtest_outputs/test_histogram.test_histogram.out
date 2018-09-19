@@ -7,10 +7,7 @@
     }
   },
   "data": {
-    "name": "data-f1cec2bd5d4b8e9235970d656792f792"
-  },
-  "datasets": {
-    "data-f1cec2bd5d4b8e9235970d656792f792": [
+    "values": [
       {
         "Creative_Type": null,
         "Director": null,
@@ -27285,7 +27282,7 @@
         "Creative_Type": "Contemporary Fiction",
         "Director": null,
         "Distributor": "Sony Pictures",
-        "IMDB_Rating": 1.7000000000000002,
+        "IMDB_Rating": 1.7,
         "IMDB_Votes": 7466.0,
         "MPAA_Rating": "PG-13",
         "Major_Genre": "Drama",
@@ -28635,7 +28632,7 @@
         "Creative_Type": "Contemporary Fiction",
         "Director": "Jason Friedberg",
         "Distributor": "Lionsgate",
-        "IMDB_Rating": 1.7000000000000002,
+        "IMDB_Rating": 1.7,
         "IMDB_Votes": 34928.0,
         "MPAA_Rating": "PG-13",
         "Major_Genre": "Comedy",
