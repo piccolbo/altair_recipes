@@ -12,67 +12,67 @@
   "datasets": {
     "data-5f22e562d5ccfb3dd09ecb491c02c17e": [
       {
-        "Autocorrelation": 1.0,
+        "Autocorrelation": 0.9999999999999998,
         "Lag": 0
       },
       {
-        "Autocorrelation": -0.0705158322822,
+        "Autocorrelation": -0.07051583228220218,
         "Lag": 1
       },
       {
-        "Autocorrelation": 0.282592198191,
+        "Autocorrelation": 0.2825921981910391,
         "Lag": 2
       },
       {
-        "Autocorrelation": -0.121634201324,
+        "Autocorrelation": -0.12163420132397063,
         "Lag": 3
       },
       {
-        "Autocorrelation": 0.0745877924561,
+        "Autocorrelation": 0.07458779245608979,
         "Lag": 4
       },
       {
-        "Autocorrelation": -0.0734959485887,
+        "Autocorrelation": -0.07349594858870878,
         "Lag": 5
       },
       {
-        "Autocorrelation": 0.0710106670223,
+        "Autocorrelation": 0.07101066702233698,
         "Lag": 6
       },
       {
-        "Autocorrelation": -0.0505686488362,
+        "Autocorrelation": -0.050568648836178155,
         "Lag": 7
       },
       {
-        "Autocorrelation": 0.0554371287185,
+        "Autocorrelation": 0.055437128718518885,
         "Lag": 8
       },
       {
-        "Autocorrelation": -0.1747851682917,
+        "Autocorrelation": -0.17478516829165627,
         "Lag": 9
       },
       {
-        "Autocorrelation": 0.2372179636358,
+        "Autocorrelation": 0.2372179636357854,
         "Lag": 10
       },
       {
-        "Autocorrelation": -0.1215914908736,
+        "Autocorrelation": -0.1215914908735529,
         "Lag": 11
       },
       {
-        "Autocorrelation": 0.1271298422811,
+        "Autocorrelation": 0.12712984228112253,
         "Lag": 12
       },
       {
-        "Autocorrelation": -0.042201004458,
+        "Autocorrelation": -0.042201004457959546,
         "Lag": 13
       },
       {
-        "Autocorrelation": 0.1160230529033,
+        "Autocorrelation": 0.11602305290330876,
         "Lag": 14
       },
       {
-        "Autocorrelation": 0.0417696270256,
+        "Autocorrelation": 0.04176962702559601,
         "Lag": 15
       }
     ]

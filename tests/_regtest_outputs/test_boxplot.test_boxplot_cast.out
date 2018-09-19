@@ -35,7 +35,7 @@
       },
       {
         "species": "setosa",
-        "value": 1.7,
+        "value": 1.7000000000000002,
         "variable": "petalLength"
       },
       {
@@ -100,7 +100,7 @@
       },
       {
         "species": "setosa",
-        "value": 1.7,
+        "value": 1.7000000000000002,
         "variable": "petalLength"
       },
       {
@@ -110,7 +110,7 @@
       },
       {
         "species": "setosa",
-        "value": 1.7,
+        "value": 1.7000000000000002,
         "variable": "petalLength"
       },
       {
@@ -125,7 +125,7 @@
       },
       {
         "species": "setosa",
-        "value": 1.7,
+        "value": 1.7000000000000002,
         "variable": "petalLength"
       },
       {
@@ -790,7 +790,7 @@
       },
       {
         "species": "setosa",
-        "value": 0.3,
+        "value": 0.30000000000000004,
         "variable": "petalWidth"
       },
       {
@@ -845,17 +845,17 @@
       },
       {
         "species": "setosa",
-        "value": 0.3,
+        "value": 0.30000000000000004,
         "variable": "petalWidth"
       },
       {
         "species": "setosa",
-        "value": 0.3,
+        "value": 0.30000000000000004,
         "variable": "petalWidth"
       },
       {
         "species": "setosa",
-        "value": 0.3,
+        "value": 0.30000000000000004,
         "variable": "petalWidth"
       },
       {
@@ -960,12 +960,12 @@
       },
       {
         "species": "setosa",
-        "value": 0.3,
+        "value": 0.30000000000000004,
         "variable": "petalWidth"
       },
       {
         "species": "setosa",
-        "value": 0.3,
+        "value": 0.30000000000000004,
         "variable": "petalWidth"
       },
       {
@@ -975,7 +975,7 @@
       },
       {
         "species": "setosa",
-        "value": 0.6,
+        "value": 0.6000000000000001,
         "variable": "petalWidth"
       },
       {
@@ -985,7 +985,7 @@
       },
       {
         "species": "setosa",
-        "value": 0.3,
+        "value": 0.30000000000000004,
         "variable": "petalWidth"
       },
       {
@@ -1145,7 +1145,7 @@
       },
       {
         "species": "versicolor",
-        "value": 1.7,
+        "value": 1.7000000000000002,
         "variable": "petalWidth"
       },
       {
@@ -1290,7 +1290,7 @@
       },
       {
         "species": "virginica",
-        "value": 1.7,
+        "value": 1.7000000000000002,
         "variable": "petalWidth"
       },
       {

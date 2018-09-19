@@ -33,7 +33,7 @@ def viz_reg_test(test_f):
                 alt.Chart.from_dict(
                     remap(
                         plot.to_dict(),
-                        lambda p, k, v: (k, round(v, 13))
+                        lambda p, k, v: (k, round(v, 20))
                         if isinstance(v, float)
                         else (k, v),
                     )
