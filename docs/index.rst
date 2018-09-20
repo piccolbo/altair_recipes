@@ -1,5 +1,5 @@
 Welcome to altair_recipes's documentation!
-======================================
+==========================================
 
 .. toctree::
    :maxdepth: 2
