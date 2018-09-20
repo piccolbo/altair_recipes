@@ -1,0 +1,563 @@
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair_recipes</span> <span class="kn">as</span> <span class="nn">ar</span>
+<span class="kn">from</span> <span class="nn">altair_recipes.common</span> <span class="kn">import</span> <span class="n">viz_reg_test</span>
+<span class="kn">from</span> <span class="nn">altair_recipes.display_altair</span> <span class="kn">import</span> <span class="n">show_test</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+<h2>Qqplot</h2>
+
+
+<div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
+<span class="k">def</span> <span class="nf">test_qqplot</span><span class="p">():</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;Trial A&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+        <span class="s1">&#39;Trial B&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+        <span class="s1">&#39;Trial C&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Trial A&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Trial C&#39;</span><span class="p">)</span>
+
+<span class="n">show_test</span><span class="p">(</span><span class="n">test_qqplot</span><span class="p">)</span>
+</pre></div>
+
+
+
+ <div id="A464a67847e37d5bcd2d583bbb5d56f331afd84b45389fd99575cc2502414dbce"></div>
+  <script type="text/javascript">
+    var spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "name": "data-87efad9de4fbceb6fced8de5dd0ec169"
+  },
+  "datasets": {
+    "data-87efad9de4fbceb6fced8de5dd0ec169": [
+      {
+        "Trial A": -2.292970685207886,
+        "Trial B": -5.0926097111874835,
+        "Trial C": 2.00022987303502
+      },
+      {
+        "Trial A": -1.7495743732511346,
+        "Trial B": -4.42614599604204,
+        "Trial C": 2.0134425104342366
+      },
+      {
+        "Trial A": -1.6050599600431141,
+        "Trial B": -4.1374260070074484,
+        "Trial C": 2.023263759088767
+      },
+      {
+        "Trial A": -1.4014827356572062,
+        "Trial B": -4.008390745869798,
+        "Trial C": 2.0344173490209343
+      },
+      {
+        "Trial A": -1.2975770414289314,
+        "Trial B": -3.8724731591869377,
+        "Trial C": 2.047060088841743
+      },
+      {
+        "Trial A": -1.240357752082966,
+        "Trial B": -3.6954621476006797,
+        "Trial C": 2.0540610766090084
+      },
+      {
+        "Trial A": -1.1808430379424537,
+        "Trial B": -3.579342779252993,
+        "Trial C": 2.0653668958421365
+      },
+      {
+        "Trial A": -1.1470262767703965,
+        "Trial B": -3.4958166581085015,
+        "Trial C": 2.0738095402156724
+      },
+      {
+        "Trial A": -1.09437600560346,
+        "Trial B": -3.4345937093852816,
+        "Trial C": 2.0816235757849832
+      },
+      {
+        "Trial A": -1.0387638155282906,
+        "Trial B": -3.3747774774485393,
+        "Trial C": 2.096865519597324
+      },
+      {
+        "Trial A": -1.0017250901837054,
+        "Trial B": -3.2763089628344755,
+        "Trial C": 2.1035140401105172
+      },
+      {
+        "Trial A": -0.9588422813887862,
+        "Trial B": -3.2148022057917114,
+        "Trial C": 2.1239120556257864
+      },
+      {
+        "Trial A": -0.9191014309573267,
+        "Trial B": -3.1675663979980246,
+        "Trial C": 2.135144645545146
+      },
+      {
+        "Trial A": -0.8882846667656367,
+        "Trial B": -3.1201376021939584,
+        "Trial C": 2.1414711054764894
+      },
+      {
+        "Trial A": -0.8533141202312801,
+        "Trial B": -3.102722784508619,
+        "Trial C": 2.14714529204843
+      },
+      {
+        "Trial A": -0.8102420605318923,
+        "Trial B": -3.0681479760142683,
+        "Trial C": 2.157501824308415
+      },
+      {
+        "Trial A": -0.7826321587515299,
+        "Trial B": -3.009597148681359,
+        "Trial C": 2.166433333893027
+      },
+      {
+        "Trial A": -0.746510792417072,
+        "Trial B": -2.9581841067418244,
+        "Trial C": 2.173659778366251
+      },
+      {
+        "Trial A": -0.7207927569213866,
+        "Trial B": -2.9420727006927523,
+        "Trial C": 2.18578767741411
+      },
+      {
+        "Trial A": -0.6819386570242887,
+        "Trial B": -2.9125330577367787,
+        "Trial C": 2.192783145777946
+      },
+      {
+        "Trial A": -0.6551878048240907,
+        "Trial B": -2.848897319067236,
+        "Trial C": 2.2038162764530456
+      },
+      {
+        "Trial A": -0.6168081447587134,
+        "Trial B": -2.8239362684419302,
+        "Trial C": 2.2126115576556753
+      },
+      {
+        "Trial A": -0.5939586803782155,
+        "Trial B": -2.7807868149094537,
+        "Trial C": 2.2206203702609497
+      },
+      {
+        "Trial A": -0.5650152859012368,
+        "Trial B": -2.745210825309261,
+        "Trial C": 2.2286293831871182
+      },
+      {
+        "Trial A": -0.5398320500602986,
+        "Trial B": -2.7265349613025323,
+        "Trial C": 2.2435895115530275
+      },
+      {
+        "Trial A": -0.5203350154442172,
+        "Trial B": -2.711241106033615,
+        "Trial C": 2.2519325074715697
+      },
+      {
+        "Trial A": -0.49441265731369044,
+        "Trial B": -2.6786393995484286,
+        "Trial C": 2.264274896766324
+      },
+      {
+        "Trial A": -0.47304736731668834,
+        "Trial B": -2.649884066462155,
+        "Trial C": 2.2787291536274985
+      },
+      {
+        "Trial A": -0.4589026678957744,
+        "Trial B": -2.6221555425544554,
+        "Trial C": 2.286624097880809
+      },
+      {
+        "Trial A": -0.435174336923843,
+        "Trial B": -2.596504458804812,
+        "Trial C": 2.292466854391656
+      },
+      {
+        "Trial A": -0.4261154110009199,
+        "Trial B": -2.5520180574273357,
+        "Trial C": 2.2988072258372734
+      },
+      {
+        "Trial A": -0.4124508996655081,
+        "Trial B": -2.5172994841381517,
+        "Trial C": 2.3093263869919345
+      },
+      {
+        "Trial A": -0.3991859282928798,
+        "Trial B": -2.497470556248826,
+        "Trial C": 2.317131394265213
+      },
+      {
+        "Trial A": -0.36828395585508966,
+        "Trial B": -2.4731606820752035,
+        "Trial C": 2.3304904869680416
+      },
+      {
+        "Trial A": -0.32098464711786245,
+        "Trial B": -2.4515200192907307,
+        "Trial C": 2.337406743387554
+      },
+      {
+        "Trial A": -0.3069654148721222,
+        "Trial B": -2.425937665585267,
+        "Trial C": 2.3428057354218286
+      },
+      {
+        "Trial A": -0.2873321453190264,
+        "Trial B": -2.409769149722942,
+        "Trial C": 2.351462478566682
+      },
+      {
+        "Trial A": -0.26411707345323276,
+        "Trial B": -2.395079210463895,
+        "Trial C": 2.3655751043015627
+      },
+      {
+        "Trial A": -0.2336118687419506,
+        "Trial B": -2.3600646665721134,
+        "Trial C": 2.3724824167916303
+      },
+      {
+        "Trial A": -0.20705857340977163,
+        "Trial B": -2.3393021960882994,
+        "Trial C": 2.386002927639141
+      },
+      {
+        "Trial A": -0.19595838711012425,
+        "Trial B": -2.3191187783243175,
+        "Trial C": 2.3949028491609856
+      },
+      {
+        "Trial A": -0.17559784954363566,
+        "Trial B": -2.2844527089165227,
+        "Trial C": 2.4079189128061502
+      },
+      {
+        "Trial A": -0.15598276724465426,
+        "Trial B": -2.2582776462299274,
+        "Trial C": 2.4214337541279862
+      },
+      {
+        "Trial A": -0.1413401619082877,
+        "Trial B": -2.2258808982688283,
+        "Trial C": 2.431595015208209
+      },
+      {
+        "Trial A": -0.11700398251787177,
+        "Trial B": -2.199732539535683,
+        "Trial C": 2.4412227253836143
+      },
+      {
+        "Trial A": -0.1001580803043392,
+        "Trial B": -2.1860898705186065,
+        "Trial C": 2.4531135862386737
+      },
+      {
+        "Trial A": -0.07321522077402251,
+        "Trial B": -2.149706041579072,
+        "Trial C": 2.463125449545597
+      },
+      {
+        "Trial A": -0.053515273832624874,
+        "Trial B": -2.127367704587946,
+        "Trial C": 2.476568115338167
+      },
+      {
+        "Trial A": -0.01804529899169432,
+        "Trial B": -2.0886607601273317,
+        "Trial C": 2.4868256122182784
+      },
+      {
+        "Trial A": -0.003301221967455743,
+        "Trial B": -2.0605100188825674,
+        "Trial C": 2.49614271565928
+      },
+      {
+        "Trial A": 0.014793431425675237,
+        "Trial B": -2.02710706271501,
+        "Trial C": 2.50716379110563
+      },
+      {
+        "Trial A": 0.02561876218504556,
+        "Trial B": -1.9991979962370805,
+        "Trial C": 2.514590741098045
+      },
+      {
+        "Trial A": 0.0584052728762556,
+        "Trial B": -1.9684663302361276,
+        "Trial C": 2.5218779567851355
+      },
+      {
+        "Trial A": 0.0807871793296526,
+        "Trial B": -1.949212013814857,
+        "Trial C": 2.5371305489448
+      },
+      {
+        "Trial A": 0.09876863093152452,
+        "Trial B": -1.9232149770085705,
+        "Trial C": 2.5438648333211447
+      },
+      {
+        "Trial A": 0.11852521066050528,
+        "Trial B": -1.8923944596403561,
+        "Trial C": 2.555336950236325
+      },
+      {
+        "Trial A": 0.1363478888305028,
+        "Trial B": -1.8693582951116725,
+        "Trial C": 2.5667337325246278
+      },
+      {
+        "Trial A": 0.1443144535830284,
+        "Trial B": -1.8562188297303364,
+        "Trial C": 2.57432712096238
+      },
+      {
+        "Trial A": 0.16447028677524902,
+        "Trial B": -1.8368037818430334,
+        "Trial C": 2.5826325948517543
+      },
+      {
+        "Trial A": 0.18263713114779714,
+        "Trial B": -1.8040915863036995,
+        "Trial C": 2.592036388989685
+      },
+      {
+        "Trial A": 0.2015692856431892,
+        "Trial B": -1.7890638506577528,
+        "Trial C": 2.6038245170435417
+      },
+      {
+        "Trial A": 0.22451537013588774,
+        "Trial B": -1.7675312679633124,
+        "Trial C": 2.6099740306130497
+      },
+      {
+        "Trial A": 0.24426081952240244,
+        "Trial B": -1.7332842080887398,
+        "Trial C": 2.6194805711406275
+      },
+      {
+        "Trial A": 0.25956429907437434,
+        "Trial B": -1.698146547302367,
+        "Trial C": 2.627777870188381
+      },
+      {
+        "Trial A": 0.288860612760354,
+        "Trial B": -1.6792636758170267,
+        "Trial C": 2.640383239030885
+      },
+      {
+        "Trial A": 0.3074431019951627,
+        "Trial B": -1.6539218387521966,
+        "Trial C": 2.6459111694460526
+      },
+      {
+        "Trial A": 0.33007799613360583,
+        "Trial B": -1.6200401119496433,
+        "Trial C": 2.6549113112743115
+      },
+      {
+        "Trial A": 0.3538217897041229,
+        "Trial B": -1.5849589261291845,
+        "Trial C": 2.668923484500805
+      },
+      {
+        "Trial A": 0.3795111340204123,
+        "Trial B": -1.5674339074858044,
+        "Trial C": 2.681880036563862
+      },
+      {
+        "Trial A": 0.40773352353529557,
+        "Trial B": -1.5434382602475996,
+        "Trial C": 2.6920051879332787
+      },
+      {
+        "Trial A": 0.4216554842895258,
+        "Trial B": -1.5211424526249284,
+        "Trial C": 2.6976235824020716
+      },
+      {
+        "Trial A": 0.4389834023718461,
+        "Trial B": -1.4988524621925194,
+        "Trial C": 2.7088177486274914
+      },
+      {
+        "Trial A": 0.47106504900498936,
+        "Trial B": -1.4686365052784875,
+        "Trial C": 2.721845200176322
+      },
+      {
+        "Trial A": 0.49246984806827515,
+        "Trial B": -1.4270832067569532,
+        "Trial C": 2.7266966558453554
+      },
+      {
+        "Trial A": 0.5085530581563257,
+        "Trial B": -1.4026992270429948,
+        "Trial C": 2.736432076481843
+      },
+      {
+        "Trial A": 0.5420609250865702,
+        "Trial B": -1.3657876285948543,
+        "Trial C": 2.747739220996507
+      },
+      {
+        "Trial A": 0.5649163407936612,
+        "Trial B": -1.3382386990302053,
+        "Trial C": 2.7628203393130724
+      },
+      {
+        "Trial A": 0.5827701708810111,
+        "Trial B": -1.3205231474630394,
+        "Trial C": 2.7805433553112255
+      },
+      {
+        "Trial A": 0.6102488889556322,
+        "Trial B": -1.273083226124216,
+        "Trial C": 2.791310905085625
+      },
+      {
+        "Trial A": 0.6220227456437393,
+        "Trial B": -1.2443488541636025,
+        "Trial C": 2.8037129683183637
+      },
+      {
+        "Trial A": 0.6430770525446838,
+        "Trial B": -1.212289719702195,
+        "Trial C": 2.8145967904559708
+      },
+      {
+        "Trial A": 0.6623971295999744,
+        "Trial B": -1.1630015622868868,
+        "Trial C": 2.8244087220382905
+      },
+      {
+        "Trial A": 0.6949254331040376,
+        "Trial B": -1.140269218135041,
+        "Trial C": 2.8339799686181992
+      },
+      {
+        "Trial A": 0.7233378324049219,
+        "Trial B": -1.1025109936529482,
+        "Trial C": 2.8431748122215335
+      },
+      {
+        "Trial A": 0.7422021899941327,
+        "Trial B": -1.0735623556712384,
+        "Trial C": 2.8550964020082463
+      },
+      {
+        "Trial A": 0.7719157512613106,
+        "Trial B": -1.0286889431697857,
+        "Trial C": 2.862063447142527
+      },
+      {
+        "Trial A": 0.812318977389056,
+        "Trial B": -0.9978554628544999,
+        "Trial C": 2.8728065927325583
+      },
+      {
+        "Trial A": 0.8766017382832385,
+        "Trial B": -0.9122471776622079,
+        "Trial C": 2.878156291411574
+      },
+      {
+        "Trial A": 0.9482166675863613,
+        "Trial B": -0.8320578565729664,
+        "Trial C": 2.8886629075484844
+      },
+      {
+        "Trial A": 0.9996189966235716,
+        "Trial B": -0.7574912099539093,
+        "Trial C": 2.8978709798095705
+      },
+      {
+        "Trial A": 1.0270750854850779,
+        "Trial B": -0.6928696242168462,
+        "Trial C": 2.9104457722682717
+      },
+      {
+        "Trial A": 1.0969360956858123,
+        "Trial B": -0.6424239173310394,
+        "Trial C": 2.9197765091364274
+      },
+      {
+        "Trial A": 1.1610427191902624,
+        "Trial B": -0.5952074760019659,
+        "Trial C": 2.928167747764313
+      },
+      {
+        "Trial A": 1.199459121410972,
+        "Trial B": -0.5165300510145515,
+        "Trial C": 2.9378968239050356
+      },
+      {
+        "Trial A": 1.271145230549475,
+        "Trial B": -0.43833283206100404,
+        "Trial C": 2.945906457598463
+      },
+      {
+        "Trial A": 1.374536024408066,
+        "Trial B": -0.31479314224898414,
+        "Trial C": 2.9548892690251685
+      },
+      {
+        "Trial A": 1.4794113959991524,
+        "Trial B": -0.23349491703311953,
+        "Trial C": 2.9612507323228483
+      },
+      {
+        "Trial A": 1.6742311596784858,
+        "Trial B": -0.1362428381494201,
+        "Trial C": 2.965398049123436
+      },
+      {
+        "Trial A": 1.7530163873940197,
+        "Trial B": -0.05530849753492566,
+        "Trial C": 2.9752247734085144
+      },
+      {
+        "Trial A": 1.9393193122815846,
+        "Trial B": 0.2969099956051603,
+        "Trial C": 2.9883364299760617
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "Trial A",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Trial C",
+      "type": "quantitative"
+    }
+  },
+  "mark": "point"
+};
+    var opt = {"renderer": "canvas", "actions": false};
+    vegaEmbed("#A464a67847e37d5bcd2d583bbb5d56f331afd84b45389fd99575cc2502414dbce", spec, opt);
+  </script>
+  

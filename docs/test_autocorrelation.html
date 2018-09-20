@@ -1,0 +1,125 @@
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair_recipes</span> <span class="kn">as</span> <span class="nn">ar</span>
+<span class="kn">from</span> <span class="nn">altair_recipes.common</span> <span class="kn">import</span> <span class="n">viz_reg_test</span>
+<span class="kn">from</span> <span class="nn">altair_recipes.display_altair</span> <span class="kn">import</span> <span class="n">show_test</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+<h2>Autocorrelation</h2>
+
+
+<div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
+<span class="k">def</span> <span class="nf">test_autocorrelation</span><span class="p">():</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">autocorrelation</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">max_lag</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+
+<span class="n">show_test</span><span class="p">(</span><span class="n">test_autocorrelation</span><span class="p">)</span>
+</pre></div>
+
+
+
+ <div id="A3794d469ba241cefe1d3272493113c93147954192d0eb86fdea54cf50e20bfc1"></div>
+  <script type="text/javascript">
+    var spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "name": "data-5f22e562d5ccfb3dd09ecb491c02c17e"
+  },
+  "datasets": {
+    "data-5f22e562d5ccfb3dd09ecb491c02c17e": [
+      {
+        "Autocorrelation": 0.9999999999999998,
+        "Lag": 0
+      },
+      {
+        "Autocorrelation": -0.07051583228220218,
+        "Lag": 1
+      },
+      {
+        "Autocorrelation": 0.2825921981910391,
+        "Lag": 2
+      },
+      {
+        "Autocorrelation": -0.12163420132397063,
+        "Lag": 3
+      },
+      {
+        "Autocorrelation": 0.07458779245608979,
+        "Lag": 4
+      },
+      {
+        "Autocorrelation": -0.07349594858870878,
+        "Lag": 5
+      },
+      {
+        "Autocorrelation": 0.07101066702233698,
+        "Lag": 6
+      },
+      {
+        "Autocorrelation": -0.050568648836178155,
+        "Lag": 7
+      },
+      {
+        "Autocorrelation": 0.055437128718518885,
+        "Lag": 8
+      },
+      {
+        "Autocorrelation": -0.17478516829165627,
+        "Lag": 9
+      },
+      {
+        "Autocorrelation": 0.2372179636357854,
+        "Lag": 10
+      },
+      {
+        "Autocorrelation": -0.1215914908735529,
+        "Lag": 11
+      },
+      {
+        "Autocorrelation": 0.12712984228112253,
+        "Lag": 12
+      },
+      {
+        "Autocorrelation": -0.042201004457959546,
+        "Lag": 13
+      },
+      {
+        "Autocorrelation": 0.11602305290330876,
+        "Lag": 14
+      },
+      {
+        "Autocorrelation": 0.04176962702559601,
+        "Lag": 15
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "Lag",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "Autocorrelation",
+      "type": "quantitative"
+    }
+  },
+  "mark": "bar"
+};
+    var opt = {"renderer": "canvas", "actions": false};
+    vegaEmbed("#A3794d469ba241cefe1d3272493113c93147954192d0eb86fdea54cf50e20bfc1", spec, opt);
+  </script>
+  
