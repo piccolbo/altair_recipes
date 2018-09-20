@@ -2,7 +2,7 @@
 ========
 Examples
 ========
-
+ These examples are taken unedited from the test suite. Look at the body of each test to see how ``altair_recipes`` can be used.
 
 .. raw:: html
    :file: ../tests/test_autocorrelation.html

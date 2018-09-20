@@ -45,7 +45,7 @@ Sometimes we want to skip all of that and just produce a boxplot (or heatmap or 
 * ``seaborn`` and the graphical subset of ``pandas``, for example, both provide high level statistical graphics primitives (higher than the grammar of graphics) and they are quite successful (but not web-based).
 * Even ``ggplot``, which is named after the Grammar of Graphics, slipped in some more complex charts, pretending they are elements of the grammar, such as ``geom_boxplot``, because sometimes even R developers are lazy. But a boxplot is not a *geom* or mark. It's a combination of several ones, certain statistics and so on. The right approach is to keep these two levels of abstraction separate.
 
-The boxplot is not the only example. The scatter plot, the quantile-quantile plot, the heatmap are important idioms that are battle tested in data analysis practice. They deserve their own abstracion.
+The boxplot is not the only example. The scatter plot, the quantile-quantile plot, the heatmap are important idioms that are battle tested in data analysis practice. They deserve their own abstraction.
 
 
 ``altair_recipes`` aims to fill this space above ``altair`` while making full use of its features. It provides a growing list of "classic" statistical graphics without going down to the grammar level. At the same time it is hoped that it can provide examples and model best practices of how to use the ``altair`` to build effective statistical graphics.
@@ -54,7 +54,7 @@ And while we were at it, here are some goodies:
 
 * Free software: BSD license.
 * Fully documented: https://altair_recipes.readthedocs.io.
-* Highly consistent API.
+* Highly consistent API enforced with autosig_
 * Near 100% regression test coverage.
 * Most API entrypoints accept data in both wide and long format.
 * Data can be provided as a dataframe or as a URL pointing to a csv or json file.
@@ -83,3 +83,4 @@ This package was created with Cookiecutter_ and the `elgertam/cookiecutter-pipen
 .. _`elgertam/cookiecutter-pipenv`: https://github.com/elgertam/cookiecutter-pipenv
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _Examples: examples.html
+.. _autosig: http://github.com/piccolbo/autosig

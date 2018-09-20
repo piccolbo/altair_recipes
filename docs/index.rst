@@ -6,6 +6,7 @@ Welcome to altair_recipes's documentation!
    :caption: Contents:
 
    readme
+   examples
    installation
    usage
    modules
