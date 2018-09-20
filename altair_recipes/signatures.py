@@ -60,7 +60,7 @@ class BivariateRecipe(Recipe):
 @signature
 class MultivariateRecipe(Recipe):
     columns = param(
-        None,
+        default=None,
         docstring="""`str` or `int` or `list` thereof
     The column or columns to be used in the graphics, defaults to all""")
     group_by = param(
