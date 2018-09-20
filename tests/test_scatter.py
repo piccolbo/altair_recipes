@@ -3,7 +3,7 @@ from altair_recipes.common import viz_reg_test
 from altair_recipes.display_altair import show_test
 from vega_datasets import data
 
-#' ##  Scatter
+#' <h2>Scatter</h2>
 #+ results='raw'
 
 
@@ -19,7 +19,7 @@ def test_scatter():
 
 show_test(test_scatter)
 
-#' ##  Multiscatter at defaults
+#' <h2>Multiscatter at defaults</h2>
 #+ results='raw'
 
 
@@ -30,7 +30,7 @@ def test_multiscatter_defaults():
 
 show_test(test_multiscatter_defaults)
 
-#' ##  Multiscatter with explicit parameters
+#' <h2>Multiscatter with explicit parameters</h2>
 #+ results='raw'
 
 

@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from vega_datasets import data
 
-#' ## Heatmap
+#' <h2>Heatmap</h2>
 #+ results='raw'
 
 
@@ -27,7 +27,7 @@ def test_heatmap():
 
 show_test(test_heatmap)
 
-#' ##  Count Heatmap
+#' <h2>Count Heatmap</h2>
 #+ results='raw'
 
 

@@ -3,7 +3,7 @@ from altair_recipes.common import viz_reg_test
 from altair_recipes.display_altair import show_test
 from vega_datasets import data
 
-#' ##  Boxplot from melted data
+#' <h2>Boxplot from melted data</h2>
 #+ results='raw'
 
 
@@ -13,7 +13,7 @@ def test_boxplot_melted():
 
 
 show_test(test_boxplot_melted)
-#' ##  Boxplot from cast data
+#' <h2>Boxplot from cast data</h2>
 #+ results='raw'
 
 

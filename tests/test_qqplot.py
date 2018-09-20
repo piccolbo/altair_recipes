@@ -4,7 +4,7 @@ from altair_recipes.display_altair import show_test
 import numpy as np
 import pandas as pd
 
-#' ##  Qqplot
+#' <h2>Qqplot</h2>
 #+ results='raw'
 
 

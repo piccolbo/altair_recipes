@@ -82,5 +82,5 @@ This package was created with Cookiecutter_ and the `elgertam/cookiecutter-pipen
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`elgertam/cookiecutter-pipenv`: https://github.com/elgertam/cookiecutter-pipenv
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-.. _Examples: examples.html
+.. _Examples: https://altair-recipes.readthedocs.io/en/latest/examples.html
 .. _autosig: http://github.com/piccolbo/autosig

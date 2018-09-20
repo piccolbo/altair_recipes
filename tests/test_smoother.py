@@ -5,7 +5,7 @@ from altair_recipes.display_altair import show_test
 import numpy as np
 import pandas as pd
 
-#' ##  Smoother
+#' <h2>Smoother</h2>
 #+ results='raw'
 
 

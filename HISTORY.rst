@@ -2,7 +2,12 @@
 History
 =======
 
-0.2.5 (2018-09-20)
+0.3.1 (2018-09-20)
+------------------
+
+* Addressing a documentation mishap
+
+0.3.0 (2018-09-20)
 ------------------
 
 * Better readme and a raft of examples
