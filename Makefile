@@ -65,7 +65,17 @@ coverage: ## check code coverage quickly with the default Python
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
-docs: ## generate Sphinx HTML documentation, including API docs
+
+
+%.html : %.py
+	  pypublish $<
+
+TESTS=$(wildcard tests/*.py)
+PYPUBLISH_DOCS = $(TESTS:py=html)
+
+
+docs:  $(PYPUBLISH_DOCS) ## generate Sphinx HTML documentation, including API docs
+	echo $(TESTS)
 	rm -f docs/altair_recipes.rst
 	rm -f docs/modules.rst
 	sphinx-apidoc -o docs/ --maxdepth 0 altair_recipes/ altair_recipes/[a-z]*py
