@@ -40,8 +40,8 @@ def viz_reg_test(test_f):
                         )
                     ).to_json()
                 )
-                plot.save(test_f.__code__.co_filename + "_" + test_f.__qualname__ +
-                          ".html")
+                plot.save(test_f.__code__.co_filename + "_" +
+                          test_f.__qualname__ + ".html")
             return plot
 
     return fun
@@ -158,7 +158,3 @@ def multivariate_preprocess(data, columns, group_by):
         key = group_by
         value = columns if type(columns) is str else columns[0]
     return data, key, value
-
-
-def subset_dict(d, keep_keys, exclude_values=[None]):
-    return {k: d[k] for k in keep_keys if d[k] not in exclude_values}

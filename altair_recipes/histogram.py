@@ -1,11 +1,11 @@
 """Generate histograms."""
 from .common import multivariate_preprocess
-from .signatures import UnivariateRecipe, MultivariateRecipe
+from .signatures import univariate_recipe, multivariate_recipe
 import altair as alt
 from autosig import autosig
 
 
-@autosig(UnivariateRecipe)
+@autosig(univariate_recipe)
 def histogram(
         data,
         column=0,
@@ -15,7 +15,7 @@ def histogram(
         alt.X(column + ":Q", bin=True), alt.Y("count()"))
 
 
-@autosig(MultivariateRecipe)
+@autosig(multivariate_recipe)
 def layered_histogram(
         data,
         columns=None,

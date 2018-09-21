@@ -1,11 +1,11 @@
 """Boxplot implementation."""
 from .common import multivariate_preprocess
-from .signatures import MultivariateRecipe
+from .signatures import multivariate_recipe
 import altair as alt
 from autosig import autosig
 
 
-@autosig(MultivariateRecipe)
+@autosig(multivariate_recipe)
 def boxplot(
         data,
         columns=None,

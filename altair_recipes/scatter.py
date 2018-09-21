@@ -1,57 +1,33 @@
 """Scatter plots."""
-from .common import default, subset_dict
-from .signatures import BivariateRecipe, MultivariateRecipe
+from .common import default
+from .signatures import (
+    bivariate_recipe,
+    multivariate_recipe,
+    color,
+    tooltip,
+)
 import altair as alt
-from autosig import autosig, signature, param
-
-color = param(
-    default=None,
-    docstring="""`str` or `int`
-The column containing the data associated with the color of the mark""")
-
-tooltip = param(
-    default=None,
-    docstring="""`str` or `int`
-The column containing the data associated with the tooltip text""")
+from autosig import autosig, Signature
+from toolz.dicttoolz import itemfilter
 
 
-@signature
-class Scatter(BivariateRecipe):
-    color = color
-    tooltip = tooltip
-
-    def default(self):
-        super().default()
-        self.to_column("color")
-        self.to_column("tooltip")
-
-
-@autosig(Scatter)
+@autosig(bivariate_recipe + Signature(
+    color=color(default=None, position=3),
+    tooltip=tooltip(default=None, position=4)))
 def scatter(data, x=0, y=1, color=None, tooltip=None):
     """Generate a scatter plot."""
-    kwargs = subset_dict(locals(), keep_keys=['color', 'tooltip'])
+    kwargs = itemfilter(lambda x: x in ['color', 'tooltip'], locals())
     return alt.Chart(data).mark_point().encode(x=x, y=y, **kwargs)
 
 
-@signature
-class Multiscatter(MultivariateRecipe):
-    # TODO: dupicates from line 11 in class Scatter
-    color = color
-    tooltip = tooltip
-
-    def default(self):
-        super().default()
-        self.to_column("color")
-        self.to_column("tooltip")
-
-
-@autosig(Multiscatter)
+@autosig(multivariate_recipe + Signature(
+    color=color(default=None, position=3),
+    tooltip=tooltip(default=None, position=4)))
 def multiscatter(data, columns=None, group_by=None, color=None, tooltip=None):
     """Generate many scatter plots.
 
     Based on several columns, pairwise."""
-    kwargs = subset_dict(locals(), keep_keys=['color', 'tooltip'])
-    columns = list(default(columns, data.columns))
+    kwargs = itemfilter(lambda x: x in ['color', 'tooltip'], locals())
     assert group_by is None, "Long format not supported yet"
     return alt.Chart(data).mark_point().encode(
         alt.X(alt.repeat("column"), type='quantitative'),

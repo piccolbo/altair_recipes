@@ -1,11 +1,11 @@
 """Generate qqplots."""
-from .signatures import BivariateRecipe
+from .signatures import bivariate_recipe
 import altair as alt
 from autosig import autosig
 import numpy as np
 
 
-@autosig(BivariateRecipe)
+@autosig(bivariate_recipe)
 def qqplot(data, x=0, y=1):
     """Generate a quantile-quantile plot."""
     n = data.shape[0]

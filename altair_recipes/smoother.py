@@ -1,21 +1,17 @@
 """Smoother graph."""
-from .signatures import signature, BivariateRecipe
+from .signatures import bivariate_recipe
 import altair as alt
-from autosig import autosig, param
+from autosig import autosig, param, Signature
 
 
-@signature
-class Smoother(BivariateRecipe):
-    window = param(
+@autosig(bivariate_recipe + Signature(
+    window=param(
         default=None, docstring="""int
-The size of the smoothing window""")
-    interquartile_area = param(
+The size of the smoothing window"""),
+    interquartile_area=param(
         default=True,
         docstring="""interquartile_area: bool
-Whether to plot the IRQ as an area""")
-
-
-@autosig(Smoother)
+Whether to plot the IRQ as an area""")))
 def smoother(data, x=0, y=1, window=None, interquartile_area=True):
     """Generate a smooth line plot with optional IRQ shading area."""
     window = data.shape[0] // 4 if window is None else int(window)
