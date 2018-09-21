@@ -2,6 +2,11 @@
 History
 =======
 
+0.3.2 (2018-09-21)
+------------------
+
+* Dealt with breaking changes from autosig, but code is simpler and paves the way for some new features
+
 0.3.1 (2018-09-20)
 ------------------
 
