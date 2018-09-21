@@ -8,7 +8,11 @@ from .signatures import (
 )
 import altair as alt
 from autosig import autosig, Signature
-from toolz.dicttoolz import itemfilter
+from toolz.dicttoolz import keyfilter, valfilter
+
+
+def keyvalfilter(keypred, valpred, a_dict):
+    return keyfilter(keypred, valfilter(valpred, a_dict))
 
 
 @autosig(bivariate_recipe + Signature(
@@ -16,7 +20,8 @@ from toolz.dicttoolz import itemfilter
     tooltip=tooltip(default=None, position=4)))
 def scatter(data, x=0, y=1, color=None, tooltip=None):
     """Generate a scatter plot."""
-    kwargs = itemfilter(lambda x: x in ['color', 'tooltip'], locals())
+    kwargs = keyvalfilter(lambda x: x in ['color', 'tooltip'],
+                          lambda x: x is not None, locals())
     return alt.Chart(data).mark_point().encode(x=x, y=y, **kwargs)
 
 
@@ -27,7 +32,8 @@ def multiscatter(data, columns=None, group_by=None, color=None, tooltip=None):
     """Generate many scatter plots.
 
     Based on several columns, pairwise."""
-    kwargs = itemfilter(lambda x: x in ['color', 'tooltip'], locals())
+    kwargs = keyvalfilter(lambda x: x in ['color', 'tooltip'],
+                          lambda x: x is not None, locals())
     assert group_by is None, "Long format not supported yet"
     return alt.Chart(data).mark_point().encode(
         alt.X(alt.repeat("column"), type='quantitative'),
