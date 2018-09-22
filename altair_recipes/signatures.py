@@ -58,14 +58,14 @@ multivariate_recipe = recipe + Signature(
     columns=param(
         default=None,
         validator=to_columns,
-        position=2,
+        position=1,
         docstring="""`str` or `int` or `list` thereof
     The column or columns to be used in the graphics, defaults to all""",
     ),
     group_by=param(
         default=None,
         validator=to_column,
-        position=3,
+        position=2,
         docstring="""`str` or `int`
     The column to be used to group the data when in long form. When group_by is
     specified columns should point to a single column""",

@@ -1,5 +1,4 @@
 """Scatter plots."""
-from .common import default
 from .signatures import (
     bivariate_recipe,
     multivariate_recipe,
