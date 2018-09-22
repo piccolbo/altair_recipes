@@ -34,35 +34,40 @@ A collection of ready-made statistical graphics for vega.
 
 ``altair`` is a python package that produces ``vega`` graphics. Like ``vega``, it adopts an approach to describing statistical graphics known as *grammar of graphics* which underlies other well known packages such as ``ggplot`` for R. It represents a extremely useful compromise of power and flexibility. Its elements are data, marks (points, lines), encodings (relations between data and marks), scales etc.
 
-Sometimes we want to skip all of that and just produce a boxplot (or heatmap or histogram, the argument is the same) by calling ``boxplot(...)`` because:
+Sometimes we want to skip all of that and just produce a boxplot (or heatmap or histogram, the argument is the same) by calling::
 
-* It's more convenient, faster, less error-prone.
+  boxplot(data.iris(), columns="petalLength", group_by="species")
+
+because:
+
+
 * It's a well known type of statistical graphics that everyone can recognize and understand on the fly.
-* It's widely used and time tested.
-* Creativity is nice, in statistical graphics as in many other endeavors, but takes effort: there are more bad charts out there than good ones. Following a grammar won't guarantee a text is a classic novel. A boxplot is beyond reproach.
-* While it's simple to put together a boxplot in ``altair``, it isn't trivial: there are rectangles, vertical lines, horizontal lines (whiskers), points (outliers). Each element is related to a different statistics of the data. It's a few lines of code and, unless you run them, it's hard to tell you are looking at a boxplot.
-* In software, there is often room for different compromises between power and ease of use, and while the one picked by ``altair`` is incredibly useful and proven over several implementations and years of practice, there are times when you don't need its full power. Just show me a boxplot of the data, I don't care what the whiskers thickness is. It's got to be done by yesterday and no, it's not for a Science submission. Any decent boxplot will do, thanks.
+* Creativity is nice, in statistical graphics as in many other endeavors, but dangerous: there are more `bad charts <https://www.google.com/search?q=chartjunk&tbm=isch>`_ out there than good ones. The *grammar of graphics* is no insurance.
+* While it's simple to put together a boxplot in ``altair``, it isn't trivial: there are rectangles, vertical lines, horizontal lines (whiskers), points (outliers). Each element is related to a different statistics of the data. It's about `30 lines of code <https://altair-viz.github.io/gallery/boxplot_max_min.html>`_ and, unless you run them, it's hard to tell you are looking at a boxplot.
+* One doesn't always need the control that the grammar of graphics affords. There are times when I need to see a boxplot as quick as possible. Others, for instance preparing a publication, when I need to control every detail.
+
+The boxplot is not the only example. The scatter plot, the quantile-quantile plot, the heatmap are important idioms that are battle tested in data analysis practice. They deserve their own abstraction. Other packages offering an abstraction above the grammar level are:
+
 * ``seaborn`` and the graphical subset of ``pandas``, for example, both provide high level statistical graphics primitives (higher than the grammar of graphics) and they are quite successful (but not web-based).
-* Even ``ggplot``, which is named after the Grammar of Graphics, slipped in some more complex charts, pretending they are elements of the grammar, such as ``geom_boxplot``, because sometimes even R developers are lazy. But a boxplot is not a *geom* or mark. It's a combination of several ones, certain statistics and so on. The right approach is to keep these two levels of abstraction separate.
-
-The boxplot is not the only example. The scatter plot, the quantile-quantile plot, the heatmap are important idioms that are battle tested in data analysis practice. They deserve their own abstraction.
+* ``ggplot``, even if named after the Grammar of Graphics, slipped in some more complex charts, pretending they are elements of the grammar, such as ``geom_boxplot``, because sometimes even R developers are lazy. But a boxplot is not a *geom* or mark. It's a combination of several ones, certain statistics and so on. I suspect the authors of ``altair`` know better than mixing the two levels.
 
 
-``altair_recipes`` aims to fill this space above ``altair`` while making full use of its features. It provides a growing list of "classic" statistical graphics without going down to the grammar level. At the same time it is hoped that it can provide examples and model best practices for ``altair``.
+``altair_recipes`` aims to fill this space above ``altair`` while making full use of its features. It provides a growing list of "classic" statistical graphics without going down to the grammar level. At the same time it is hoped that, over time, it can become  a repository of examples and model best practices for ``altair``, a computable form of its `gallery <https://altair-viz.github.io/gallery/index.html>`_
 
-And while we were at it, here are some goodies:
+Features
+--------
 
 * Free software: BSD license.
 * Fully documented: https://altair_recipes.readthedocs.io.
-* Highly consistent API enforced with autosig_
+* Highly consistent API enforced with `autosig <https://github.com/piccolbo/autosig>`_
 * Near 100% regression test coverage.
-* Most API entrypoints accept data in both wide and long format.
+* Support for both wide and long format.
 * Data can be provided as a dataframe or as a URL pointing to a csv or json file.
 * All charts produced are valid ``altair`` charts, can be modified, combined, saved, served, embedded exactly as one.
 
 
-Features
---------
+Chart types
+-----------
 
 * autocorrelation
 * boxplot
@@ -72,7 +77,7 @@ Features
 * scatter, in the simple and all-vs-all versions
 * smoother, smoothing line with IRQ range shading
 
-See Examples_.
+See `Examples <https://altair-recipes.readthedocs.io/en/latest/examples.html>`_.
 
 Credits
 -------
