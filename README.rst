@@ -30,7 +30,7 @@ altair_recipes
 A collection of ready-made statistical graphics for vega.
 ---------------------------------------------------------
 
-``vega`` is a statistical graphics system for the web, meaning the plots are displayed in a browser. As an added bonus, it adds interactions, again through web technologies: select data point, reveal information on hover etc. Interaction and the web are clearly the future of statistical graphics. Even the successor to the famous `ggplot` for R, `ggvis` is based on `vega`.
+``vega`` is a statistical graphics system for the web, meaning the plots are displayed in a browser. As an added bonus, it adds interactions, again through web technologies: select data point, reveal information on hover etc. Interaction and the web are clearly the future of statistical graphics. Even the successor to the famous ``ggplot`` for R, ``ggvis`` is based on ``vega``.
 
 ``altair`` is a python package that produces ``vega`` graphics. Like ``vega``, it adopts an approach to describing statistical graphics known as *grammar of graphics* which underlies other well known packages such as ``ggplot`` for R. It represents a extremely useful compromise of power and flexibility. Its elements are data, marks (points, lines), encodings (relations between data and marks), scales etc.
 
