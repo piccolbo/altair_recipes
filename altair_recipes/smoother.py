@@ -6,10 +6,13 @@ from autosig import autosig, param, Signature
 
 @autosig(bivariate_recipe + Signature(
     window=param(
-        default=None, docstring="""int
+        default=None,
+        position=3,
+        docstring="""int
 The size of the smoothing window"""),
     interquartile_area=param(
         default=True,
+        position=4,
         docstring="""interquartile_area: bool
 Whether to plot the IRQ as an area""")))
 def smoother(data, x=0, y=1, window=None, interquartile_area=True):
