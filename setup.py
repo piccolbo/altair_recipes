@@ -12,7 +12,7 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     "altair>=2.2.2",
-    "autosig>=0.5.0",
+    "autosig>=0.6.0",
     "boltons>=18.0.0",
     "numpy>=1.5.1",
     "pandas>=0.23.4",
