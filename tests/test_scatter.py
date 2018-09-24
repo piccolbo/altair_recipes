@@ -1,3 +1,4 @@
+"""Tests for scatter-related plots."""
 import altair_recipes as ar
 from altair_recipes.common import viz_reg_test
 from altair_recipes.display_altair import show_test
@@ -9,6 +10,7 @@ from vega_datasets import data
 
 @viz_reg_test
 def test_scatter():
+    """Test scatter."""
     return ar.scatter(
         data.iris(),
         x="petalWidth",
@@ -25,6 +27,7 @@ show_test(test_scatter)
 
 @viz_reg_test
 def test_multiscatter_defaults():
+    """Test multiscatter."""
     return ar.multiscatter(data.iris())
 
 
@@ -36,6 +39,7 @@ show_test(test_multiscatter_defaults)
 
 @viz_reg_test
 def test_multiscatter_args():
+    """Test multiscatter."""
     return ar.multiscatter(
         data.iris(), columns=data.iris().columns[:-1], color="species")
 

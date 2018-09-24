@@ -1,8 +1,10 @@
+"""Mini-library for all the other modules."""
 import altair as alt
 from boltons.iterutils import remap
 from functools import singledispatch
 import pandas as pd
 import requests
+from number import Number
 
 
 def viz_reg_test(test_f):
@@ -38,12 +40,16 @@ def viz_reg_test(test_f):
                             if isinstance(v, float)
                             else (k, v),
                         )
-                    ).to_json()
-                )
+                    ).to_json())
                 plot.save(test_f.__code__.co_filename + "_" +
                           test_f.__qualname__ + ".html")
             return plot
 
+    fun.__doc__ += """
+    Parameters
+    ----------
+    Pass a single unnamed argument equal None to manually  execute outside regression testing. In that case it returns a chart.
+    """
     return fun
 
 
@@ -73,6 +79,62 @@ def _(data):
 @to_dataframe.register(str)
 def _(data):
     return pd.DataFrame(requests.get(data).json())
+
+
+def to_column(inst, attribute, value):
+    """Convert a col specification to a col name and assign it to a given attribute.
+
+    If it's an int, look at  inst.data positionally to find the col name, otherwise convert to str.
+    Parameters
+    ----------
+    inst : any
+        Instance to which attribute belongs.
+    attribute : attr.Attribute
+        The attributed holding the column info.
+    value : `int` or `str`
+        The initial col specification.
+
+    Returns
+    -------
+    NoneType
+        None, works by side-effects on inst.
+
+    """
+    if value is not None:
+        value = inst.data.columns[value] if isinstance(value,
+                                                       Number) else str(value)
+    assert isinstance(value, str) or value is None
+    setattr(inst, attribute.name, value)
+
+
+def to_columns(inst, attribute, value):
+    """Convert a col set specification to a list of str.
+
+    It first promotes value to a list if not Iterable, then applies to_column to each element and assigns result to attribute in inst. If value is None, it is construed as "all columns in inst.data"
+
+    Parameters
+    ----------
+    inst : any
+        Instance to which attribute belongs.
+    attribute : attr.Attribute
+        The attributed holding the column info.
+    value : `int`, `str` or Iterable thereof, or None
+        Col or multiple col specification as position or name or iterable thereof. None stand for "all columns"
+
+    Returns
+    -------
+    NoneType
+        None, works by side-effects on inst.
+
+    """
+    value = (list(inst.data.columns) if value is None else
+             ([inst.data.columns[value]] if isinstance(value, int) else
+              ([value] if isinstance(value, str) else\
+               list(
+                  map(lambda x: inst.data.columns[x] if type(x) is int else x,
+                      value)))))
+
+    setattr(inst, attribute.name, value)
 
 
 def default(*args):

@@ -1,25 +1,8 @@
-from .common import to_dataframe
+"""Collection of signatures used throughout the package."""
+
+from .common import to_dataframe, to_column, to_columns
 from autosig import Signature, param
 from functools import partial
-
-
-def to_column(inst, attribute, value):
-    if value is not None:
-        value = inst.data.columns[value] if isinstance(value, int) else value
-    assert isinstance(value, str) or value is None
-    setattr(inst, attribute.name, value)
-
-
-def to_columns(inst, attribute, value):
-    value = (list(inst.data.columns) if value is None else
-             ([inst.data.columns[value]] if isinstance(value, int) else
-              ([value] if isinstance(value, str) else\
-               list(
-                  map(lambda x: inst.data.columns[x] if type(x) is int else x,
-                      value)))))
-
-    setattr(inst, attribute.name, value)
-
 
 recipe = Signature(
     data=param(

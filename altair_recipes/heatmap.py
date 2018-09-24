@@ -1,11 +1,12 @@
 """Heatmap implementation."""
-from .signatures import bivariate_recipe, to_column, color
+from .signatures import bivariate_recipe, color
 import altair as alt
 from autosig import autosig, Signature, param
 from math import sqrt
 
 
 def maxbins(data):
+    """Return a pair of ints with reasonable defaults for binning in heatmap."""
     n = sqrt(data.shape[0])
 
     return data, n * 4 // 3, n * 3 // 4
