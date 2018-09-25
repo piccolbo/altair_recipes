@@ -9,17 +9,20 @@ recipe = Signature(
         converter=to_dataframe,
         position=0,
         docstring="""`altair.Data` or `pandas.DataFrame` or csv or json file URL
-    The data from which the statistical graphics is being generated"""),
+    The data from which the statistical graphics is being generated""",
+    ),
     height=param(
         default=300,
         converter=int,
         docstring="""`int`
-    The height of the chart"""),
+    The height of the chart""",
+    ),
     width=param(
         default=400,
         converter=int,
         docstring="""`int`
-    The height of the chart"""),
+    The height of the chart""",
+    ),
 )
 
 univariate_recipe = recipe + Signature(
@@ -29,7 +32,8 @@ univariate_recipe = recipe + Signature(
         position=1,
         docstring="""`str` or `int`
     The column containing the data to be used in the graphics""",
-    ))
+    )
+)
 
 bivariate_recipe = recipe + Signature(
     x=param(
@@ -45,7 +49,8 @@ bivariate_recipe = recipe + Signature(
         position=2,
         docstring="""`str` or `int`
     The column containing the data associated with the vertical dimension""",
-    ))
+    ),
+)
 
 multivariate_recipe = recipe + Signature(
     columns=param(
@@ -62,16 +67,19 @@ multivariate_recipe = recipe + Signature(
         docstring="""`str` or `int`
     The column to be used to group the data when in long form. When group_by is
     specified columns should point to a single column""",
-    ))
+    ),
+)
 
 color = partial(
     param,
     validator=to_column,
     docstring="""`str` or `int`
-The column containing the data associated with the color of the mark""")
+The column containing the data associated with the color of the mark""",
+)
 
 tooltip = partial(
     param,
     validator=to_column,
     docstring="""`str` or `int`
-The column containing the data associated with the tooltip text""")
+The column containing the data associated with the tooltip text""",
+)
