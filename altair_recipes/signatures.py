@@ -14,12 +14,14 @@ recipe = Signature(
     height=param(
         default=300,
         converter=int,
+        position=-2,
         docstring="""`int`
     The height of the chart""",
     ),
     width=param(
         default=400,
         converter=int,
+        position=-1,
         docstring="""`int`
     The height of the chart""",
     ),
