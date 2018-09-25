@@ -4,8 +4,9 @@ from altair_recipes.display_altair import show_test
 import numpy as np
 import pandas as pd
 
+# fmt: off
 #' <h2>Autocorrelation</h2>
-#+ results='raw'
+# # fmt: on
 
 
 @viz_reg_test

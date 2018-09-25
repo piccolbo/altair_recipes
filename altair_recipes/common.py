@@ -40,17 +40,19 @@ def viz_reg_test(test_f):
                             if isinstance(v, float)
                             else (k, v),
                         )
-                    ).to_json())
+                    ).to_json()
+                )
                 plot.save(test_f.__code__.co_filename + "_" +
                           test_f.__qualname__ + ".html")
             return plot
 
-    test_f.__doc__ = (test_f.__doc__ or "Test for function {test_f}".format(
-        test_f=test_f.__qualname__)) + """
+    test_f.__doc__ = (
+        (test_f.__doc__ or
+         "Test for function {test_f}".format(test_f=test_f.__qualname__)) + """
     Parameters
     ----------
     Pass a single unnamed argument equal None to manually  execute outside regression testing. In that case it returns a chart.
-    """
+    """)
     return fun
 
 
@@ -130,8 +132,7 @@ def to_columns(inst, attribute, value):
     """
     value = (list(inst.data.columns) if value is None else
              ([inst.data.columns[value]] if isinstance(value, int) else
-              ([value] if isinstance(value, str) else\
-               list(
+              ([value] if isinstance(value, str) else list(
                   map(lambda x: inst.data.columns[x] if type(x) is int else x,
                       value)))))
 

@@ -7,7 +7,8 @@ display_html(
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
 """,
-    raw=True)
+    raw=True,
+)
 
 
 def show(plot):
@@ -25,8 +26,11 @@ def show(plot):
     var opt = {{"renderer": "canvas", "actions": false}};
     vegaEmbed("#{id}", spec, opt);
   </script>
-  """.format(id=id, json=json),
-        raw=True)
+  """.format(
+            id=id, json=json
+        ),
+        raw=True,
+    )
 
 
 def show_test(f):

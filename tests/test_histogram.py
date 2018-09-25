@@ -5,9 +5,12 @@ import numpy as np
 import pandas as pd
 from vega_datasets import data
 
+# fmt: off
 #' <h2>Histogram</h2>
+# fmt: on
 
-#+ results='raw'
+
+
 
 
 @viz_reg_test
@@ -16,9 +19,12 @@ def test_histogram():
 
 
 show_test(test_histogram)
+# fmt: off
 #' <h2>Layered Histogram from wide data</h2>
+# fmt: on
 
-#+ results='raw'
+
+
 
 
 @viz_reg_test
@@ -34,9 +40,12 @@ def test_layered_histogram_wide():
 
 show_test(test_layered_histogram_wide)
 
+# fmt: off
 #' <h2>Layered Histogram from long data</h2>
+# fmt: on
 
-#+ results='raw'
+
+
 
 
 @viz_reg_test
