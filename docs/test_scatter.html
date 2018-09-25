@@ -13,22 +13,24 @@
 <h2>Scatter</h2>
 
 
+
+
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_scatter</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
         <span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">(),</span>
         <span class="n">x</span><span class="o">=</span><span class="s2">&quot;petalWidth&quot;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;petalLength&#39;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;petalLength&quot;</span><span class="p">,</span>
         <span class="n">color</span><span class="o">=</span><span class="s2">&quot;sepalWidth&quot;</span><span class="p">,</span>
-        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_scatter</span><span class="p">)</span>
 </pre></div>
 
 
-
- <div id="Ace858d7657262264dd67525eb9361797b65b01e29df3e799c7a35d33bbf9fbee"></div>
+ <div id="Aab4f986853945432b1d01d1577e11f2f9b6fbd1f6f31ae7e1fc5a96f21ae0a13"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -1113,10 +1115,12 @@
       "type": "quantitative"
     }
   },
-  "mark": "point"
+  "height": 300,
+  "mark": "point",
+  "width": 400
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Ace858d7657262264dd67525eb9361797b65b01e29df3e799c7a35d33bbf9fbee", spec, opt);
+    vegaEmbed("#Aab4f986853945432b1d01d1577e11f2f9b6fbd1f6f31ae7e1fc5a96f21ae0a13", spec, opt);
   </script>
   
 
@@ -1132,8 +1136,7 @@
 </pre></div>
 
 
-
- <div id="Aa5e7032e77154b0c05156d78b66df2d9bbdfb22490f3378d4b107b09976e13ae"></div>
+ <div id="A303de7e9fd269030cc086e2aa551e9b8a606611b7a2f786027a66d491858b9ca"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -2231,19 +2234,27 @@
         "type": "quantitative"
       }
     },
-    "mark": "point"
+    "height": 60.0,
+    "mark": {
+      "size": 0.2,
+      "type": "point"
+    },
+    "width": 80.0
   }
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Aa5e7032e77154b0c05156d78b66df2d9bbdfb22490f3378d4b107b09976e13ae", spec, opt);
+    vegaEmbed("#A303de7e9fd269030cc086e2aa551e9b8a606611b7a2f786027a66d491858b9ca", spec, opt);
   </script>
   
 
 <h2>Multiscatter with explicit parameters</h2>
 
 
+
+
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_multiscatter_args</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Test multiscatter.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">multiscatter</span><span class="p">(</span>
         <span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">()</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
 
@@ -2252,8 +2263,7 @@
 </pre></div>
 
 
-
- <div id="Af8aa1ed93cd2f9e094d885fa3afafa358c88edc09bf685424209cc5e98b5415a"></div>
+ <div id="A7960b9739171af36230ccbc590e7bda8b78c23379636654f6fa9a9ea725d4697"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -3353,10 +3363,15 @@
         "type": "quantitative"
       }
     },
-    "mark": "point"
+    "height": 75.0,
+    "mark": {
+      "size": 0.25,
+      "type": "point"
+    },
+    "width": 100.0
   }
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Af8aa1ed93cd2f9e094d885fa3afafa358c88edc09bf685424209cc5e98b5415a", spec, opt);
+    vegaEmbed("#A7960b9739171af36230ccbc590e7bda8b78c23379636654f6fa9a9ea725d4697", spec, opt);
   </script>
   

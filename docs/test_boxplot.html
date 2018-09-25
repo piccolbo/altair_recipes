@@ -13,6 +13,9 @@
 <h2>Boxplot from melted data</h2>
 
 
+
+
+
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_boxplot_melted</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;petalLength&quot;</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
@@ -22,8 +25,7 @@
 </pre></div>
 
 
-
- <div id="A35710c73e494d33db270e27d877adfbf2be8bb0663fc0b46178ee28d18df8248"></div>
+ <div id="A38b620a3c5b68bd0c93c5c649115028924ab3b7873e6db2755fc286ecd6e9f73"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -1108,10 +1110,12 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "filled": false,
         "type": "bar"
-      }
+      },
+      "width": 400
     },
     {
       "data": {
@@ -1133,10 +1137,12 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "filled": false,
         "type": "bar"
-      }
+      },
+      "width": 400
     },
     {
       "data": {
@@ -1153,7 +1159,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "tick"
+      "height": 300,
+      "mark": "tick",
+      "width": 400
     },
     {
       "data": {
@@ -1170,7 +1178,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "tick"
+      "height": 300,
+      "mark": "tick",
+      "width": 400
     },
     {
       "data": {
@@ -1195,16 +1205,21 @@
           "type": "quantitative"
         }
       },
-      "mark": "rule"
+      "height": 300,
+      "mark": "rule",
+      "width": 400
     }
   ]
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A35710c73e494d33db270e27d877adfbf2be8bb0663fc0b46178ee28d18df8248", spec, opt);
+    vegaEmbed("#A38b620a3c5b68bd0c93c5c649115028924ab3b7873e6db2755fc286ecd6e9f73", spec, opt);
   </script>
   
 
 <h2>Boxplot from cast data</h2>
+
+
+
 
 
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
@@ -1217,8 +1232,7 @@
 </pre></div>
 
 
-
- <div id="Ae9b8008bfbdea7613e3ce0b041e0324b0c3c4d2b1cc999b1e372f4dd5271b6fb"></div>
+ <div id="A9166b5c03a16c9749637f9d4156ddf47ca7f3671dd1306dc0bf27772c98273de"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -4253,10 +4267,12 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "filled": false,
         "type": "bar"
-      }
+      },
+      "width": 400
     },
     {
       "data": {
@@ -4278,10 +4294,12 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "filled": false,
         "type": "bar"
-      }
+      },
+      "width": 400
     },
     {
       "data": {
@@ -4298,7 +4316,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "tick"
+      "height": 300,
+      "mark": "tick",
+      "width": 400
     },
     {
       "data": {
@@ -4315,7 +4335,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "tick"
+      "height": 300,
+      "mark": "tick",
+      "width": 400
     },
     {
       "data": {
@@ -4340,11 +4362,13 @@
           "type": "quantitative"
         }
       },
-      "mark": "rule"
+      "height": 300,
+      "mark": "rule",
+      "width": 400
     }
   ]
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Ae9b8008bfbdea7613e3ce0b041e0324b0c3c4d2b1cc999b1e372f4dd5271b6fb", spec, opt);
+    vegaEmbed("#A9166b5c03a16c9749637f9d4156ddf47ca7f3671dd1306dc0bf27772c98273de", spec, opt);
   </script>
   

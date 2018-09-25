@@ -16,6 +16,9 @@
 
 
 
+
+
+
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_histogram</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">movies</span><span class="p">(),</span> <span class="n">column</span><span class="o">=</span><span class="s2">&quot;IMDB_Rating&quot;</span><span class="p">)</span>
@@ -25,8 +28,7 @@
 </pre></div>
 
 
-
- <div id="A79940d5e33d7800fee134293fe27537b4bd74ac5989cd854828fac8c39a47f59"></div>
+ <div id="A1e0f2bbece9937f8d67aeae1f8458edb86dc9d177393bf6ee8fad621df2cce06"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -57672,14 +57674,19 @@
       "type": "quantitative"
     }
   },
-  "mark": "bar"
+  "height": 300,
+  "mark": "bar",
+  "width": 400
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A79940d5e33d7800fee134293fe27537b4bd74ac5989cd854828fac8c39a47f59", spec, opt);
+    vegaEmbed("#A1e0f2bbece9937f8d67aeae1f8458edb86dc9d177393bf6ee8fad621df2cce06", spec, opt);
   </script>
   
 
 <h2>Layered Histogram from wide data</h2>
+
+
+
 
 
 
@@ -57698,8 +57705,7 @@
 </pre></div>
 
 
-
- <div id="Ac934c85f00da38bfe99bd55f43568cf4a565726dfa993c6651dab3ec9f6c07cf"></div>
+ <div id="Acac2836a25f9661a49718b43dbb85dd26f0097514e69e6737828bff7aef36ce7"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -69732,18 +69738,23 @@
       "type": "quantitative"
     }
   },
+  "height": 300,
   "mark": {
     "interpolate": "step",
     "opacity": 0.3333333333333333,
     "type": "area"
-  }
+  },
+  "width": 400
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Ac934c85f00da38bfe99bd55f43568cf4a565726dfa993c6651dab3ec9f6c07cf", spec, opt);
+    vegaEmbed("#Acac2836a25f9661a49718b43dbb85dd26f0097514e69e6737828bff7aef36ce7", spec, opt);
   </script>
   
 
 <h2>Layered Histogram from long data</h2>
+
+
+
 
 
 
@@ -69765,8 +69776,7 @@
 </pre></div>
 
 
-
- <div id="A2b4f1f02db9880fc786782d471cacd36848b63c9c83571d0ad23440d4cadd77c"></div>
+ <div id="A15fbe52884049fb0e93060fc39d1bd4de726a77b9fb49b2914f059b7543e6c8e"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -81799,13 +81809,15 @@
       "type": "quantitative"
     }
   },
+  "height": 300,
   "mark": {
     "interpolate": "step",
     "opacity": 0.3333333333333333,
     "type": "area"
-  }
+  },
+  "width": 400
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A2b4f1f02db9880fc786782d471cacd36848b63c9c83571d0ad23440d4cadd77c", spec, opt);
+    vegaEmbed("#A15fbe52884049fb0e93060fc39d1bd4de726a77b9fb49b2914f059b7543e6c8e", spec, opt);
   </script>
   

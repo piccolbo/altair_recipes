@@ -15,9 +15,11 @@
 <h2>Smoother</h2>
 
 
+
+
+
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_smoother</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Test smoother.&quot;&quot;&quot;</span>
     <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">x</span><span class="p">))</span>
@@ -28,8 +30,7 @@
 </pre></div>
 
 
-
- <div id="A675ba243ba97bbbb887f96f1bec317919a534296712e6eaac0c3fdb97618f45b"></div>
+ <div id="A95b7ea94cb07f4a7ab57ef2984f73b19f4b058bc56910514982c0d8440447c28"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -758,7 +759,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "line"
+      "height": 300,
+      "mark": "line",
+      "width": 400
     },
     {
       "data": {
@@ -778,14 +781,16 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "opacity": 0.2,
         "type": "area"
-      }
+      },
+      "width": 400
     }
   ]
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A675ba243ba97bbbb887f96f1bec317919a534296712e6eaac0c3fdb97618f45b", spec, opt);
+    vegaEmbed("#A95b7ea94cb07f4a7ab57ef2984f73b19f4b058bc56910514982c0d8440447c28", spec, opt);
   </script>
   
