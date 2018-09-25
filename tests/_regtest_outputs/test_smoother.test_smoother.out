@@ -722,7 +722,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "line"
+      "height": 300,
+      "mark": "line",
+      "width": 400
     },
     {
       "data": {
@@ -1443,10 +1445,12 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "opacity": 0.2,
         "type": "area"
-      }
+      },
+      "width": 400
     }
   ]
 }

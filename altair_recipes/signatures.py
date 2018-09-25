@@ -9,8 +9,18 @@ recipe = Signature(
         converter=to_dataframe,
         position=0,
         docstring="""`altair.Data` or `pandas.DataFrame` or csv or json file URL
-    The data from which the statistical graphics is being generated""",
-    ))
+    The data from which the statistical graphics is being generated"""),
+    height=param(
+        default=300,
+        converter=int,
+        docstring="""`int`
+    The height of the chart"""),
+    width=param(
+        default=400,
+        converter=int,
+        docstring="""`int`
+    The height of the chart"""),
+)
 
 univariate_recipe = recipe + Signature(
     column=param(

@@ -4,7 +4,7 @@ from boltons.iterutils import remap
 from functools import singledispatch
 import pandas as pd
 import requests
-from number import Number
+from numbers import Number
 
 
 def viz_reg_test(test_f):
@@ -45,7 +45,8 @@ def viz_reg_test(test_f):
                           test_f.__qualname__ + ".html")
             return plot
 
-    fun.__doc__ += """
+    test_f.__doc__ = (test_f.__doc__ or "Test for function {test_f}".format(
+        test_f=test_f.__qualname__)) + """
     Parameters
     ----------
     Pass a single unnamed argument equal None to manually  execute outside regression testing. In that case it returns a chart.

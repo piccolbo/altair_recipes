@@ -1078,10 +1078,12 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "filled": false,
         "type": "bar"
-      }
+      },
+      "width": 400
     },
     {
       "data": {
@@ -2154,10 +2156,12 @@
           "type": "quantitative"
         }
       },
+      "height": 300,
       "mark": {
         "filled": false,
         "type": "bar"
-      }
+      },
+      "width": 400
     },
     {
       "data": {
@@ -3225,7 +3229,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "tick"
+      "height": 300,
+      "mark": "tick",
+      "width": 400
     },
     {
       "data": {
@@ -4293,7 +4299,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "tick"
+      "height": 300,
+      "mark": "tick",
+      "width": 400
     },
     {
       "data": {
@@ -5369,7 +5377,9 @@
           "type": "quantitative"
         }
       },
-      "mark": "rule"
+      "height": 300,
+      "mark": "rule",
+      "width": 400
     }
   ]
 }

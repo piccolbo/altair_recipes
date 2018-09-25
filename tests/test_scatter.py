@@ -10,7 +10,6 @@ from vega_datasets import data
 
 @viz_reg_test
 def test_scatter():
-    """Test scatter."""
     return ar.scatter(
         data.iris(),
         x="petalWidth",
@@ -27,7 +26,6 @@ show_test(test_scatter)
 
 @viz_reg_test
 def test_multiscatter_defaults():
-    """Test multiscatter."""
     return ar.multiscatter(data.iris())
 
 

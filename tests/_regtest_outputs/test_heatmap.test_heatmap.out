@@ -639,5 +639,7 @@
       "type": "quantitative"
     }
   },
-  "mark": "rect"
+  "height": 300,
+  "mark": "rect",
+  "width": 400
 }

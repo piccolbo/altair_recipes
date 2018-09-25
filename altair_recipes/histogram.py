@@ -9,9 +9,11 @@ from autosig import autosig
 def histogram(
         data,
         column=0,
+        height=300,
+        width=400,
 ):
     """Generate a histogram."""
-    return alt.Chart(data).mark_bar().encode(
+    return alt.Chart(data,height=height, width=width).mark_bar().encode(
         alt.X(column + ":Q", bin=True), alt.Y("count()"))
 
 
@@ -20,10 +22,12 @@ def layered_histogram(
         data,
         columns=None,
         group_by=None,
+        height=300,
+        width=400,
 ):
     """Generate multiple overlapping histograms."""
     data, key, value = multivariate_preprocess(data, columns, group_by)
-    return alt.Chart(data).mark_area(
+    return alt.Chart(data,height=height, width=width).mark_area(
         opacity=1 / (len(data[group_by].unique())
                      if group_by is not None else len(columns)),
         interpolate="step",

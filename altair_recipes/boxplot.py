@@ -10,11 +10,13 @@ def boxplot(
         data,
         columns=None,
         group_by=None,
+        height=300,
+        width=400,
 ):
     """Generate a boxplot."""
     data, key, value = multivariate_preprocess(data, columns, group_by)
     #long form assumed from here
-    chart = alt.Chart(data)
+    chart = alt.Chart(data, height=height, width=width)
     chart_bar = chart.mark_bar(filled=False)
     chart_tick = chart.mark_tick()
     min_value = "min(" + value + ")"

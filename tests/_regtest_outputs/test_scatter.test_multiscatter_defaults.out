@@ -1091,6 +1091,11 @@
         "type": "quantitative"
       }
     },
-    "mark": "point"
+    "height": 60.0,
+    "mark": {
+      "size": 0.2,
+      "type": "point"
+    },
+    "width": 80.0
   }
 }

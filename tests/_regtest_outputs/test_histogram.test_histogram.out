@@ -57639,5 +57639,7 @@
       "type": "quantitative"
     }
   },
-  "mark": "bar"
+  "height": 300,
+  "mark": "bar",
+  "width": 400
 }

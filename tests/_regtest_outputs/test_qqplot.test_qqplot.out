@@ -520,5 +520,7 @@
       "type": "quantitative"
     }
   },
-  "mark": "point"
+  "height": 300,
+  "mark": "point",
+  "width": 400
 }
