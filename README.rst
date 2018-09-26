@@ -1,6 +1,6 @@
-==============
-altair_recipes
-==============
+
+Introduction to altair_recipes
+==============================
 
 
 .. image:: https://img.shields.io/pypi/v/altair_recipes.svg
@@ -26,7 +26,6 @@ altair_recipes
 
 
 
----------------------------------------------------------
 A collection of ready-made statistical graphics for vega.
 ---------------------------------------------------------
 
