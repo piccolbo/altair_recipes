@@ -17,19 +17,14 @@
 
 
 
-
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_heatmap</span><span class="p">():</span>
     <span class="c1"># Compute x^2 + y^2 across a 2D grid</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
 
     <span class="c1"># Convert this grid to columnar data expected by Altair</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span>
-        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">y</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span>
-        <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="n">z</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span>
-    <span class="p">})</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">y</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="s2">&quot;z&quot;</span><span class="p">:</span> <span class="n">z</span><span class="o">.</span><span class="n">ravel</span><span class="p">()})</span>
 
     <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>
 
@@ -698,15 +693,10 @@
 
 
 
-
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_count_heatmap</span><span class="p">():</span>
     <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">movies</span><span class="o">.</span><span class="n">url</span>
-    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">count_heatmap</span><span class="p">(</span>
-        <span class="n">source</span><span class="p">,</span>
-        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;IMDB_Rating&quot;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Rotten_Tomatoes_Rating&quot;</span><span class="p">,</span>
-    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">count_heatmap</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;IMDB_Rating&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Rotten_Tomatoes_Rating&quot;</span><span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_count_heatmap</span><span class="p">)</span>

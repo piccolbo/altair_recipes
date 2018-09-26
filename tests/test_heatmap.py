@@ -5,9 +5,8 @@ import numpy as np
 import pandas as pd
 from vega_datasets import data
 
-# fmt: off
+
 #' <h2>Heatmap</h2>
-# fmt: on
 
 
 @viz_reg_test
@@ -24,9 +23,8 @@ def test_heatmap():
 
 show_test(test_heatmap)
 
-# fmt: off
+
 #' <h2>Count Heatmap</h2>
-# fmt: on
 
 
 @viz_reg_test
