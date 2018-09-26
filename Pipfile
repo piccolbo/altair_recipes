@@ -19,6 +19,8 @@ vega-datasets = ">=0.5.0"
 watchdog = ">=0.8.3"
 wheel = ">=0.30.0"
 pweave = ">=0.30.2"
+sphinx-rtd-theme = "*"
+recommonmark = "*"
 
 [packages]
 "e1839a8" = {path = ".", editable = true}
