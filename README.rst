@@ -51,7 +51,7 @@ The boxplot is not the only example. The scatter plot, the quantile-quantile plo
 * ``ggplot``, even if named after the Grammar of Graphics, slipped in some more complex charts, pretending they are elements of the grammar, such as ``geom_boxplot``, because sometimes even R developers are lazy. But a boxplot is not a *geom* or mark. It's a combination of several ones, certain statistics and so on. I suspect the authors of ``altair`` know better than mixing the two levels.
 
 
-``altair_recipes`` aims to fill this space above ``altair`` while making full use of its features. It provides a growing list of "classic" statistical graphics without going down to the grammar level. At the same time it is hoped that, over time, it can become  a repository of examples and model best practices for ``altair``, a computable form of its `gallery <https://altair-viz.github.io/gallery/index.html>`_
+``altair_recipes`` aims to fill this space above ``altair`` while making full use of its features. It provides a growing list of "classic" statistical graphics without going down to the grammar level. At the same time it is hoped that, over time, it can become  a repository of examples and model best practices for ``altair``, a computable form of its `gallery <https://altair-viz.github.io/gallery/index.html>`_.
 
 Features
 --------
