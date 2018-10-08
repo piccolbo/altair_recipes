@@ -104,5 +104,5 @@ install: clean  ## install the package to the active Python's site-packages
 
 install-dev: clean ## install dev with pipenv
 	pip install pipenv
-	pipenv run pip install  --upgrade 'pip<=18.0'
+	pip install --upgrade 'pip<=18.0'
 	pipenv install --dev --three
