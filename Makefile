@@ -103,6 +103,6 @@ install: clean  ## install the package to the active Python's site-packages
 	python setup.py install
 
 install-dev: clean ## install dev with pipenv
-	pip install pipenv
-	pip install --upgrade 'pip<=18.0'
+	pip install --upgrade pip # to install latest 18.1
+	pip install git+https://github.com/pypa/pipenv.git
 	pipenv install --dev --three
