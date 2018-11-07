@@ -2,9 +2,17 @@
 import altair as alt
 from boltons.iterutils import remap
 from functools import singledispatch
+from numbers import Number
 import pandas as pd
 import requests
-from numbers import Number
+from toolz.dicttoolz import keyfilter, valfilter
+
+
+def round_floats(a_dict, precision):
+    return remap(
+        a_dict,
+        lambda p, k, v: (k, round(v, precision)) if isinstance(v, float) else (k, v),
+    )
 
 
 def viz_reg_test(test_f):
@@ -33,26 +41,24 @@ def viz_reg_test(test_f):
             plot = test_f()
             if regtest is not None:
                 regtest.write(
-                    alt.Chart.from_dict(
-                        remap(
-                            plot.to_dict(),
-                            lambda p, k, v: (k, round(v, 13))
-                            if isinstance(v, float)
-                            else (k, v),
-                        )
-                    ).to_json()
+                    alt.Chart.from_dict(round_floats(plot.to_dict * (), 13)).to_json()
                 )
-                plot.save(test_f.__code__.co_filename + "_" +
-                          test_f.__qualname__ + ".html")
+                plot.save(
+                    test_f.__code__.co_filename + "_" + test_f.__qualname__ + ".html"
+                )
             return plot
 
     test_f.__doc__ = (
-        (test_f.__doc__ or
-         "Test for function {test_f}".format(test_f=test_f.__qualname__)) + """
+        (
+            test_f.__doc__
+            or "Test for function {test_f}".format(test_f=test_f.__qualname__)
+        )
+        + """
     Parameters
     ----------
     Pass a single unnamed argument equal None to manually  execute outside regression testing. In that case it returns a chart.
-    """)
+    """
+    )
     return fun
 
 
@@ -104,8 +110,7 @@ def to_column(inst, attribute, value):
 
     """
     if value is not None:
-        value = inst.data.columns[value] if isinstance(value,
-                                                       Number) else str(value)
+        value = inst.data.columns[value] if isinstance(value, Number) else str(value)
     assert isinstance(value, str) or value is None
     setattr(inst, attribute.name, value)
 
@@ -130,11 +135,21 @@ def to_columns(inst, attribute, value):
         None, works by side-effects on inst.
 
     """
-    value = (list(inst.data.columns) if value is None else
-             ([inst.data.columns[value]] if isinstance(value, int) else
-              ([value] if isinstance(value, str) else list(
-                  map(lambda x: inst.data.columns[x] if type(x) is int else x,
-                      value)))))
+    value = (
+        list(inst.data.columns)
+        if value is None
+        else (
+            [inst.data.columns[value]]
+            if isinstance(value, int)
+            else (
+                [value]
+                if isinstance(value, str)
+                else list(
+                    map(lambda x: inst.data.columns[x] if type(x) is int else x, value)
+                )
+            )
+        )
+    )
 
     setattr(inst, attribute.name, value)
 
@@ -212,8 +227,9 @@ def multivariate_preprocess(data, columns, group_by):
         the variable and the name of of the column holding the values.
 
     """
-    assert (type(columns) == str or len(columns) == 1
-            or group_by is None), "Wide or long format but not both"
+    assert (
+        type(columns) == str or len(columns) == 1 or group_by is None
+    ), "Wide or long format but not both"
     if group_by is None:  # convert wide to long
         key = default(data.columns.name, "variable")
         value = "value"
@@ -222,3 +238,7 @@ def multivariate_preprocess(data, columns, group_by):
         key = group_by
         value = columns if type(columns) is str else columns[0]
     return data, key, value
+
+
+def choose_kwargs(from_, which):
+    return keyfilter(lambda x: x in which, valfilter(lambda x: x is not None, from_))

@@ -27,10 +27,11 @@ recipe = Signature(
     ),
 )
 
+column = partial(param, validator=to_column)
+
 univariate_recipe = recipe + Signature(
-    column=param(
+    column=column(
         default=0,
-        validator=to_column,
         position=1,
         docstring="""`str` or `int`
     The column containing the data to be used in the graphics""",
@@ -38,16 +39,14 @@ univariate_recipe = recipe + Signature(
 )
 
 bivariate_recipe = recipe + Signature(
-    x=param(
+    x=column(
         default=0,
-        validator=to_column,
         position=1,
         docstring="""`str` or `int`
     The column containing the data associated with the horizontal dimension""",
     ),
-    y=param(
+    y=column(
         default=1,
-        validator=to_column,
         position=2,
         docstring="""`str` or `int`
     The column containing the data associated with the vertical dimension""",
@@ -62,9 +61,8 @@ multivariate_recipe = recipe + Signature(
         docstring="""`str` or `int` or `list` thereof
     The column or columns to be used in the graphics, defaults to all""",
     ),
-    group_by=param(
+    group_by=column(
         default=None,
-        validator=to_column,
         position=2,
         docstring="""`str` or `int`
     The column to be used to group the data when in long form. When group_by is
@@ -73,15 +71,13 @@ multivariate_recipe = recipe + Signature(
 )
 
 color = partial(
-    param,
-    validator=to_column,
+    column,
     docstring="""`str` or `int`
 The column containing the data associated with the color of the mark""",
 )
 
 tooltip = partial(
-    param,
-    validator=to_column,
+    column,
     docstring="""`str` or `int`
 The column containing the data associated with the tooltip text""",
 )

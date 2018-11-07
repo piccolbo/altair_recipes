@@ -2,21 +2,18 @@
 from .signatures import bivariate_recipe, multivariate_recipe, color, tooltip
 import altair as alt
 from autosig import autosig, Signature
-from toolz.dicttoolz import keyfilter, valfilter
+from common import choose_kwargs
 
 
-@autosig(
-    bivariate_recipe
-    + Signature(
-        color=color(default=None, position=3), tooltip=tooltip(default=None, position=4)
-    )
+scatter_sig = Signature(
+    color=color(default=None, position=3), tooltip=tooltip(default=None, position=4)
 )
+
+
+@autosig(bivariate_recipe + scatter_sig)
 def scatter(data, x=0, y=1, color=None, tooltip=None, height=300, width=400):
     """Generate a scatter plot."""
-    kwargs = keyfilter(
-        lambda x: x in ["color", "tooltip"],
-        valfilter(lambda x: x is not None, locals()),
-    )
+    kwargs = choose_kwargs(from_=locals(), which=["color", "tooltip"])
     return (
         alt.Chart(data, height=height, width=width)
         .mark_point()
@@ -24,12 +21,7 @@ def scatter(data, x=0, y=1, color=None, tooltip=None, height=300, width=400):
     )
 
 
-@autosig(
-    multivariate_recipe
-    + Signature(
-        color=color(default=None, position=3), tooltip=tooltip(default=None, position=4)
-    )
-)
+@autosig(multivariate_recipe + scatter_sig)
 def multiscatter(
     data, columns=None, group_by=None, color=None, tooltip=None, height=300, width=400
 ):
@@ -37,10 +29,8 @@ def multiscatter(
 
     Based on several columns, pairwise.
     """
-    kwargs = keyfilter(
-        lambda x: x in ["color", "tooltip"],
-        valfilter(lambda x: x is not None, locals()),
-    )
+    kwargs = choose_kwargs(from_=locals(), which=["color", "tooltip"])
+
     assert group_by is None, "Long format not supported yet"
     return (
         alt.Chart(data, height=height / len(columns), width=width / len(columns))
