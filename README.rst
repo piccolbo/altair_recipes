@@ -24,6 +24,9 @@ Introduction to altair_recipes
      :target: https://pyup.io/repos/github/piccolbo/altair_recipes/
      :alt: Updates
 
+.. image:: https://api.codeclimate.com/v1/badges/4ab3f4aad65b12b2bb7c/maintainability
+     :target: https://codeclimate.com/github/piccolbo/altair_recipes/maintainability
+     :alt: Maintainability
 
 
 A collection of ready-made statistical graphics for vega.
