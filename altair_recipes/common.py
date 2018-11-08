@@ -41,7 +41,7 @@ def viz_reg_test(test_f):
             plot = test_f()
             if regtest is not None:
                 regtest.write(
-                    alt.Chart.from_dict(round_floats(plot.to_dict * (), 13)).to_json()
+                    alt.Chart.from_dict(round_floats(plot.to_dict(), 13)).to_json()
                 )
                 plot.save(
                     test_f.__code__.co_filename + "_" + test_f.__qualname__ + ".html"

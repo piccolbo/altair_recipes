@@ -2,7 +2,7 @@
 from .signatures import bivariate_recipe, multivariate_recipe, color, tooltip
 import altair as alt
 from autosig import autosig, Signature
-from common import choose_kwargs
+from .common import choose_kwargs
 
 
 scatter_sig = Signature(
