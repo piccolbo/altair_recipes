@@ -11,7 +11,7 @@ def histogram(data, column=0, height=300, width=400):
     return (
         alt.Chart(data, height=height, width=width)
         .mark_bar()
-        .encode(alt.X(column + ":Q", bin=True), alt.Y("count()"))
+        .encode(alt.X(column, bin=True), alt.Y("count()"))
     )
 
 
@@ -26,9 +26,5 @@ def layered_histogram(data, columns=None, group_by=None, height=300, width=400):
             / (len(data[group_by].unique()) if group_by is not None else len(columns)),
             interpolate="step",
         )
-        .encode(
-            alt.X(value + ":Q", bin=True),
-            alt.Y("count()", stack=None),
-            alt.Color(key + ":N"),
-        )
+        .encode(alt.X(value, bin=True), alt.Y("count()", stack=None), alt.Color(key))
     )

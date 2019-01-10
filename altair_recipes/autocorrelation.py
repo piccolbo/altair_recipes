@@ -27,5 +27,5 @@ def autocorrelation(data, column=0, max_lag=None, height=300, width=400):
     return (
         alt.Chart(_data, height=height, width=width)
         .mark_bar()
-        .encode(x="Lag:O", y="Autocorrelation" + ":Q")
+        .encode(x="Lag:O", y="Autocorrelation")
     )
