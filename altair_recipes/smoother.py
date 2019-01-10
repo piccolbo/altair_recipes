@@ -33,11 +33,11 @@ def smoother(
         alt.Chart(_data, height=height, width=width).mark_line().encode(x=x, y="median")
     )
     if interquartile_area:
-        _data["q1"] = _data["y"].rolling(window).quantile(.25)
-        _data["q3"] = _data["y"].rolling(window).quantile(.75)
+        _data["q1"] = _data["y"].rolling(window).quantile(0.25)
+        _data["q3"] = _data["y"].rolling(window).quantile(0.75)
         chart_area = (
             alt.Chart(_data, height=height, width=width)
-            .mark_area(opacity=.2)
+            .mark_area(opacity=0.2)
             .encode(x=x, y="q1", y2="q3")
         )
         return chart_line + chart_area
