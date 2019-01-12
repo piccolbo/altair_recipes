@@ -1,7 +1,7 @@
 """Generate barcharts."""
 from .signatures import bivariate_recipe, color
-from autosig import autosig, Signature
 import altair as alt
+from autosig import autosig, Signature
 
 
 @autosig(bivariate_recipe + Signature(color=color(default=None, position=3)))
