@@ -37,4 +37,4 @@ def boxplot(data, columns=None, group_by=None, color=None, height=300, width=400
         bplot.properties(data=data)
         if color is None
         else bplot.facet(data=data, column=key)
-    )  # + q3_bar + min_tick + max_tick
+    )
