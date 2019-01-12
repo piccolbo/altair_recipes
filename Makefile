@@ -72,7 +72,7 @@ coverage: ## check code coverage quickly with the default Python
 
 
 %.html : %.py
-	  pweave -i script -f html  $<
+	  pipenv run pweave -i script -f html  $<
 
 TESTS=$(wildcard tests/*.py)
 PYPUBLISH_DOCS = $(TESTS:py=html)
@@ -82,7 +82,7 @@ docs:  $(PYPUBLISH_DOCS) ## generate Sphinx HTML documentation, including API do
 	rm -f docs/altair_recipes.rst
 	rm -f docs/modules.rst
 	cp $(PYPUBLISH_DOCS) docs
-	sphinx-apidoc -o docs/ --maxdepth 0 altair_recipes/ altair_recipes/[a-z]*py
+	pipenv run sphinx-apidoc -o docs/ --maxdepth 0 altair_recipes/ altair_recipes/[a-z]*py
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
