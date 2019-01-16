@@ -1,18 +1,40 @@
 """Generate barcharts."""
-from .signatures import bivariate_recipe, color
+from .signatures import bivariate_recipe, column
 import altair as alt
 from autosig import autosig, Signature
 
 
-@autosig(bivariate_recipe + Signature(color=color(default=None, position=3)))
-def barchart(data, x=0, y=1, color=None, height=300, width=400):
+@autosig(
+    bivariate_recipe
+    + Signature(
+        column=column(
+            default=None,
+            position=3,
+            docstring="The column containing the data associated with horizontal faceting",
+        ),
+        row=column(
+            default=None,
+            position=4,
+            docstring="The column containing the data associated with vertical faceting",
+        ),
+    )
+)
+def barchart(data, x=0, y=1, column=None, row=None, height=600, width=800):
     """Generate a barchart."""
-    chart = alt.Chart(
-        data,
-        height=height,
-        width=width / ((len(data[x].unique()) if color is not None else 1)),
-    ).mark_bar()
-    if color is None:
-        return chart.encode(x=x, y=y)
-    else:
-        return chart.encode(x=alt.X(color, axis=None), y=y, color=color, column=x)
+    enc_args = dict(x=x, y=y)
+    if column is not None:
+        enc_args["x"] = alt.X(x, axis=None)
+        enc_args["color"] = x
+        enc_args["column"] = column
+    if row is not None:
+        enc_args["row"] = row
+
+    return (
+        alt.Chart(
+            data,
+            height=height / (len(data[row].unique()) if row is not None else 1),
+            width=width / (len(data[column].unique()) if column is not None else 1),
+        )
+        .mark_bar()
+        .encode(**enc_args)
+    )
