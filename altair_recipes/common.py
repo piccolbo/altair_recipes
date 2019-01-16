@@ -7,6 +7,12 @@ import pandas as pd
 import requests
 from toolz.dicttoolz import keyfilter, valfilter
 
+# collections
+
+
+def choose_kwargs(from_, which):
+    return keyfilter(lambda x: x in which, valfilter(lambda x: x is not None, from_))
+
 
 def round_floats(a_dict, precision):
     return remap(
@@ -15,51 +21,10 @@ def round_floats(a_dict, precision):
     )
 
 
-def viz_reg_test(test_f):
-    """Decorate recipe tests.
-
-    Transforms a function into a regression test. Also saves chart in html for
-    visual inspection in the test directory, named after the file and function
-    of the test. If invoked with None as sole argument, the decorated function
-    will just produce the chart, disabling the regression machinery, again for
-    manual inspection.
-
-    Parameters
-    ----------
-    test_f : function
-        Simple chart-generating argumentless function, pytest-style
-
-    Returns
-    -------
-    function
-        The decorated function.
-
-    """
-
-    def fun(regtest):
-        with alt.data_transformers.enable(consolidate_datasets=False):
-            plot = test_f()
-            if regtest is not None:
-                regtest.write(
-                    alt.Chart.from_dict(round_floats(plot.to_dict(), 13)).to_json()
-                )
-                plot.save(
-                    test_f.__code__.co_filename + "_" + test_f.__qualname__ + ".html"
-                )
-            return plot
-
-    test_f.__doc__ = (
-        (
-            test_f.__doc__
-            or "Test for function {test_f}".format(test_f=test_f.__qualname__)
-        )
-        + """
-    Parameters
-    ----------
-    Pass a single unnamed argument equal None to manually  execute outside regression testing. In that case it returns a chart.
-    """
-    )
-    return fun
+def ndistinct(data, column, test=None, default=1):
+    if test is None:
+        test = column is not None
+    return len(data[column].unique()) if test else default
 
 
 @singledispatch
@@ -90,6 +55,57 @@ def _(data):
     return pd.DataFrame(requests.get(data).json())
 
 
+def default(*args):
+    """Return the first not None of the arguments.
+
+    Parameters
+    ----------
+    *args : Any
+        Any number of arguments.
+
+    Returns
+    -------
+    Any
+        One of the arguments.
+
+    """
+    return next(x for x in args if x is not None)
+
+
+def gather(data, key, value, columns):
+    """Convert wide format data frame to long format.
+
+    Do so while concatenating selected columns into one and using a new column
+    to track their origin.
+
+    Parameters
+    ----------
+    data : pandas DataFrame
+        The data to operate on.
+    key : str
+        The name of the column tracking the origin of that record.
+    value : type
+        The name of the column holding all the values previously in a number of
+        columns.
+    columns : list of str
+        The names of the columns to reduce to a single column.
+
+    Returns
+    -------
+    pandas.DataFrame
+        A data frame with a reduced number of columns but the same information.
+
+    """
+    return pd.melt(
+        data,
+        id_vars=[col for col in data.columns if col not in columns],
+        value_vars=columns,
+        var_name=key,
+        value_name=value,
+    )
+
+
+# agument manip (may belong to signatures)
 def to_column(inst, attribute, value):
     """Convert a col specification to a col name and assign it to a given attribute.
 
@@ -154,56 +170,6 @@ def to_columns(inst, attribute, value):
     setattr(inst, attribute.name, value)
 
 
-def default(*args):
-    """Return the first not None of the arguments.
-
-    Parameters
-    ----------
-    *args : Any
-        Any number of arguments.
-
-    Returns
-    -------
-    Any
-        One of the arguments.
-
-    """
-    return next(x for x in args if x is not None)
-
-
-def gather(data, key, value, columns):
-    """Convert wide format data frame to long format.
-
-    Do so while concatenating selected columns into one and using a new column
-    to track their origin.
-
-    Parameters
-    ----------
-    data : pandas DataFrame
-        The data to operate on.
-    key : str
-        The name of the column tracking the origin of that record.
-    value : type
-        The name of the column holding all the values previously in a number of
-        columns.
-    columns : list of str
-        The names of the columns to reduce to a single column.
-
-    Returns
-    -------
-    pandas.DataFrame
-        A data frame with a reduced number of columns but the same information.
-
-    """
-    return pd.melt(
-        data,
-        id_vars=[col for col in data.columns if col not in columns],
-        value_vars=columns,
-        var_name=key,
-        value_name=value,
-    )
-
-
 # TODO: this doesn't cover multiscatter which is a multivariate viz but does
 # require the data in wide format, this only converts to long (gather)
 def multivariate_preprocess(data, columns, group_by):
@@ -240,8 +206,54 @@ def multivariate_preprocess(data, columns, group_by):
     return data, key, value
 
 
-def choose_kwargs(from_, which):
-    return keyfilter(lambda x: x in which, valfilter(lambda x: x is not None, from_))
+# testing
+def viz_reg_test(test_f):
+    """Decorate recipe tests.
 
+    Transforms a function into a regression test. Also saves chart in html for
+    visual inspection in the test directory, named after the file and function
+    of the test. If invoked with None as sole argument, the decorated function
+    will just produce the chart, disabling the regression machinery, again for
+    manual inspection.
+
+    Parameters
+    ----------
+    test_f : function
+        Simple chart-generating argumentless function, pytest-style
+
+    Returns
+    -------
+    function
+        The decorated function.
+
+    """
+
+    def fun(regtest):
+        with alt.data_transformers.enable(consolidate_datasets=False):
+            plot = test_f()
+            if regtest is not None:
+                regtest.write(
+                    alt.Chart.from_dict(round_floats(plot.to_dict(), 13)).to_json()
+                )
+                plot.save(
+                    test_f.__code__.co_filename + "_" + test_f.__qualname__ + ".html"
+                )
+            return plot
+
+    test_f.__doc__ = (
+        (
+            test_f.__doc__
+            or "Test for function {test_f}".format(test_f=test_f.__qualname__)
+        )
+        + """
+    Parameters
+    ----------
+    Pass a single unnamed argument equal None to manually  execute outside regression testing. In that case it returns a chart.
+    """
+    )
+    return fun
+
+
+# constant luminosity scale
 
 constant_cl_hcl_scale = alt.Scale(type="linear", range=["#FF00FF", "#00FFFF"])
