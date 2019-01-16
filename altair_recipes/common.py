@@ -242,3 +242,6 @@ def multivariate_preprocess(data, columns, group_by):
 
 def choose_kwargs(from_, which):
     return keyfilter(lambda x: x in which, valfilter(lambda x: x is not None, from_))
+
+
+constant_cl_hcl_scale = alt.Scale(type="linear", range=["#FF00FF", "#00FFFF"])
