@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "x_cat": "Q",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "x_cat",
+      "type": "nominal"
+    },
+    "column": {
+      "field": "y_cat",
+      "type": "nominal"
+    },
+    "x": {
+      "axis": null,
+      "field": "x_cat",
+      "type": "nominal"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative"
+    }
+  },
+  "height": 600.0,
+  "mark": "bar",
+  "width": 160.0
+}

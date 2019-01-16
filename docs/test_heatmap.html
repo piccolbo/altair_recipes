@@ -696,14 +696,16 @@
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_count_heatmap</span><span class="p">():</span>
     <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">movies</span><span class="o">.</span><span class="n">url</span>
-    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">count_heatmap</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;IMDB_Rating&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Rotten_Tomatoes_Rating&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+        <span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;IMDB_Rating&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Rotten_Tomatoes_Rating&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">aggregate</span><span class="o">=</span><span class="s2">&quot;count&quot;</span>
+    <span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_count_heatmap</span><span class="p">)</span>
 </pre></div>
 
 
- <div id="A71408406aea9e10c420053718e295fe4b14148e8f15b9bf231a405d87c342c2b"></div>
+ <div id="A0ced002f7331d6b367730fc16d502d23fa66bad66410ca7126f83a0c50f8cff3"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -58341,7 +58343,6 @@
   "encoding": {
     "color": {
       "aggregate": "count",
-      "field": "x",
       "scale": {
         "scheme": "greenblue"
       },
@@ -58367,6 +58368,6 @@
   "width": 400
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A71408406aea9e10c420053718e295fe4b14148e8f15b9bf231a405d87c342c2b", spec, opt);
+    vegaEmbed("#A0ced002f7331d6b367730fc16d502d23fa66bad66410ca7126f83a0c50f8cff3", spec, opt);
   </script>
   

@@ -1,0 +1,230 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "value": 1.7640523459677,
+        "variable": "x"
+      },
+      {
+        "value": 0.4001572083672,
+        "variable": "x"
+      },
+      {
+        "value": 0.9787379841057,
+        "variable": "x"
+      },
+      {
+        "value": 2.2408931992015,
+        "variable": "x"
+      },
+      {
+        "value": 1.86755799015,
+        "variable": "x"
+      },
+      {
+        "value": -0.9772778798764,
+        "variable": "x"
+      },
+      {
+        "value": 0.9500884175256,
+        "variable": "x"
+      },
+      {
+        "value": -0.1513572082977,
+        "variable": "x"
+      },
+      {
+        "value": -0.1032188517936,
+        "variable": "x"
+      },
+      {
+        "value": 0.4105985019384,
+        "variable": "x"
+      },
+      {
+        "value": 0.1440435711609,
+        "variable": "x"
+      },
+      {
+        "value": 1.454273506963,
+        "variable": "x"
+      },
+      {
+        "value": 0.761037725147,
+        "variable": "x"
+      },
+      {
+        "value": 0.1216750164928,
+        "variable": "x"
+      },
+      {
+        "value": 0.4438632327454,
+        "variable": "x"
+      },
+      {
+        "value": 0.3336743273743,
+        "variable": "x"
+      },
+      {
+        "value": 1.4940790731576,
+        "variable": "x"
+      },
+      {
+        "value": -0.2051582637658,
+        "variable": "x"
+      },
+      {
+        "value": 0.3130677016509,
+        "variable": "x"
+      },
+      {
+        "value": -0.8540957393017,
+        "variable": "x"
+      },
+      {
+        "value": -2.5529898158341,
+        "variable": "x"
+      },
+      {
+        "value": 0.6536185954404,
+        "variable": "x"
+      },
+      {
+        "value": 0.8644361988595,
+        "variable": "x"
+      },
+      {
+        "value": -0.7421650204064,
+        "variable": "x"
+      },
+      {
+        "value": 2.2697546239876,
+        "variable": "x"
+      },
+      {
+        "value": -1.4543656745988,
+        "variable": "x"
+      },
+      {
+        "value": 0.0457585173014,
+        "variable": "x"
+      },
+      {
+        "value": -0.1871838500258,
+        "variable": "x"
+      },
+      {
+        "value": 1.5327792143585,
+        "variable": "x"
+      },
+      {
+        "value": 1.4693587699003,
+        "variable": "x"
+      },
+      {
+        "value": 0.1549474256969,
+        "variable": "x"
+      },
+      {
+        "value": 0.3781625196022,
+        "variable": "x"
+      },
+      {
+        "value": -0.8877857476301,
+        "variable": "x"
+      },
+      {
+        "value": -1.9807964682239,
+        "variable": "x"
+      },
+      {
+        "value": -0.3479121493262,
+        "variable": "x"
+      },
+      {
+        "value": 0.156348969104,
+        "variable": "x"
+      },
+      {
+        "value": 1.2302906807277,
+        "variable": "x"
+      },
+      {
+        "value": 1.2023798487844,
+        "variable": "x"
+      },
+      {
+        "value": -0.387326817408,
+        "variable": "x"
+      },
+      {
+        "value": -0.3023027505753,
+        "variable": "x"
+      },
+      {
+        "value": -1.0485529650671,
+        "variable": "x"
+      },
+      {
+        "value": -1.420017937179,
+        "variable": "x"
+      },
+      {
+        "value": -1.706270190625,
+        "variable": "x"
+      },
+      {
+        "value": 1.9507753952318,
+        "variable": "x"
+      },
+      {
+        "value": -0.5096521817517,
+        "variable": "x"
+      },
+      {
+        "value": -0.4380743016112,
+        "variable": "x"
+      },
+      {
+        "value": -1.2527953600499,
+        "variable": "x"
+      },
+      {
+        "value": 0.7774903558319,
+        "variable": "x"
+      },
+      {
+        "value": -1.613897847558,
+        "variable": "x"
+      },
+      {
+        "value": -0.212740280214,
+        "variable": "x"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "variable",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative"
+    }
+  },
+  "height": 600,
+  "mark": {
+    "opacity": 0.3333333333333,
+    "thickness": 2,
+    "type": "tick"
+  },
+  "width": 800
+}

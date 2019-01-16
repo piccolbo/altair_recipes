@@ -1,0 +1,1035 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "x_cat": "Q",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "H",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "Q"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "P"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "P"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J"
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "y_cat",
+      "type": "nominal"
+    },
+    "column": {
+      "field": "x_cat",
+      "type": "nominal"
+    },
+    "x": {
+      "axis": null,
+      "field": "y_cat",
+      "type": "nominal"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative"
+    }
+  },
+  "height": 600.0,
+  "mark": "bar",
+  "width": 80.0
+}

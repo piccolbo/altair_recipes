@@ -12026,11 +12026,11 @@
       "type": "quantitative"
     }
   },
-  "height": 300,
+  "height": 600,
   "mark": {
     "interpolate": "step",
     "opacity": 0.3333333333333,
     "type": "area"
   },
-  "width": 400
+  "width": 800
 }

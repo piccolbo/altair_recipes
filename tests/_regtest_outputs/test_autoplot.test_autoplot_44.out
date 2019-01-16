@@ -1,0 +1,5039 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "x_cat": "Q",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "P",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "H",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "K",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "Q",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "I",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "P",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "P",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "H",
+        "y_cat": "I",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "P",
+        "z_cat": "R"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "P",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "H",
+        "z_cat": "G"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "I",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "P",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "H",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "P",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "H",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "R"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "I",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "F"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "Q",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "G",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "R"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "P",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "P",
+        "z_cat": "R"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "P",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "I"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "I",
+        "z_cat": "F"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "I",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "J",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "I",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "P",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "Q"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "O",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "H"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "Q",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "I",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "Q",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "O",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "N",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "O",
+        "z_cat": "P"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "O",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "M",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "J",
+        "z_cat": "J"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "J",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "J",
+        "y_cat": "L",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "K",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "P",
+        "z_cat": "O"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "N",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "N"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "K",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "L"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "K"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "M",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "N",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "L",
+        "z_cat": "M"
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z_cat": "M"
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "y_cat",
+      "type": "nominal"
+    },
+    "column": {
+      "field": "z_cat",
+      "type": "nominal"
+    },
+    "row": {
+      "field": "x_cat",
+      "type": "nominal"
+    },
+    "x": {
+      "axis": null,
+      "field": "y_cat",
+      "type": "nominal"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative"
+    }
+  },
+  "height": 60.0,
+  "mark": "bar",
+  "width": 61.5384615384615
+}

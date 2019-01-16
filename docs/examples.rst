@@ -9,6 +9,8 @@ Examples
 .. raw:: html
    :file: test_boxplot.html
 .. raw:: html
+   :file: test_barchart.html
+.. raw:: html
    :file: test_heatmap.html
 .. raw:: html
    :file: test_histogram.html
@@ -16,3 +18,7 @@ Examples
    :file: test_qqplot.html
 .. raw:: html
    :file: test_scatter.html
+.. raw:: html
+   :file: test_stripplot.html
+.. raw:: html
+   :file test_autoplot.html

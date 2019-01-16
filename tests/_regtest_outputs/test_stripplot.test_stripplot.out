@@ -1,0 +1,830 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 0.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 2.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 3.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 4.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 5.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 6.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 7.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 8.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 9.0,
+        "variable": "x"
+      },
+      {
+        "value": 1.1266359221065,
+        "variable": "y"
+      },
+      {
+        "value": -1.0799315083634,
+        "variable": "y"
+      },
+      {
+        "value": -1.1474686524111,
+        "variable": "y"
+      },
+      {
+        "value": -0.4378200447444,
+        "variable": "y"
+      },
+      {
+        "value": -0.4980324506923,
+        "variable": "y"
+      },
+      {
+        "value": 1.929532053817,
+        "variable": "y"
+      },
+      {
+        "value": 0.9494208069258,
+        "variable": "y"
+      },
+      {
+        "value": 0.0875512413852,
+        "variable": "y"
+      },
+      {
+        "value": -1.2254355188302,
+        "variable": "y"
+      },
+      {
+        "value": 0.8443629764015,
+        "variable": "y"
+      },
+      {
+        "value": -1.0002153473896,
+        "variable": "y"
+      },
+      {
+        "value": -1.5447710967776,
+        "variable": "y"
+      },
+      {
+        "value": 1.1880297923523,
+        "variable": "y"
+      },
+      {
+        "value": 0.3169426119248,
+        "variable": "y"
+      },
+      {
+        "value": 0.9208588237808,
+        "variable": "y"
+      },
+      {
+        "value": 0.318727652943,
+        "variable": "y"
+      },
+      {
+        "value": 0.8568306119027,
+        "variable": "y"
+      },
+      {
+        "value": -0.6510255933001,
+        "variable": "y"
+      },
+      {
+        "value": -1.0342428417845,
+        "variable": "y"
+      },
+      {
+        "value": 0.6815945182816,
+        "variable": "y"
+      },
+      {
+        "value": -0.8034096641738,
+        "variable": "y"
+      },
+      {
+        "value": -0.6895497777502,
+        "variable": "y"
+      },
+      {
+        "value": -0.4555325035173,
+        "variable": "y"
+      },
+      {
+        "value": 0.0174791590251,
+        "variable": "y"
+      },
+      {
+        "value": -0.3539939112535,
+        "variable": "y"
+      },
+      {
+        "value": -1.374951293418,
+        "variable": "y"
+      },
+      {
+        "value": -0.6436184028329,
+        "variable": "y"
+      },
+      {
+        "value": -2.2234031522244,
+        "variable": "y"
+      },
+      {
+        "value": 0.6252314510272,
+        "variable": "y"
+      },
+      {
+        "value": -1.6020576556067,
+        "variable": "y"
+      },
+      {
+        "value": -1.1043833394285,
+        "variable": "y"
+      },
+      {
+        "value": 0.052165079261,
+        "variable": "y"
+      },
+      {
+        "value": -0.7395629963913,
+        "variable": "y"
+      },
+      {
+        "value": 1.5430145954067,
+        "variable": "y"
+      },
+      {
+        "value": -1.2928569097234,
+        "variable": "y"
+      },
+      {
+        "value": 0.2670508693492,
+        "variable": "y"
+      },
+      {
+        "value": -0.0392828182275,
+        "variable": "y"
+      },
+      {
+        "value": -1.1680934977412,
+        "variable": "y"
+      },
+      {
+        "value": 0.5232766605318,
+        "variable": "y"
+      },
+      {
+        "value": -0.1715463312222,
+        "variable": "y"
+      },
+      {
+        "value": 0.7717905512137,
+        "variable": "y"
+      },
+      {
+        "value": 0.8235041539637,
+        "variable": "y"
+      },
+      {
+        "value": 2.1632359492807,
+        "variable": "y"
+      },
+      {
+        "value": 1.3365279494364,
+        "variable": "y"
+      },
+      {
+        "value": -0.3691818379424,
+        "variable": "y"
+      },
+      {
+        "value": -0.2393791775759,
+        "variable": "y"
+      },
+      {
+        "value": 1.0996595958871,
+        "variable": "y"
+      },
+      {
+        "value": 0.6552637307226,
+        "variable": "y"
+      },
+      {
+        "value": 0.6401315260976,
+        "variable": "y"
+      },
+      {
+        "value": -1.6169560443108,
+        "variable": "y"
+      },
+      {
+        "value": -0.0243261243989,
+        "variable": "y"
+      },
+      {
+        "value": -0.7380309092057,
+        "variable": "y"
+      },
+      {
+        "value": 0.2799245990432,
+        "variable": "y"
+      },
+      {
+        "value": -0.098150389643,
+        "variable": "y"
+      },
+      {
+        "value": 0.9101789080926,
+        "variable": "y"
+      },
+      {
+        "value": 0.3172182151913,
+        "variable": "y"
+      },
+      {
+        "value": 0.786327962109,
+        "variable": "y"
+      },
+      {
+        "value": -0.4664190967359,
+        "variable": "y"
+      },
+      {
+        "value": -0.9444462559183,
+        "variable": "y"
+      },
+      {
+        "value": -0.4100496932025,
+        "variable": "y"
+      },
+      {
+        "value": -0.0170204138614,
+        "variable": "y"
+      },
+      {
+        "value": 0.3791517355551,
+        "variable": "y"
+      },
+      {
+        "value": 2.2593089506909,
+        "variable": "y"
+      },
+      {
+        "value": -0.0422571516606,
+        "variable": "y"
+      },
+      {
+        "value": -0.9559450004928,
+        "variable": "y"
+      },
+      {
+        "value": -0.3459817756994,
+        "variable": "y"
+      },
+      {
+        "value": -0.4635959746461,
+        "variable": "y"
+      },
+      {
+        "value": 0.4814814737735,
+        "variable": "y"
+      },
+      {
+        "value": -1.5407970144446,
+        "variable": "y"
+      },
+      {
+        "value": 0.0632619942003,
+        "variable": "y"
+      },
+      {
+        "value": 0.1565065379654,
+        "variable": "y"
+      },
+      {
+        "value": 0.2321810362003,
+        "variable": "y"
+      },
+      {
+        "value": -0.5973160689654,
+        "variable": "y"
+      },
+      {
+        "value": -0.237921729736,
+        "variable": "y"
+      },
+      {
+        "value": -1.4240609089825,
+        "variable": "y"
+      },
+      {
+        "value": -0.4933198833622,
+        "variable": "y"
+      },
+      {
+        "value": -0.5428614760167,
+        "variable": "y"
+      },
+      {
+        "value": 0.4160500462614,
+        "variable": "y"
+      },
+      {
+        "value": -1.1561824318219,
+        "variable": "y"
+      },
+      {
+        "value": 0.78119810171,
+        "variable": "y"
+      },
+      {
+        "value": 1.4944845444914,
+        "variable": "y"
+      },
+      {
+        "value": -2.0699850250135,
+        "variable": "y"
+      },
+      {
+        "value": 0.4262587307781,
+        "variable": "y"
+      },
+      {
+        "value": 0.6769080350302,
+        "variable": "y"
+      },
+      {
+        "value": -0.6374370255522,
+        "variable": "y"
+      },
+      {
+        "value": -0.3972718143288,
+        "variable": "y"
+      },
+      {
+        "value": -0.132880577587,
+        "variable": "y"
+      },
+      {
+        "value": -0.2977908794017,
+        "variable": "y"
+      },
+      {
+        "value": -0.3090129690471,
+        "variable": "y"
+      },
+      {
+        "value": -1.67600380633,
+        "variable": "y"
+      },
+      {
+        "value": 1.1523315647831,
+        "variable": "y"
+      },
+      {
+        "value": 1.0796185920368,
+        "variable": "y"
+      },
+      {
+        "value": -0.8133642592042,
+        "variable": "y"
+      },
+      {
+        "value": -1.4664243278025,
+        "variable": "y"
+      },
+      {
+        "value": 0.5210648764528,
+        "variable": "y"
+      },
+      {
+        "value": -0.5757879698131,
+        "variable": "y"
+      },
+      {
+        "value": 0.1419531633208,
+        "variable": "y"
+      },
+      {
+        "value": -0.3193284171451,
+        "variable": "y"
+      },
+      {
+        "value": 0.6915387510702,
+        "variable": "y"
+      },
+      {
+        "value": 0.694749143656,
+        "variable": "y"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "variable",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative"
+    }
+  },
+  "height": 600,
+  "mark": {
+    "opacity": 1.0,
+    "thickness": 2,
+    "type": "tick"
+  },
+  "width": 800
+}

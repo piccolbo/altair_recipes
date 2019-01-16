@@ -3031,9 +3031,9 @@
           "type": "quantitative"
         }
       },
-      "height": 300,
+      "height": 600,
       "mark": "rule",
-      "width": 400.0
+      "width": 800.0
     },
     {
       "encoding": {
@@ -3047,9 +3047,9 @@
           "type": "quantitative"
         }
       },
-      "height": 300,
+      "height": 600,
       "mark": "tick",
-      "width": 400.0
+      "width": 800.0
     },
     {
       "encoding": {
@@ -3063,9 +3063,9 @@
           "type": "quantitative"
         }
       },
-      "height": 300,
+      "height": 600,
       "mark": "tick",
-      "width": 400.0
+      "width": 800.0
     },
     {
       "encoding": {
@@ -3084,13 +3084,13 @@
           "type": "quantitative"
         }
       },
-      "height": 300,
+      "height": 600,
       "mark": {
         "fill": "#4682b4",
         "stroke": "black",
         "type": "bar"
       },
-      "width": 400.0
+      "width": 800.0
     },
     {
       "encoding": {
@@ -3109,13 +3109,13 @@
           "type": "quantitative"
         }
       },
-      "height": 300,
+      "height": 600,
       "mark": {
         "fill": "#4682b4",
         "stroke": "black",
         "type": "bar"
       },
-      "width": 400.0
+      "width": 800.0
     }
   ]
 }

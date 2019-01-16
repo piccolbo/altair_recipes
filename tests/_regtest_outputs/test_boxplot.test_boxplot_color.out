@@ -763,9 +763,9 @@
             "type": "quantitative"
           }
         },
-        "height": 300,
+        "height": 600,
         "mark": "rule",
-        "width": 66.6666666666667
+        "width": 133.3333333333333
       },
       {
         "encoding": {
@@ -780,9 +780,9 @@
             "type": "quantitative"
           }
         },
-        "height": 300,
+        "height": 600,
         "mark": "tick",
-        "width": 66.6666666666667
+        "width": 133.3333333333333
       },
       {
         "encoding": {
@@ -797,9 +797,9 @@
             "type": "quantitative"
           }
         },
-        "height": 300,
+        "height": 600,
         "mark": "tick",
-        "width": 66.6666666666667
+        "width": 133.3333333333333
       },
       {
         "encoding": {
@@ -823,13 +823,13 @@
             "type": "quantitative"
           }
         },
-        "height": 300,
+        "height": 600,
         "mark": {
           "fill": "#4682b4",
           "stroke": "black",
           "type": "bar"
         },
-        "width": 66.6666666666667
+        "width": 133.3333333333333
       },
       {
         "encoding": {
@@ -853,13 +853,13 @@
             "type": "quantitative"
           }
         },
-        "height": 300,
+        "height": 600,
         "mark": {
           "fill": "#4682b4",
           "stroke": "black",
           "type": "bar"
         },
-        "width": 66.6666666666667
+        "width": 133.3333333333333
       }
     ]
   }

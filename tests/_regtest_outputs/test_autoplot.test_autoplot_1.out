@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "value": 1.7640523459677,
+        "variable": "x"
+      },
+      {
+        "value": 0.4001572083672,
+        "variable": "x"
+      },
+      {
+        "value": 0.9787379841057,
+        "variable": "x"
+      },
+      {
+        "value": 2.2408931992015,
+        "variable": "x"
+      },
+      {
+        "value": 1.86755799015,
+        "variable": "x"
+      },
+      {
+        "value": -0.9772778798764,
+        "variable": "x"
+      },
+      {
+        "value": 0.9500884175256,
+        "variable": "x"
+      },
+      {
+        "value": -0.1513572082977,
+        "variable": "x"
+      },
+      {
+        "value": -0.1032188517936,
+        "variable": "x"
+      },
+      {
+        "value": 0.4105985019384,
+        "variable": "x"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "variable",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative"
+    }
+  },
+  "height": 600,
+  "mark": {
+    "opacity": 1.0,
+    "thickness": 2,
+    "type": "tick"
+  },
+  "width": 800
+}

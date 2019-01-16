@@ -1078,7 +1078,10 @@
       "type": "quantitative"
     }
   },
-  "height": 300,
-  "mark": "point",
-  "width": 400
+  "height": 600,
+  "mark": {
+    "opacity": 1.0,
+    "type": "point"
+  },
+  "width": 800
 }

@@ -57631,7 +57631,6 @@
   "encoding": {
     "color": {
       "aggregate": "count",
-      "field": "x",
       "scale": {
         "scheme": "greenblue"
       },
@@ -57652,7 +57651,7 @@
       "type": "quantitative"
     }
   },
-  "height": 300,
+  "height": 600,
   "mark": "rect",
-  "width": 400
+  "width": 800
 }

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "x_cat": "Q",
+        "y_cat": "O",
+        "z": 1.8716591437633
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z": -1.1705299861827
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z": 1.1754183483235
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "N",
+        "z": 1.8692873741136
+      },
+      {
+        "x_cat": "O",
+        "y_cat": "L",
+        "z": 0.0902364731988
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z": -1.2379130685482
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "P",
+        "z": 4.4138369525645
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "N",
+        "z": 2.2919696392777
+      },
+      {
+        "x_cat": "M",
+        "y_cat": "L",
+        "z": -0.6295298344857
+      },
+      {
+        "x_cat": "L",
+        "y_cat": "M",
+        "z": -0.1959488005708
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "x_cat",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "y_cat",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "z",
+      "type": "quantitative"
+    }
+  },
+  "height": 600,
+  "mark": {
+    "opacity": 1.0,
+    "thickness": 2,
+    "type": "tick"
+  },
+  "width": 800
+}

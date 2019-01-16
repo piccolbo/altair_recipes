@@ -30,7 +30,9 @@ show_test(test_heatmap)
 @viz_reg_test
 def test_count_heatmap():
     source = data.movies.url
-    return ar.count_heatmap(source, x="IMDB_Rating", y="Rotten_Tomatoes_Rating")
+    return ar.heatmap(
+        source, x="IMDB_Rating", y="Rotten_Tomatoes_Rating", color="", aggregate="count"
+    )
 
 
 show_test(test_count_heatmap)
