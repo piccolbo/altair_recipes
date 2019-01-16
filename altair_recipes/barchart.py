@@ -1,4 +1,5 @@
 """Generate barcharts."""
+from .common import ndistinct
 from .signatures import bivariate_recipe, column
 import altair as alt
 from autosig import autosig, Signature
@@ -32,8 +33,8 @@ def barchart(data, x=0, y=1, column=None, row=None, height=600, width=800):
     return (
         alt.Chart(
             data,
-            height=height / (len(data[row].unique()) if row is not None else 1),
-            width=width / (len(data[column].unique()) if column is not None else 1),
+            height=height / ndistinct(data, row),
+            width=width / ndistinct(data, column),
         )
         .mark_bar()
         .encode(**enc_args)

@@ -1,13 +1,12 @@
 """Automatic plot selection."""
 from .barchart import barchart
 from .boxplot import boxplot
-from .common import constant_cl_hcl_scale
+from .common import ndistinct
 from .heatmap import heatmap
 from .histogram import histogram
 from .scatter import scatter
 from .signatures import multivariate_recipe
 from .stripplot import stripplot
-import altair as alt
 from autosig import autosig
 from numbers import Number
 import pandas as pd
@@ -37,10 +36,6 @@ def is_cat(xx):
 
 def resolve_var(n, nvars, order, data):
     return (order[n], is_cat(data[order[n]])) if nvars > n else (None, None)
-
-
-def ndistinct(xx):
-    return len(xx.unique())
 
 
 @autosig(multivariate_recipe)
@@ -89,8 +84,8 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             x=x,
             y=y,
             aggregate="average" if use_opacity else "count",
-            height=height / (ndistinct(data[z]) if use_facet else 1),
-            width=width / (ndistinct(data[z]) if use_facet else 1),
+            height=height / ndistinct(data, z, use_facet),
+            width=width / ndistinct(data, z, use_facet),
             **args
         )
         return chart.facet(row=z) if use_facet else chart
@@ -107,8 +102,8 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             y=y,
             color=z if use_color else None,
             opacity=1 / overlap_deg if use_opacity else 1,
-            height=height / (ndistinct(data[z]) if use_facet else 1),
-            width=width / (ndistinct(data[z]) if use_facet else 1),
+            height=height / ndistinct(data, z, use_facet),
+            width=width / ndistinct(data, z, use_facet),
         )
         return chart.facet(row=z) if use_facet else chart
     if nvars == 2 and not is_cat_y and is_cat_x and OL_high:
@@ -124,7 +119,7 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             color=z if use_color else None,
             opacity=1 / overlap_deg if use_opacity else 1,
             height=height,
-            width=width / (ndistinct(data[z]) if use_facet else 1),
+            width=width / ndistinct(data, z, use_facet),
         )
         return chart.facet(column=z) if use_facet else chart
     assert False, "This combination was not foreseen"
