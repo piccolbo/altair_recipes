@@ -1,19 +1,20 @@
 # -*- coding: utf-8 -*-
 """Top-level package for altair_recipes."""
 from .autocorrelation import autocorrelation
+from .autoplot import autoplot
 from .barchart import barchart
 from .boxplot import boxplot
-from .heatmap import count_heatmap
 from .heatmap import heatmap
 from .histogram import histogram, layered_histogram
 from .qqplot import qqplot
 from .scatter import scatter, multiscatter
 from .smoother import smoother
+from .stripplot import stripplot
 
 # alphabetically ordered exports
 __all__ = [
     "autocorrelation",
-    "count_heatmap",
+    "autoplot",
     "barchart",
     "boxplot",
     "heatmap",
@@ -23,6 +24,7 @@ __all__ = [
     "qqplot",
     "scatter",
     "smoother",
+    "stripplot",
 ]
 __author__ = """Antonio Piccolboni"""
 __email__ = "altair_recipes@piccolboni.info"
