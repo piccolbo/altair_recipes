@@ -12,14 +12,14 @@ recipe = Signature(
     The data from which the statistical graphics is being generated""",
     ),
     height=param(
-        default=300,
+        default=600,
         converter=int,
         position=-2,
         docstring="""`int`
     The height of the chart""",
     ),
     width=param(
-        default=400,
+        default=800,
         converter=int,
         position=-1,
         docstring="""`int`
@@ -74,6 +74,14 @@ color = partial(
     column,
     docstring="""`str` or `int`
 The column containing the data associated with the color of the mark""",
+)
+
+opacity = partial(
+    param,
+    default=1,
+    converter=float,
+    docstring="""float
+The value of the constant opacity of the mark (use to counter overlap)""",
 )
 
 tooltip = partial(
