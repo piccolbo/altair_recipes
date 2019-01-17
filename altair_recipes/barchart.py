@@ -21,7 +21,7 @@ from autosig import autosig, Signature
     )
 )
 def barchart(data, x=0, y=1, hfacet=None, vfacet=None, height=600, width=800):
-    """Generate a barchart."""
+    """Generate a barchart, optionally faceted."""
     enc_args = dict(x=x, y=y)
     if hfacet is not None:
         enc_args["x"] = alt.X(x, axis=None)
