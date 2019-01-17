@@ -7,11 +7,12 @@ from autosig import autosig, Signature
 
 @autosig(
     multivariate_recipe
-    + Signature(color=color(default=None, position=3), opacity=opacity(position=3))
+    + Signature(color=color(default=None, position=3), opacity=opacity(position=4))
 )
 def stripplot(
     data, columns=None, group_by=None, color=None, opacity=1, height=600, width=800
 ):
+    """Generate a stripplot"""
     data, key, value = multivariate_preprocess(data, columns, group_by)
     enc_args = dict()
     if color is not None:
