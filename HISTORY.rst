@@ -2,6 +2,12 @@
 History
 =======
 
+0.5.0 (2019-01-17)
+------------------
+
+* Autoplot for automatic statistical graphics
+* Stripplots and barcharts
+
 0.4.0 (2018-09-25)
 ------------------
 
