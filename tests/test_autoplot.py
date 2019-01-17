@@ -553,3 +553,40 @@ def test_autoplot_45():
 
 
 show_test(test_autoplot_45)
+
+
+#' To finish three corner cases when there's no overlap with categorical vars only
+
+w = pd.Series(range(10))
+
+no_overlap_data = pd.DataFrame(
+    dict(
+        x=pd.concat([w, w - 3]).astype(str),
+        y=pd.concat([w, w]).astype(str),
+        z=pd.concat([w, w]).astype(str),
+    )
+)
+
+
+@viz_reg_test
+def test_autoplot_CCC():
+    return ar.autoplot(no_overlap_data)
+
+
+show_test(test_autoplot_CCC)
+
+
+@viz_reg_test
+def test_autoplot_CC():
+    return ar.autoplot(no_overlap_data, columns=["x", "y"])
+
+
+show_test(test_autoplot_CC)
+
+
+@viz_reg_test
+def test_autoplot_C():
+    return ar.autoplot(no_overlap_data.head(10), columns=["x"])
+
+
+show_test(test_autoplot_C)
