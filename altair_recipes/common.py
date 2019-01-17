@@ -254,6 +254,7 @@ def viz_reg_test(test_f):
     return fun
 
 
-# constant luminosity scale
+# constant luminosity and chroma scales
 
-constant_cl_hcl_scale = alt.Scale(type="linear", range=["#FF00FF", "#00FFFF"])
+hue_scale_light = alt.Scale(type="linear", range=["#F271B8", "#00B4D7"])
+hue_scale_dark = alt.Scale(type="linear", range=["#C10083", "#0080A7"])

@@ -1,5 +1,5 @@
 """Scatter plots."""
-from .common import choose_kwargs, constant_cl_hcl_scale
+from .common import choose_kwargs, hue_scale_dark, hue_scale_light
 from .signatures import bivariate_recipe, multivariate_recipe, color, tooltip
 import altair as alt
 from autosig import autosig, Signature, param
@@ -23,7 +23,9 @@ A constant value for the opacity of the mark""",
 def scatter(data, x=0, y=1, color=None, opacity=1, tooltip=None, height=600, width=800):
     """Generate a scatter plot."""
     if opacity < 1 and color is not None and isinstance(data[color][0], Number):
-        color = alt.Color(color, scale=constant_cl_hcl_scale)
+        color = alt.Color(
+            color, scale=hue_scale_light if opacity == 1 else hue_scale_dark
+        )
     kwargs = choose_kwargs(from_=locals(), which=["color", "tooltip"])
     return alt.Chart(
         data,

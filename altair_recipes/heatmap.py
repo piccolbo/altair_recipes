@@ -1,5 +1,5 @@
 """Heatmap implementation."""
-from .common import constant_cl_hcl_scale
+from .common import hue_scale_dark, hue_scale_light
 from .signatures import bivariate_recipe, color, column
 import altair as alt
 from autosig import autosig, Signature, param
@@ -42,9 +42,7 @@ def heatmap(
         aggregate = "count"
     color = alt.Color(
         aggregate + "(" + color + "):Q",
-        scale=constant_cl_hcl_scale
-        if opacity is not None
-        else alt.Scale(scheme="greenblue"),
+        scale=hue_scale_dark if opacity is not None else hue_scale_light,
     )
     enc_opt_args = dict(opacity=opacity) if opacity is not None else dict()
     return (
