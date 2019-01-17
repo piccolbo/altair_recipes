@@ -21,4 +21,4 @@ Examples
 .. raw:: html
    :file: test_stripplot.html
 .. raw:: html
-   :file test_autoplot.html
+   :file: test_autoplot.html
