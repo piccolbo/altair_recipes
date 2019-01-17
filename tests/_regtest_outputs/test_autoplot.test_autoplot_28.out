@@ -1265,8 +1265,8 @@
       "field": "z",
       "scale": {
         "range": [
-          "#FF00FF",
-          "#00FFFF"
+          "#C10083",
+          "#0080A7"
         ],
         "type": "linear"
       },

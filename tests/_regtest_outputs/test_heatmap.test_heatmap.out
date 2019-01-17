@@ -620,7 +620,11 @@
       "aggregate": "average",
       "field": "z",
       "scale": {
-        "scheme": "greenblue"
+        "range": [
+          "#F271B8",
+          "#00B4D7"
+        ],
+        "type": "linear"
       },
       "type": "quantitative"
     },
