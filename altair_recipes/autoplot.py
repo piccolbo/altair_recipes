@@ -35,7 +35,7 @@ def is_cat(xx):
 
 
 def resolve_var(n, nvars, order, data):
-    return (order[n], is_cat(data[order[n]])) if nvars > n else (None, None)
+    return (order[n], is_cat(data[order[n]])) if nvars > n else (None, False)
 
 
 @autosig(multivariate_recipe)
@@ -56,24 +56,22 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
     y, is_cat_y = resolve_var(0, nvars, order, data)
     x, is_cat_x = resolve_var(1, nvars, order, data)
     z, is_cat_z = resolve_var(2, nvars, order, data)
+    nvcat = is_cat_x + is_cat_y + is_cat_z
+    nvfloat = nvars - nvcat
     if all_cat_var and not OL_no:
-        args = dict(y="count()")
-        if nvars == 1:
-            args.update(x=y)
+        args = dict(x=y, y="count()", row=z)
         if nvars >= 2:
             args.update(x=x, column=y)
-        if nvars == 3:
-            args.update(row=z)
         return barchart(data, height=height, width=width, **args)
     if all_cat_var and OL_no:
-        if nvars > 1:
+        if nvars >= 2:
             args = dict(color=z) if z is not None else dict()
             return scatter(data, x=x, y=y, height=height, width=width, **args)
         else:  # nvars == 1
             return stripplot(data, columns=x, height=height, width=width)
-    if is_cat_x and not is_cat_y and OL_high:
+    if nvfloat == 1 and nvcat >= 1 and OL_high:
         return boxplot(data, columns=y, group_by=x, color=z, height=height, width=width)
-    if nvars > 1 and not is_cat_y and not is_cat_x and OL_high:
+    if nvfloat >= 2 and OL_high:
         use_opacity = z is not None and not is_cat_z
         use_facet = z is not None and is_cat_z
         args = dict(color="count()")
@@ -89,10 +87,10 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             **args
         )
         return chart.facet(row=z) if use_facet else chart
-    if nvars == 1 and not is_cat_y and OL_high:
+    if nvars == 1 and nvfloat == 1 and OL_high:
         return histogram(data, column=y, height=height, width=width)
 
-    if nvars > 1 and not (is_cat_x or is_cat_y) and not OL_high:
+    if nvfloat >= 2 and not OL_high:
         use_facet = z is not None and is_cat_z and OL_low
         use_color = z is not None and not use_facet
         use_opacity = (OL_low and not is_cat_z) or use_facet
@@ -106,9 +104,10 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             width=width / ndistinct(data, z, use_facet),
         )
         return chart.facet(row=z) if use_facet else chart
-    if nvars == 2 and not is_cat_y and is_cat_x and OL_high:
+    if nvars == 2 and nvfloat == 1 and OL_high:
         return barchart(data, x=x, y=y, height=height, width=width)
-    if not is_cat_y and not OL_high:
+    # if not is_cat_y and not OL_high:
+    if nvfloat == 1 and not OL_high:
         use_facet = z is not None and is_cat_z and OL_low
         use_color = z is not None and not use_facet
         use_opacity = (OL_low and not is_cat_z) or use_facet
