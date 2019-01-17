@@ -61,9 +61,9 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
     chart = None
     if all_cat_var and not OL_no:
         assert chart is None
-        args = dict(x=y, y="count()", row=z)
+        args = dict(x=y, y="count()", vfacet=z)
         if nvars >= 2:
-            args.update(x=x, column=y)
+            args.update(x=x, hfacet=y)
         chart = barchart(data, height=height, width=width, **args)
     if all_cat_var and OL_no:
         assert chart is None

@@ -9,7 +9,7 @@ from vega_datasets import data
 @viz_reg_test
 def test_barchart_color():
     source = data.barley()
-    return ar.barchart(source, x="year:O", y="mean(yield)", column="site")
+    return ar.barchart(source, x="year:O", y="mean(yield)", hfacet="site")
 
 
 show_test(test_barchart_color)
