@@ -29,7 +29,7 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
+clean: clean-build clean-pyc clean-test  ## remove all build, test, coverage and Python artifacts
 
 clean-build: ## remove build artifacts
 	rm -fr build/
@@ -75,13 +75,14 @@ coverage: ## check code coverage quickly with the default Python
 	  pipenv run pweave -i script -f html  $<
 
 TESTS=$(wildcard tests/*.py)
-PYPUBLISH_DOCS = $(TESTS:py=html)
+
+PWEAVE_DOCS = $(TESTS:py=html)
 
 
-docs:  $(PYPUBLISH_DOCS) ## generate Sphinx HTML documentation, including API docs
+docs: $(PWEAVE_DOCS) ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/altair_recipes.rst
 	rm -f docs/modules.rst
-	cp $(PYPUBLISH_DOCS) docs
+	cp $(PWEAVE_DOCS) docs
 	pipenv run sphinx-apidoc -o docs/ --maxdepth 0 altair_recipes/ altair_recipes/[a-z]*py
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
