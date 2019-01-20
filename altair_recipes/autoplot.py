@@ -38,50 +38,59 @@ def resolve_var(n, nvars, order, data):
     return (order[n], is_cat(data[order[n]])) if nvars > n else (None, False)
 
 
+def col_cardinality(data, column, condition=None, default=1):
+    if condition is None:
+        condition = column is not None
+    return ndistinct(data, column) if condition else default
+
+
 @autosig(multivariate_recipe)
 def autoplot(data, columns=None, group_by=None, height=600, width=800):
     """Automatically choose and produce a statistical graphics based on up to three columns of data"""
-    assert group_by is None, "long data not supported yet"
-    nvars = len(columns)
-    assert nvars <= 3, "Only up to three vars supported at this time"
-    data = data[columns]
-    order = var_order(data)
-    overlap_deg = (
-        overlap(data[[order[0]]]) if nvars == 1 else overlap(data[[order[0], order[1]]])
-    )
-    OL_no = overlap_deg == 1
-    OL_low = overlap_deg > 1 and overlap_deg <= 10
-    OL_high = overlap_deg > 10
 
-    all_cat_var = all([is_cat(data[col]) for col in columns])
-    y, is_cat_y = resolve_var(0, nvars, order, data)
-    x, is_cat_x = resolve_var(1, nvars, order, data)
-    z, is_cat_z = resolve_var(2, nvars, order, data)
-    nvcat = is_cat_x + is_cat_y + is_cat_z
-    nvfloat = nvars - nvcat
-    chart = None
-    if all_cat_var and not OL_no:
-        assert chart is None
+    assert group_by is None, "long data not supported yet"
+    vars_n = len(columns)
+    assert vars_n <= 3, "Only up to three vars supported at this time"
+    data = data[columns]
+    columns = sorted(columns, key=lambda x: -len(data[x].unique()))
+    y, x, z, *_ = columns + 2 * [None]
+    overlap_deg = overlap(data[columns[: min(vars_n, 2)]])
+    max_overlap = 10
+    high_overlap = overlap_deg >= max_overlap
+    no_overlap = overlap_deg == 1
+    low_overlap = 1 < overlap_deg < max_overlap
+    cat_vars_n = sum(map(lambda col: is_cat(data[col]), columns))
+    numeric_vars_n = vars_n - cat_vars_n
+
+    chart_type_selection = [
+        (scatterplot, numeric_vars_n >= 2 and not high_overlap),
+        (heatmap, numeric_vars_n >= 2 and high_overlap),
+        (stripplot, numeric_vars_n == 1 and not high_overlap),
+        (barchart, numeric_vars_n == 0),
+        (histogram, numeric_vars_n == 1 and cat_vars_n == 0 and high_overlap),
+        (boxplot, numeric_vars_n == 1 and cat_vars_n >= 1 and high_overlap),
+    ]
+    chart_type = list(filter(lambda x: x[1], chart_type_selection))
+    assert len(chart_type) == 1
+    chart_type = chart_type[0][0]
+    use_facet = cat_vars_n >= 2 or (
+        cat_vars_n == 1 and numeric_vars_n == 2 and not no_overlap
+    )
+    use_color = vars_n == 3 and not (use_facet and chart_type is scatterplot)
+    use_opacity = (chart_type in (scatterplot, stripplot) and low_overlap) or (
+        chart_type is heatmap and high_overlap and numeric_vars_n == 3
+    )  # heat
+
+    if chart_type is barchart:
         args = dict(x=y, y="count()", vfacet=z)
-        if nvars >= 2:
+        if use_facet:
             args.update(x=x, hfacet=y)
         chart = barchart(data, height=height, width=width, **args)
-    if all_cat_var and OL_no:
-        assert chart is None
-        if nvars >= 2:
-            args = dict(color=z) if z is not None else dict()
-            chart = scatter(data, x=x, y=y, height=height, width=width, **args)
-        else:  # nvars == 1
-            chart = stripplot(data, columns=x, height=height, width=width)
-    if nvfloat == 1 and nvcat >= 1 and OL_high:
-        assert chart is None
+    if chart_type is boxplot:
         chart = boxplot(
             data, columns=y, group_by=x, color=z, height=height, width=width
         )
-    if nvfloat >= 2 and OL_high:
-        assert chart is None
-        use_opacity = z is not None and not is_cat_z
-        use_facet = z is not None and is_cat_z
+    if chart_type is heatmap:
         args = dict(color="count()")
         if use_opacity:
             args.update(color=z, opacity="count()")
@@ -90,35 +99,15 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             x=x,
             y=y,
             aggregate="average" if use_opacity else "count",
-            height=height / ndistinct(data, z, use_facet),
-            width=width / ndistinct(data, z, use_facet),
+            height=height / (ndistinct(data, z) if use_facet else 1),
+            width=width / (ndistinct(data, z) if use_facet else 1),
             **args
         )
-        chart = chart.facet(row=z) if use_facet else chart
-    if nvars == 1 and nvfloat == 1 and OL_high:
-        assert chart is None
+        if use_facet:
+            chart = chart.facet(row=z)
+    if chart_type is histogram:
         chart = histogram(data, column=y, height=height, width=width)
-
-    if nvfloat >= 2 and not OL_high:
-        assert chart is None
-        use_facet = z is not None and is_cat_z and OL_low
-        use_color = z is not None and not use_facet
-        use_opacity = (OL_low and not is_cat_z) or use_facet
-        chart = scatter(
-            data,
-            x=x,
-            y=y,
-            color=z if use_color else None,
-            opacity=1 / overlap_deg if use_opacity else 1,
-            height=height / ndistinct(data, z, use_facet),
-            width=width / ndistinct(data, z, use_facet),
-        )
-        chart = chart.facet(row=z) if use_facet else chart
-    if nvfloat == 1 and not OL_high:
-        assert chart is None
-        use_facet = z is not None and is_cat_z and OL_low
-        use_color = z is not None and not use_facet
-        use_opacity = (OL_low and not is_cat_z) or use_facet
+    if chart_type is stripplot:
         chart = stripplot(
             data,
             columns=y,
@@ -126,8 +115,20 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             color=z if use_color else None,
             opacity=1 / overlap_deg if use_opacity else 1,
             height=height,
-            width=width / ndistinct(data, z, use_facet),
+            width=width / (ndistinct(data, z) if use_facet else 1),
         )
-        chart = chart.facet(column=z) if use_facet else chart
-    assert chart, "This combination was not foreseen"
+        if use_facet:
+            chart = chart.facet(column=z)
+    if chart_type is scatterplot:
+        chart = scatterplot(
+            data,
+            x=x,
+            y=y,
+            color=z if use_color else None,
+            opacity=1 / overlap_deg if use_opacity else 1,
+            height=height / (ndistinct(data, z) if use_facet else 1),
+            width=width / (ndistinct(data, z) if use_facet else 1),
+        )
+        if use_facet:
+            chart = chart.facet(row=z)
     return chart

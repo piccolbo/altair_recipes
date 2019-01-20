@@ -33,8 +33,8 @@ def barchart(data, x=0, y=1, hfacet=None, vfacet=None, height=600, width=800):
     return (
         alt.Chart(
             data,
-            height=height / ndistinct(data, vfacet),
-            width=width / ndistinct(data, hfacet),
+            height=height / (ndistinct(data, vfacet) if vfacet is not None else 1),
+            width=width / (ndistinct(data, hfacet) if hfacet is not None else 1),
         )
         .mark_bar()
         .encode(**enc_args)

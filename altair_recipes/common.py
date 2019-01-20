@@ -21,10 +21,8 @@ def round_floats(a_dict, precision):
     )
 
 
-def ndistinct(data, column, test=None, default=1):
-    if test is None:
-        test = column is not None
-    return len(data[column].unique()) if test else default
+def ndistinct(data, column):
+    return len(data[column].unique())
 
 
 @singledispatch

@@ -22,7 +22,8 @@ def layered_histogram(data, columns=None, group_by=None, height=600, width=800):
     return (
         alt.Chart(data, height=height, width=width)
         .mark_area(
-            opacity=1 / ndistinct(data, group_by, default=len(columns)),
+            opacity=1
+            / (ndistinct(data, group_by) if group_by is not None else len(columns)),
             interpolate="step",
         )
         .encode(alt.X(value, bin=True), alt.Y("count()", stack=None), alt.Color(key))
