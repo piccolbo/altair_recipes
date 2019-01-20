@@ -99,8 +99,8 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             x=x,
             y=y,
             aggregate="average" if use_opacity else "count",
-            height=height / (ndistinct(data, z) if use_facet else 1),
-            width=width / (ndistinct(data, z) if use_facet else 1),
+            height=height / col_cardinality(data, z, use_facet),
+            width=width / col_cardinality(data, z, use_facet),
             **args
         )
         if use_facet:
@@ -115,7 +115,7 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             color=z if use_color else None,
             opacity=1 / overlap_deg if use_opacity else 1,
             height=height,
-            width=width / (ndistinct(data, z) if use_facet else 1),
+            width=width / col_cardinality(data, z, use_facet),
         )
         if use_facet:
             chart = chart.facet(column=z)
@@ -126,8 +126,8 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             y=y,
             color=z if use_color else None,
             opacity=1 / overlap_deg if use_opacity else 1,
-            height=height / (ndistinct(data, z) if use_facet else 1),
-            width=width / (ndistinct(data, z) if use_facet else 1),
+            height=height / col_cardinality(data, z, use_facet),
+            width=width / col_cardinality(data, z, use_facet),
         )
         if use_facet:
             chart = chart.facet(row=z)
