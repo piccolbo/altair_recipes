@@ -1,4 +1,4 @@
-"""Scatter plots."""
+"""Scatterplots."""
 from .common import choose_kwargs, hue_scale_dark, hue_scale_light
 from .signatures import bivariate_recipe, multivariate_recipe, color, tooltip
 import altair as alt
@@ -6,7 +6,7 @@ from autosig import autosig, Signature, param
 from numbers import Number
 
 
-scatter_sig = Signature(
+scatterplot_sig = Signature(
     color=color(default=None, position=3),
     opacity=param(
         default=1,
@@ -19,14 +19,17 @@ A constant value for the opacity of the mark""",
 )
 
 
-@autosig(bivariate_recipe + scatter_sig)
-def scatter(data, x=0, y=1, color=None, opacity=1, tooltip=None, height=600, width=800):
-    """Generate a scatter plot."""
-    if opacity < 1 and color is not None and isinstance(data[color][0], Number):
-        color = alt.Color(
-            color, scale=hue_scale_light if opacity == 1 else hue_scale_dark
-        )
-    kwargs = choose_kwargs(from_=locals(), which=["color", "tooltip"])
+@autosig(bivariate_recipe + scatterplot_sig)
+def scatterplot(
+    data, x=0, y=1, color=None, opacity=1, tooltip=None, height=600, width=800
+):
+    """Generate a scatterplot."""
+    if color is not None:
+        if isinstance(data[color][0], Number):
+            color = alt.Color(
+                color, scale=hue_scale_light if opacity == 1 else hue_scale_dark
+            )
+    kwargs = choose_kwargs(locals(), ["color", "tooltip"])
     return alt.Chart(
         data,
         height=height,
@@ -35,8 +38,8 @@ def scatter(data, x=0, y=1, color=None, opacity=1, tooltip=None, height=600, wid
     ).encode(x=x, y=y, **kwargs)
 
 
-@autosig(multivariate_recipe + scatter_sig)
-def multiscatter(
+@autosig(multivariate_recipe + scatterplot_sig)
+def multiscatterplot(
     data,
     columns=None,
     group_by=None,
@@ -46,7 +49,7 @@ def multiscatter(
     height=600,
     width=800,
 ):
-    """Generate many scatter plots.
+    """Generate many scatterplots.
 
     Based on several columns, pairwise.
     """

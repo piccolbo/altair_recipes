@@ -4,7 +4,7 @@ from .boxplot import boxplot
 from .common import ndistinct
 from .heatmap import heatmap
 from .histogram import histogram
-from .scatter import scatter
+from .scatterplot import scatterplot
 from .signatures import multivariate_recipe
 from .stripplot import stripplot
 from autosig import autosig

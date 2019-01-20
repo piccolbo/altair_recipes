@@ -7,7 +7,7 @@ from .boxplot import boxplot
 from .heatmap import heatmap
 from .histogram import histogram, layered_histogram
 from .qqplot import qqplot
-from .scatter import scatter, multiscatter
+from .scatterplot import scatterplot, multiscatterplot
 from .smoother import smoother
 from .stripplot import stripplot
 
@@ -20,9 +20,9 @@ __all__ = [
     "heatmap",
     "histogram",
     "layered_histogram",
-    "multiscatter",
+    "multiscatterplot",
     "qqplot",
-    "scatter",
+    "scatterplot",
     "smoother",
     "stripplot",
 ]

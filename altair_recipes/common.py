@@ -170,7 +170,7 @@ def to_columns(inst, attribute, value):
     setattr(inst, attribute.name, value)
 
 
-# TODO: this doesn't cover multiscatter which is a multivariate viz but does
+# TODO: this doesn't cover multiscatterplot which is a multivariate viz but does
 # require the data in wide format, this only converts to long (gather)
 def multivariate_preprocess(data, columns, group_by):
     """Preprocess data for multivariate graphs.

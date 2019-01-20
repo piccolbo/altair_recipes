@@ -17,7 +17,7 @@ Examples
 .. raw:: html
    :file: test_qqplot.html
 .. raw:: html
-   :file: test_scatter.html
+   :file: test_scatterplot.html
 .. raw:: html
    :file: test_stripplot.html
 .. raw:: html
