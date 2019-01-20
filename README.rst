@@ -56,14 +56,14 @@ The boxplot is not the only example. The scatterplot, the quantile-quantile plot
 
 ``altair_recipes`` aims to fill this space above ``altair`` while making full use of its features. It provides a growing list of "classic" statistical graphics without going down to the grammar level. At the same time it is hoped that, over time, it can become  a repository of examples and model best practices for ``altair``, a computable form of its `gallery <https://altair-viz.github.io/gallery/index.html>`_.
 
-There is *one more thing*. It's nice to have all these famous chart types available at a stroke of the keyboard, but we still have to decide which type of graphics to use and, in certain cases, the association between variables in the data and channels in the graphics (what becomes coordinate, what becomes color etc.). It still is work and things can still go wrong, sometimes in subtle ways. Enter ``autoplot``. ``autoplot`` inspects the data, selects a suitable graphics and generates it. While no claim is made that the result is optimal, it will make reasonable choices and avoid common pitfalls, like `overlapping points <https://liorpachter.files.wordpress.com/2017/08/animerr.gif?w=490>`_ in scatter plots. While there are interesting `research efforts <https://github.com/uwdata/draco>`_ aimed at characterizing the optimal graphics for a given data set, their goal is more ambitious than just selecting from a repertoire of pre-defined graphics types and they are fairly complex. Therefore, at this time ``autoplot`` is based on a set of reasonable heuristics derived from decades of experience such as:
+There is *one more thing*. It's nice to have all these famous chart types available at a stroke of the keyboard, but we still have to decide which type of graphics to use and, in certain cases, the association between variables in the data and channels in the graphics (what becomes coordinate, what becomes color etc.). It still is work and things can still go wrong, sometimes in subtle ways. Enter ``autoplot``. ``autoplot`` inspects the data, selects a suitable graphics and generates it. While no claim is made that the result is optimal, it will make reasonable choices and avoid common pitfalls, like `overlapping points <https://liorpachter.files.wordpress.com/2017/08/animerr.gif?w=490>`_ in scatterplots. While there are interesting `research efforts <https://github.com/uwdata/draco>`_ aimed at characterizing the optimal graphics for a given data set, their goal is more ambitious than just selecting from a repertoire of pre-defined graphics types and they are fairly complex. Therefore, at this time ``autoplot`` is based on a set of reasonable heuristics derived from decades of experience such as:
 
 * use stripplot and scatterplot to display continuous data, barcharts for discrete data
 * use opacity to counter mark overlap, but not with discrete color maps
 * switch to summaries (count and averages) when the amount of overlap is too high
 * use facets for discrete data
 
-``autoplot`` is work in progress and perhaps will always be and feedback is most welcome. A large number of charts generated with it is available at the end of the Examples_ page and should give a good idea of what it does. In particular, in this first iteration we do not make any attempt to detect if a dataset represents a function or a relation, hence scatter plots are preferred over line plots. Moreover there is no special support for evenly spaced data, such as a time series.
+``autoplot`` is work in progress and perhaps will always be and feedback is most welcome. A large number of charts generated with it is available at the end of the Examples_ page and should give a good idea of what it does. In particular, in this first iteration we do not make any attempt to detect if a dataset represents a function or a relation, hence scatterplots are preferred over line plots. Moreover there is no special support for evenly spaced data, such as a time series.
 
 Features
 --------
@@ -86,7 +86,7 @@ Chart types
 * heatmap
 * histogram, in a simple and multi-variable version
 * qqplot
-* scatter, in the simple and all-vs-all versions
+* scatterplot in the simple and all-vs-all versions
 * smoother, smoothing line with IRQ range shading
 * stripplot
 
