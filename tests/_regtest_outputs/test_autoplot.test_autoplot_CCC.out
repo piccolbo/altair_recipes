@@ -112,22 +112,28 @@
   },
   "encoding": {
     "color": {
+      "field": "y",
+      "type": "nominal"
+    },
+    "column": {
+      "field": "x",
+      "type": "nominal"
+    },
+    "row": {
       "field": "z",
       "type": "nominal"
     },
     "x": {
+      "axis": null,
       "field": "y",
       "type": "nominal"
     },
     "y": {
-      "field": "x",
-      "type": "nominal"
+      "aggregate": "count",
+      "type": "quantitative"
     }
   },
-  "height": 600,
-  "mark": {
-    "opacity": 1.0,
-    "type": "point"
-  },
-  "width": 800
+  "height": 60.0,
+  "mark": "bar",
+  "width": 61.5384615384615
 }

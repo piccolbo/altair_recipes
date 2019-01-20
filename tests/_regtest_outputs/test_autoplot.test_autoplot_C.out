@@ -9,62 +9,48 @@
   "data": {
     "values": [
       {
-        "value": "0",
-        "variable": "x"
+        "x": "0"
       },
       {
-        "value": "1",
-        "variable": "x"
+        "x": "1"
       },
       {
-        "value": "2",
-        "variable": "x"
+        "x": "2"
       },
       {
-        "value": "3",
-        "variable": "x"
+        "x": "3"
       },
       {
-        "value": "4",
-        "variable": "x"
+        "x": "4"
       },
       {
-        "value": "5",
-        "variable": "x"
+        "x": "5"
       },
       {
-        "value": "6",
-        "variable": "x"
+        "x": "6"
       },
       {
-        "value": "7",
-        "variable": "x"
+        "x": "7"
       },
       {
-        "value": "8",
-        "variable": "x"
+        "x": "8"
       },
       {
-        "value": "9",
-        "variable": "x"
+        "x": "9"
       }
     ]
   },
   "encoding": {
     "x": {
-      "field": "variable",
+      "field": "x",
       "type": "nominal"
     },
     "y": {
-      "field": "value",
-      "type": "nominal"
+      "aggregate": "count",
+      "type": "quantitative"
     }
   },
-  "height": 600,
-  "mark": {
-    "opacity": 1.0,
-    "thickness": 2,
-    "type": "tick"
-  },
-  "width": 800
+  "height": 600.0,
+  "mark": "bar",
+  "width": 800.0
 }

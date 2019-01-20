@@ -63,6 +63,13 @@
   "encoding": {
     "color": {
       "field": "z",
+      "scale": {
+        "range": [
+          "#F271B8",
+          "#00B4D7"
+        ],
+        "type": "linear"
+      },
       "type": "quantitative"
     },
     "x": {

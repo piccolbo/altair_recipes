@@ -60,25 +60,33 @@
       }
     ]
   },
-  "encoding": {
-    "color": {
+  "facet": {
+    "column": {
       "field": "x_cat",
       "type": "nominal"
-    },
-    "x": {
-      "field": "y_cat",
-      "type": "nominal"
-    },
-    "y": {
-      "field": "z",
-      "type": "quantitative"
     }
   },
-  "height": 600,
-  "mark": {
-    "opacity": 1.0,
-    "thickness": 2,
-    "type": "tick"
-  },
-  "width": 800
+  "spec": {
+    "encoding": {
+      "color": {
+        "field": "x_cat",
+        "type": "nominal"
+      },
+      "x": {
+        "field": "y_cat",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "z",
+        "type": "quantitative"
+      }
+    },
+    "height": 600,
+    "mark": {
+      "opacity": 1.0,
+      "thickness": 2,
+      "type": "tick"
+    },
+    "width": 200
+  }
 }
