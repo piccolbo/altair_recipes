@@ -57,7 +57,7 @@ def multiscatterplot(
 
     assert group_by is None, "Long format not supported yet"
     return (
-        alt.Chart(data, height=height / len(columns), width=width / len(columns))
+        alt.Chart(data, height=height // len(columns), width=width // len(columns))
         .mark_point(size=1 / len(columns), opacity=opacity)
         .encode(
             alt.X(alt.repeat("column"), type="quantitative"),

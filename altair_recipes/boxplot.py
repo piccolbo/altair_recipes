@@ -11,7 +11,11 @@ def boxplot(data, columns=None, group_by=None, color=None, height=600, width=800
     data, key, value = multivariate_preprocess(data, columns, group_by)
     # long form assumed from here
     chart = alt.Chart(
-        height=height, width=width / (ndistinct(data, key) if color is not None else 1)
+        height=height,
+        width=width
+        // (
+            ndistinct(data, key) if color is not None else 1
+        ),  # TODO: use col_cardinality instead
     )
     chart_bar = chart.mark_bar(stroke="black", fill="#4682b4")
     chart_tick = chart.mark_tick()
