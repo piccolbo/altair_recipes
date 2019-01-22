@@ -3,6 +3,7 @@ import altair as alt
 from boltons.iterutils import remap
 from functools import singledispatch
 from numbers import Number
+import numpy as np
 import pandas as pd
 import requests
 from toolz.dicttoolz import keyfilter, valfilter
@@ -228,6 +229,7 @@ def viz_reg_test(test_f):
 
     def fun(regtest):
         with alt.data_transformers.enable(consolidate_datasets=False):
+            np.random.seed(seed=0)
             plot = test_f()
             if regtest is not None:
                 regtest.write(
