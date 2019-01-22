@@ -10,7 +10,6 @@ import pandas as pd
 
 @viz_reg_test
 def test_autocorrelation():
-    np.random.seed(0)
     data = pd.DataFrame(dict(x=np.random.uniform(size=100)))
     return ar.autocorrelation(data, column="x", max_lag=15)
 

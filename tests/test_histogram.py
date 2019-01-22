@@ -21,7 +21,6 @@ show_test(test_histogram)
 
 @viz_reg_test
 def test_layered_histogram_wide():
-    np.random.seed(0)
     df = pd.DataFrame(
         {
             "Trial A": np.random.normal(0, 0.8, 1000),
@@ -40,7 +39,6 @@ show_test(test_layered_histogram_wide)
 
 @viz_reg_test
 def test_layered_histogram_long():
-    np.random.seed(0)
     data = pd.DataFrame(
         {
             "Trial A": np.random.normal(0, 0.8, 1000),

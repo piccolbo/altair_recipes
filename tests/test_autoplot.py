@@ -8,7 +8,6 @@ from altair_recipes.display_altair import show_test
 
 #' Autoplot is very easy to use but can produce a variety of charts that are reasonably appropriate for the data to be displayed.  Here is a longish sequence of examples of what autoplot will do with different combinations of up to three categorical or numerical variables and different data sizes
 
-np.random.seed(seed=0)
 
 test_size = 5000
 
@@ -21,6 +20,7 @@ def rand_cat(x, n):
     )
 
 
+np.random.seed(seed=0)
 x = np.random.normal(size=test_size)
 y = np.random.normal(size=test_size) + x
 z = np.random.normal(size=test_size) + y
