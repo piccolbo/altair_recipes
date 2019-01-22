@@ -1083,7 +1083,7 @@
       },
       "height": 600,
       "mark": "rule",
-      "width": 800.0
+      "width": 800
     },
     {
       "encoding": {
@@ -1099,7 +1099,7 @@
       },
       "height": 600,
       "mark": "tick",
-      "width": 800.0
+      "width": 800
     },
     {
       "encoding": {
@@ -1115,7 +1115,7 @@
       },
       "height": 600,
       "mark": "tick",
-      "width": 800.0
+      "width": 800
     },
     {
       "encoding": {
@@ -1140,7 +1140,7 @@
         "stroke": "black",
         "type": "bar"
       },
-      "width": 800.0
+      "width": 800
     },
     {
       "encoding": {
@@ -1165,7 +1165,7 @@
         "stroke": "black",
         "type": "bar"
       },
-      "width": 800.0
+      "width": 800
     }
   ]
 }

@@ -735,12 +735,7 @@
       "field": "year",
       "type": "ordinal"
     },
-    "column": {
-      "field": "site",
-      "type": "nominal"
-    },
     "x": {
-      "axis": null,
       "field": "year",
       "type": "ordinal"
     },
@@ -750,7 +745,7 @@
       "type": "quantitative"
     }
   },
-  "height": 600.0,
+  "height": 600,
   "mark": "bar",
-  "width": 133.3333333333333
+  "width": 800
 }

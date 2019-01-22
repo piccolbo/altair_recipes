@@ -5045,7 +5045,7 @@
         },
         "height": 600,
         "mark": "rule",
-        "width": 72.7272727272727
+        "width": 72
       },
       {
         "encoding": {
@@ -5062,7 +5062,7 @@
         },
         "height": 600,
         "mark": "tick",
-        "width": 72.7272727272727
+        "width": 72
       },
       {
         "encoding": {
@@ -5079,7 +5079,7 @@
         },
         "height": 600,
         "mark": "tick",
-        "width": 72.7272727272727
+        "width": 72
       },
       {
         "encoding": {
@@ -5109,7 +5109,7 @@
           "stroke": "black",
           "type": "bar"
         },
-        "width": 72.7272727272727
+        "width": 72
       },
       {
         "encoding": {
@@ -5139,7 +5139,7 @@
           "stroke": "black",
           "type": "bar"
         },
-        "width": 72.7272727272727
+        "width": 72
       }
     ]
   }

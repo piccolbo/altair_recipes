@@ -18,14 +18,14 @@
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_barchart_color</span><span class="p">():</span>
     <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">barley</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">barchart</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year:O&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mean(yield)&quot;</span><span class="p">,</span> <span class="n">hfacet</span><span class="o">=</span><span class="s2">&quot;site&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">barchart</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year:O&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mean(yield)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;year:O&quot;</span><span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_barchart_color</span><span class="p">)</span>
 </pre></div>
 
 
- <div id="A398f0a949005fbe6a883913a9490caa6d5adc18765c21ffaa9c7da7852de7e22"></div>
+ <div id="A877baaab4d1c4ceb375247826cf506c0ba37cd3431b1a709af81b6e9fdff7713"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -767,12 +767,7 @@
       "field": "year",
       "type": "ordinal"
     },
-    "column": {
-      "field": "site",
-      "type": "nominal"
-    },
     "x": {
-      "axis": null,
       "field": "year",
       "type": "ordinal"
     },
@@ -782,11 +777,11 @@
       "type": "quantitative"
     }
   },
-  "height": 600.0,
+  "height": 600,
   "mark": "bar",
-  "width": 133.33333333333334
+  "width": 800
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A398f0a949005fbe6a883913a9490caa6d5adc18765c21ffaa9c7da7852de7e22", spec, opt);
+    vegaEmbed("#A877baaab4d1c4ceb375247826cf506c0ba37cd3431b1a709af81b6e9fdff7713", spec, opt);
   </script>
   

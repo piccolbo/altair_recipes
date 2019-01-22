@@ -69,7 +69,7 @@
   "spec": {
     "encoding": {
       "color": {
-        "field": "x_cat",
+        "field": "y_cat",
         "type": "nominal"
       },
       "x": {

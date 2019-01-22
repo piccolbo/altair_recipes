@@ -770,7 +770,7 @@
       "type": "quantitative"
     }
   },
-  "height": 600.0,
+  "height": 600,
   "mark": "bar",
-  "width": 800.0
+  "width": 800
 }

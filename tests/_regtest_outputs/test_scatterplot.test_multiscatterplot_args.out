@@ -1093,12 +1093,12 @@
         "type": "quantitative"
       }
     },
-    "height": 150.0,
+    "height": 150,
     "mark": {
       "opacity": 1.0,
       "size": 0.25,
       "type": "point"
     },
-    "width": 200.0
+    "width": 200
   }
 }

@@ -5010,11 +5010,7 @@
       }
     ]
   },
-  "encoding": {
-    "color": {
-      "field": "y_cat",
-      "type": "nominal"
-    },
+  "facet": {
     "column": {
       "field": "z_cat",
       "type": "nominal"
@@ -5022,18 +5018,25 @@
     "row": {
       "field": "x_cat",
       "type": "nominal"
-    },
-    "x": {
-      "axis": null,
-      "field": "y_cat",
-      "type": "nominal"
-    },
-    "y": {
-      "aggregate": "count",
-      "type": "quantitative"
     }
   },
-  "height": 60.0,
-  "mark": "bar",
-  "width": 61.5384615384615
+  "spec": {
+    "encoding": {
+      "color": {
+        "field": "y_cat",
+        "type": "nominal"
+      },
+      "x": {
+        "field": "y_cat",
+        "type": "nominal"
+      },
+      "y": {
+        "aggregate": "count",
+        "type": "quantitative"
+      }
+    },
+    "height": 60,
+    "mark": "bar",
+    "width": 61
+  }
 }
