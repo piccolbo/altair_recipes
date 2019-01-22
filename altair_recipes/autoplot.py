@@ -82,10 +82,17 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
     )  # heat
 
     if chart_type is barchart:
-        args = dict(x=y, y="count()", vfacet=z)
+        args = dict(x=y, y="count()", height=height, width=width)
         if use_facet:
-            args.update(x=x, hfacet=y)
-        chart = barchart(data, height=height, width=width, **args)
+            args.update(x=x, color=x, width=width // col_cardinality(data, y))
+            facet_args = dict(column=y)
+            if z is not None:
+                args.update(height=height // col_cardinality(data, z))
+                facet_args.update(row=z)
+        chart = barchart(data, **args)
+        if use_facet:
+            chart = chart.facet(**facet_args)
+
     if chart_type is boxplot:
         chart = boxplot(
             data, columns=y, group_by=x, color=z, height=height, width=width
@@ -112,7 +119,7 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
             data,
             columns=y,
             group_by=x,
-            color=z if use_color else None,
+            color=x if use_facet else None,
             opacity=1 / overlap_deg if use_opacity else 1,
             height=height,
             width=width // col_cardinality(data, z, use_facet),
