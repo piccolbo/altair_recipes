@@ -26,6 +26,12 @@ def ndistinct(data, column):
     return len(data[column].unique())
 
 
+def col_cardinality(data, column, condition=None, default=1):
+    if condition is None:
+        condition = column is not None
+    return ndistinct(data, column) if condition else default
+
+
 @singledispatch
 def to_dataframe(data):
     """Convert altair.Data to pandas.DataFrame.

@@ -1,7 +1,7 @@
 """Automatic plot selection."""
 from .barchart import barchart
 from .boxplot import boxplot
-from .common import ndistinct
+from .common import col_cardinality
 from .heatmap import heatmap
 from .histogram import histogram
 from .scatterplot import scatterplot
@@ -36,12 +36,6 @@ def is_cat(xx):
 
 def resolve_var(n, nvars, order, data):
     return (order[n], is_cat(data[order[n]])) if nvars > n else (None, False)
-
-
-def col_cardinality(data, column, condition=None, default=1):
-    if condition is None:
-        condition = column is not None
-    return ndistinct(data, column) if condition else default
 
 
 @autosig(multivariate_recipe)
