@@ -1,0 +1,6 @@
+| $_\textrm{num}\backslash^\textrm{cat}$ | 0                                            | 1                                             | 2                                            | 3                  |
+| -------------------------------------- | -------------------------------------------- | --------------------------------------------- | -------------------------------------------- | ------------------ |
+| **0**                                  | ---                                          | count bar                                     | count bar+col+ fac                           | count bar+col+2fac |
+| **1**                                  | strip<br>strip+op<br>hist                    | strip<br>strip+op<br>box                      | strip+col<br>strip+col+fac+op<br>box+col+fac | ---                |
+| **2**                                  | scatter<br>scatter+op<br>heat                | scatter+col<br>scatter+op+fac<br>heat+col+fac | ---                                          | ---                |
+| **3**                                  | scatter+col<br>scatter+op+col<br>heat+op+col | ---                                           | ---                                          | ---                |
