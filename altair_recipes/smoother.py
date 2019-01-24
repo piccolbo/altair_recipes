@@ -27,19 +27,20 @@ def smoother(
     """Generate a smooth line plot with optional IRQ shading area."""
     window = data.shape[0] // 4 if window is None else int(window)
     _data = data.sort_values(by=x)
-    _data["x"] = _data["x"].rolling(window).median()
-    _data["median"] = _data["y"].rolling(window).median()
+    _data[x] = _data[x].rolling(window).median()
+    _data["median"] = _data[y].rolling(window).median()
     chart_line = (
-        alt.Chart(_data, height=height, width=width).mark_line().encode(x=x, y="median")
+        alt.Chart(height=height, width=width).mark_line().encode(x=x, y="median")
     )
     if interquartile_area:
-        _data["q1"] = _data["y"].rolling(window).quantile(0.25)
-        _data["q3"] = _data["y"].rolling(window).quantile(0.75)
+        _data["q1"] = _data[y].rolling(window).quantile(0.25)
+        _data["q3"] = _data[y].rolling(window).quantile(0.75)
         chart_area = (
-            alt.Chart(_data, height=height, width=width)
+            alt.Chart(height=height, width=width)
             .mark_area(opacity=0.2)
-            .encode(x=x, y="q1", y2="q3")
+            .encode(x=x, y=alt.Y("q1", title=y), y2="q3")
         )
-        return chart_line + chart_area
+        chart = chart_line + chart_area
     else:
-        return chart_line
+        chart = chart_line
+    return chart.properties(data=_data)
