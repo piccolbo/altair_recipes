@@ -19,7 +19,6 @@ def boxplot(data, columns=None, group_by=None, color=None, height=600, width=800
     )
     chart_bar = chart.mark_bar(stroke="black", fill="#4682b4")
     chart_tick = chart.mark_tick()
-    encode_args = dict(x=key) if color is None else dict(x=alt.X(color, axis=None))
     min_value = "min(" + value + ")"
     max_value = "max(" + value + ")"
     median_value = "median(" + value + ")"
