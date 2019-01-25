@@ -2,6 +2,17 @@
 History
 =======
 
+
+0.6.0 (2019-01-25)
+------------------
+
+* Fine tuned API:
+  * no faceting but all returned charts are facet-able
+  * Color made a bool option when separate color dim can't work
+  * Eliminated some special cases from autoplot for very small datasets
+  * Some refactor in boxpolot and autoplot to shrink, clarify code
+
+
 0.5.0 (2019-01-17)
 ------------------
 
