@@ -4359,14 +4359,20 @@
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_boxplot_color</span><span class="p">():</span>
     <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">barley</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;yield&quot;</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;site&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;year:O&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
+        <span class="n">source</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;yield&quot;</span><span class="p">,</span>
+        <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+        <span class="n">width</span><span class="o">=</span><span class="mi">800</span> <span class="o">//</span> <span class="nb">len</span><span class="p">(</span><span class="n">source</span><span class="p">[</span><span class="s2">&quot;site&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">facet</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;site&quot;</span><span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_boxplot_color</span><span class="p">)</span>
 </pre></div>
 
 
- <div id="A9f79f6679e6cbf30ce2594493b198a6a3b009a94fff77ef8821467431aa0588f"></div>
+ <div id="Af8d0f699bd08ab5f2877acd472a85b5335f753a1c7b6d01210331aace90bce37"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -5115,12 +5121,11 @@
         "encoding": {
           "color": {
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "min",
@@ -5143,9 +5148,8 @@
       {
         "encoding": {
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "min",
@@ -5160,9 +5164,8 @@
       {
         "encoding": {
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "max",
@@ -5178,12 +5181,11 @@
         "encoding": {
           "color": {
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "q1",
@@ -5208,12 +5210,11 @@
         "encoding": {
           "color": {
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "median",
@@ -5238,6 +5239,6 @@
   }
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A9f79f6679e6cbf30ce2594493b198a6a3b009a94fff77ef8821467431aa0588f", spec, opt);
+    vegaEmbed("#Af8d0f699bd08ab5f2877acd472a85b5335f753a1c7b6d01210331aace90bce37", spec, opt);
   </script>
   

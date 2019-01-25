@@ -5012,7 +5012,7 @@
   },
   "facet": {
     "column": {
-      "field": "y_cat",
+      "field": "x_cat",
       "type": "nominal"
     }
   },
@@ -5021,12 +5021,11 @@
       {
         "encoding": {
           "color": {
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "x": {
-            "axis": null,
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "y": {
@@ -5045,13 +5044,12 @@
         },
         "height": 600,
         "mark": "rule",
-        "width": 72
+        "width": 80
       },
       {
         "encoding": {
           "x": {
-            "axis": null,
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "y": {
@@ -5062,13 +5060,12 @@
         },
         "height": 600,
         "mark": "tick",
-        "width": 72
+        "width": 80
       },
       {
         "encoding": {
           "x": {
-            "axis": null,
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "y": {
@@ -5079,17 +5076,16 @@
         },
         "height": 600,
         "mark": "tick",
-        "width": 72
+        "width": 80
       },
       {
         "encoding": {
           "color": {
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "x": {
-            "axis": null,
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "y": {
@@ -5109,17 +5105,16 @@
           "stroke": "black",
           "type": "bar"
         },
-        "width": 72
+        "width": 80
       },
       {
         "encoding": {
           "color": {
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "x": {
-            "axis": null,
-            "field": "x_cat",
+            "field": "y_cat",
             "type": "nominal"
           },
           "y": {
@@ -5139,7 +5134,7 @@
           "stroke": "black",
           "type": "bar"
         },
-        "width": 72
+        "width": 80
       }
     ]
   }

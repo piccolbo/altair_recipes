@@ -18,14 +18,14 @@
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_barchart_color</span><span class="p">():</span>
     <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">barley</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">barchart</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year:O&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mean(yield)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;year:O&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">barchart</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mean(yield)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_barchart_color</span><span class="p">)</span>
 </pre></div>
 
 
- <div id="A877baaab4d1c4ceb375247826cf506c0ba37cd3431b1a709af81b6e9fdff7713"></div>
+ <div id="Aa2d5da8e575332603531a91dcfaf2aadaa851ad660dd5b3072c715b335f9c547"></div>
   <script type="text/javascript">
     var spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
@@ -765,11 +765,11 @@
   "encoding": {
     "color": {
       "field": "year",
-      "type": "ordinal"
+      "type": "nominal"
     },
     "x": {
       "field": "year",
-      "type": "ordinal"
+      "type": "nominal"
     },
     "y": {
       "aggregate": "mean",
@@ -782,6 +782,6 @@
   "width": 800
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A877baaab4d1c4ceb375247826cf506c0ba37cd3431b1a709af81b6e9fdff7713", spec, opt);
+    vegaEmbed("#Aa2d5da8e575332603531a91dcfaf2aadaa851ad660dd5b3072c715b335f9c547", spec, opt);
   </script>
   

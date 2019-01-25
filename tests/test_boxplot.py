@@ -33,7 +33,13 @@ show_test(test_boxplot_cast)
 @viz_reg_test
 def test_boxplot_color():
     source = data.barley()
-    return ar.boxplot(source, columns="yield", group_by="site", color="year:O")
+    return ar.boxplot(
+        source,
+        columns="yield",
+        group_by="year",
+        color=True,
+        width=800 // len(source["site"].unique()),
+    ).facet(column="site")
 
 
 show_test(test_boxplot_color)

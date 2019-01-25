@@ -25012,7 +25012,7 @@
   },
   "facet": {
     "column": {
-      "field": "x_cat",
+      "field": "y_cat",
       "type": "nominal"
     }
   },
@@ -25021,12 +25021,11 @@
       {
         "encoding": {
           "color": {
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "x": {
-            "axis": null,
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "y": {
@@ -25050,8 +25049,7 @@
       {
         "encoding": {
           "x": {
-            "axis": null,
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "y": {
@@ -25067,8 +25065,7 @@
       {
         "encoding": {
           "x": {
-            "axis": null,
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "y": {
@@ -25084,12 +25081,11 @@
       {
         "encoding": {
           "color": {
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "x": {
-            "axis": null,
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "y": {
@@ -25114,12 +25110,11 @@
       {
         "encoding": {
           "color": {
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "x": {
-            "axis": null,
-            "field": "y_cat",
+            "field": "x_cat",
             "type": "nominal"
           },
           "y": {

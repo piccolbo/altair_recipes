@@ -733,11 +733,11 @@
   "encoding": {
     "color": {
       "field": "year",
-      "type": "ordinal"
+      "type": "nominal"
     },
     "x": {
       "field": "year",
-      "type": "ordinal"
+      "type": "nominal"
     },
     "y": {
       "aggregate": "mean",

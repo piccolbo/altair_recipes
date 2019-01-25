@@ -742,12 +742,11 @@
         "encoding": {
           "color": {
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "min",
@@ -770,9 +769,8 @@
       {
         "encoding": {
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "min",
@@ -787,9 +785,8 @@
       {
         "encoding": {
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "max",
@@ -805,12 +802,11 @@
         "encoding": {
           "color": {
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "q1",
@@ -835,12 +831,11 @@
         "encoding": {
           "color": {
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "x": {
-            "axis": null,
             "field": "year",
-            "type": "ordinal"
+            "type": "nominal"
           },
           "y": {
             "aggregate": "median",
