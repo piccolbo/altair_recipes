@@ -20,5 +20,5 @@ def stripplot(
     return (
         alt.Chart(data, height=height, width=width)
         .mark_tick(opacity=opacity, thickness=2)
-        .encode(x=key, y=value, **enc_args)
+        .encode(x=key + ":N", y=value, **enc_args)
     )
