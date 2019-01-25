@@ -89,8 +89,15 @@ def autoplot(data, columns=None, group_by=None, height=600, width=800):
 
     if chart_type is boxplot:
         chart = boxplot(
-            data, columns=y, group_by=x, color=z, height=height, width=width
+            data,
+            columns=y,
+            group_by=x,
+            color=use_facet,  # this is a redundant use of color, different from necessary uses. Encodes x again
+            height=height,
+            width=width // col_cardinality(data, z),
         )
+        if use_facet:
+            chart = chart.facet(column=z)
     if chart_type is heatmap:
         args = dict(color="count()")
         if use_opacity:

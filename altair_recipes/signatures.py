@@ -76,6 +76,14 @@ color = partial(
 The column containing the data associated with the color of the mark""",
 )
 
+use_color = partial(
+    param,
+    default=False,
+    converter=bool,
+    docstring="""bool
+Whether to also use color to encode the same data as the x coordinate""",
+)
+
 opacity = partial(
     param,
     default=1,
