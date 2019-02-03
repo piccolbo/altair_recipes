@@ -4,6 +4,7 @@ from .autocorrelation import autocorrelation
 from .autoplot import autoplot
 from .barchart import barchart
 from .boxplot import boxplot
+from .common import layer
 from .heatmap import heatmap
 from .histogram import histogram, layered_histogram
 from .qqplot import qqplot
@@ -11,12 +12,14 @@ from .scatterplot import scatterplot, multiscatterplot
 from .smoother import smoother
 from .stripplot import stripplot
 
+
 # alphabetically ordered exports
 __all__ = [
     "autocorrelation",
     "autoplot",
     "barchart",
     "boxplot",
+    "layer",
     "heatmap",
     "histogram",
     "layered_histogram",

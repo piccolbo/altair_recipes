@@ -110,7 +110,7 @@ def gather(data, key, value, columns):
     )
 
 
-# agument manip (may belong to signatures)
+# argument manip (may belong to signatures)
 def to_column(inst, attribute, value):
     """Convert a col specification to a col name and assign it to a given attribute.
 
@@ -264,3 +264,18 @@ def viz_reg_test(test_f):
 
 hue_scale_light = alt.Scale(type="linear", range=["#F271B8", "#00B4D7"])
 hue_scale_dark = alt.Scale(type="linear", range=["#C10083", "#0080A7"])
+
+# chart combinators
+
+
+def layer(*layers, **kwargs):
+    layers = [l.copy() for l in layers]
+    data = layers[0].data
+    if all(map(lambda l: data.equals(l.data), layers)):
+        layered = alt.layer(*layers, **kwargs, data=data)
+        for l in layered.layer:
+            del l._kwds["data"]
+    else:
+        layered = alt.layer(*layers, **kwargs)
+
+    return layered
