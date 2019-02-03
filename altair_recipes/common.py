@@ -12,10 +12,12 @@ from toolz.dicttoolz import keyfilter, valfilter
 
 
 def choose_kwargs(from_, which):
+    """Choose entries for a dictionary with key in `which` and not None value."""
     return keyfilter(lambda x: x in which, valfilter(lambda x: x is not None, from_))
 
 
 def round_floats(a_dict, precision):
+    """Find all the floats in `a_dict` (recursive) and round them to `precision`."""
     return remap(
         a_dict,
         lambda p, k, v: (k, round(v, precision)) if isinstance(v, float) else (k, v),
@@ -23,10 +25,12 @@ def round_floats(a_dict, precision):
 
 
 def ndistinct(data, column):
+    """Return number of distinct elements in data[column]."""
     return len(data[column].unique())
 
 
 def col_cardinality(data, column, condition=None, default=1):
+    """Return number of distinct elements in `data[column]` if `condition` is True (defaults to `column` being different from None), otherwise return `default`."""
     if condition is None:
         condition = column is not None
     return ndistinct(data, column) if condition else default
@@ -269,6 +273,7 @@ hue_scale_dark = alt.Scale(type="linear", range=["#C10083", "#0080A7"])
 
 
 def layer(*layers, **kwargs):
+    """Layer charts: a drop in replacement for altair.layer that does a deepcopy of the layers to avoid side-effects and lifts identical datasets one level down to top level."""
     layers = [l.copy() for l in layers]
     data = layers[0].data
     if all(map(lambda l: data.equals(l.data), layers)):

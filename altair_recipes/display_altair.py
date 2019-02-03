@@ -1,3 +1,4 @@
+"""Allow including vega graphics in pweave docs."""
 from IPython.core.display import display_html
 import hashlib
 
@@ -14,6 +15,7 @@ display_html(
 def show(plot):
     """
     Include an Altair (vega) figure in Pweave document.
+
     Generates html output.
     """
     json = plot.to_json()
@@ -34,4 +36,5 @@ def show(plot):
 
 
 def show_test(f):
+    """Display a test decorated with viz_reg_test."""
     show(f(None))

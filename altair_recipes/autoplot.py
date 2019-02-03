@@ -12,7 +12,22 @@ from numbers import Number
 import pandas as pd
 
 
-def binmid(xx, n):
+def bin_midpoints(xx, n):
+    """Divide a vector in equal-width bins and return the midpoints if it is Numeric, otherwise the vector itself.
+
+    Parameters
+    ----------
+    xx : Iterable
+        The vector to be binned or other iterable to return as-is.
+    n : integer
+        Number of bins.
+
+    Returns
+    -------
+    list or same as xx
+        The midpoints or xx itself.
+
+    """
     return (
         list(map(lambda x: x.mid, list(pd.cut(xx, n))))
         if issubclass(type(xx[0]), Number)
@@ -21,26 +36,42 @@ def binmid(xx, n):
 
 
 def overlap(data):
-    return data.apply(binmid, n=100).groupby(list(data.columns)).size().max()
+    """Find how dense a set of points is in relation to plotting them.
 
+    Parameters
+    ----------
+    data : DataFrame
+        The data whose density needs to be evaluated.
 
-def var_order(data):
-    cards = data.apply(lambda x: x.nunique())
-    ranks = (-cards).rank(method="first")
-    return pd.Series(ranks.index.values, index=pd.Series(ranks) - 1)
+    Returns
+    -------
+    integer
+        The maximum number of data points having identical coordinates on categorical dimensions or falling within the same bin when Numeric, after an equal-width binning operation into 100 bins (100 is somewhat arbitrary, experience based).
+
+    """
+    return data.apply(bin_midpoints, n=100).groupby(list(data.columns)).size().max()
 
 
 def is_cat(xx):
+    """Whether a list or vector is categorical (non Numeric).
+
+    Parameters
+    ----------
+    xx : list or vector
+        A list or vector.
+
+    Returns
+    -------
+    bool
+        Whether `xx` is categorical.
+
+    """
     return not issubclass(type(xx[0]), Number)
-
-
-def resolve_var(n, nvars, order, data):
-    return (order[n], is_cat(data[order[n]])) if nvars > n else (None, False)
 
 
 @autosig(multivariate_recipe)
 def autoplot(data, columns=None, group_by=None, height=600, width=800):
-    """Automatically choose and produce a statistical graphics based on up to three columns of data"""
+    """Automatically choose and produce a statistical graphics based on up to three columns of data."""
 
     assert group_by is None, "long data not supported yet"
     vars_n = len(columns)
