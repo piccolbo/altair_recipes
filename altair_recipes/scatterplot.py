@@ -25,7 +25,7 @@ def scatterplot(
 ):
     """Generate a scatterplot."""
     if color is not None:
-        if isinstance(data[color][0], Number):
+        if isinstance(data[color].iloc[0], Number):
             color = alt.Color(
                 color, scale=hue_scale_light if opacity == 1 else hue_scale_dark
             )

@@ -30,7 +30,7 @@ def bin_midpoints(xx, n):
     """
     return (
         list(map(lambda x: x.mid, list(pd.cut(xx, n))))
-        if issubclass(type(xx[0]), Number)
+        if issubclass(type(xx.iloc[0]), Number)
         else xx
     )
 
@@ -66,7 +66,7 @@ def is_cat(xx):
         Whether `xx` is categorical.
 
     """
-    return not issubclass(type(xx[0]), Number)
+    return not issubclass(type(xx.iloc[0]), Number)
 
 
 @autosig(multivariate_recipe)
