@@ -1,0 +1,122 @@
+---
+layout: post
+title: "`altair_recipes`: a Python package to generate essential statistical graphics for the web"
+date: "2019-02-11 17:32:04 -0800"
+---
+
+If you don't need the full power of the *grammar of graphics* to generate classical plots for the web `altair_recipes` is the the easy way. Check it out with `pip install altair_recipes`.
+
+<!-- more -->
+
+## Preliminaries
+
+`vega` is a statistical graphics system for the web, meaning charts are displayed in a browser. As an added bonus, it supports interactions, again through web technologies: select data point, reveal information on hover etc. Interactive graphics for the web are the future of statistical graphics. Even the successor to the famous `ggplot` for R, `ggvis`, is based on `vega` (I am glossing over the distinction between `vega` and `vega-lite` here for brevity).
+
+`altair` is a python package that produces `vega` graphics. Like `vega`, it adopts an approach to describing statistical graphics known as *grammar of graphics*   which underlies other well known packages such as `ggplot` for R. It represents an extremely useful compromise of power and flexibility. Its elements are data, marks (points, lines), encodings (relations between data and marks), scales etc.
+
+## Why `altair_recipes`?
+
+Sometimes we want to skip all of that and just produce a *boxplot* (or *heatmap* or *histogram*) in the simplest possible way:
+
+```{python results="raw"}
+from  altair_recipes import boxplot
+from altair_recipes.display_altair import show, Output
+from vega_datasets import data
+width=700
+show(
+    boxplot(data.iris(), columns="petalLength", group_by="species", width=width),
+    output=Output.pweave_html,
+)
+```
+
+(The `show` call is only for compatibility with my publishing pipeline &mdash; skip if you are developing in a notebook or any IPython-kernel-based environment such as the atom extension [Hydrogen](https://atom.io/packages/hydrogen)).
+
+There are many reasons why we may want to do so:
+
+*   It's a well known type of statistical graphics that everyone can recognize and understand on the fly.
+*   Creativity is nice, in statistical graphics as in many other endeavors, but dangerous: there are plenty of [bad charts](https://www.google.com/search?q=chartjunk&tbm=isch) out there. The *grammar of graphics* is no insurance.
+*   While it's simple to put together a boxplot in `altair`, it isn't trivial: there are rectangles, vertical lines, horizontal lines (whiskers), points (outliers). Each element is related to a different statistics of the data. It's about [30 lines of code](https://altair-viz.github.io/gallery/boxplot_max_min.html) and, unless you run them, it's hard to tell what you are looking at.
+*   One doesn't always need the control that the grammar of graphics affords. There are times when I need to see a plot as quickly as possible. Others, for instance preparing a publication, when I need to control every detail.
+
+The boxplot is not the only example. The scatterplot, the quantile-quantile plot, the heatmap are important idioms that are battle tested in data analysis practice. They deserve their own abstraction. Other packages offering an abstraction above the grammar level are:
+
+*   `seaborn` and the graphical subset of `pandas`, for example, both provide high level statistical graphics primitives (higher than the grammar of graphics) and they are quite successful (but not web-based or interactive).
+*   `ggplot`, even if named after the Grammar of Graphics, slipped in some more complex charts, pretending they are elements of the grammar, such as `geom_boxplot`, because sometimes even R developers are lazy. But a boxplot is not a *geom*   or mark. It's a combination of several ones, certain statistics and so on. I suspect the authors of `altair` know better than mixing the two levels (but `vega` has not avoided this [trap](https://vega.github.io/vega-lite/docs/boxplot.html), unfortunately).
+
+`altair_recipes` aims to fill this space above `altair` while making full use of its features. It provides a growing list of "classic" statistical graphics without going down to the grammar level. At the same time it is hoped that, over time, it can become  a repository of examples and model best practices for `altair`, a computable form of its [gallery](https://altair-viz.github.io/gallery/index.html). In no way it is a replacement for `altair`: it trades power for convenience and tries to place itself at the highest possible level of abstraction. This is a list of chart types currently available:
+
+*   autocorrelation
+*   barchart
+*   boxplot
+*   heatmap
+*   histogram, in a simple and multi-variable version
+*   qqplot
+*   scatterplot in the simple and all-vs-all versions
+*   smoother, smoothing line with IRQ range shading
+*   stripplot
+
+You can see all of them in action in the [Examples](https://altair-recipes.readthedocs.io/en/latest/examples.html) section of the documentation. The plan is to carefully expand this list over time with widely used chart types that fulfill a need, as opposed to aiming for an unattainable goal of completeness or indulging in originality for its own sake. Feedback and contributions are welcome.
+
+Other features that promote ease of use are:
+
+*   a highly consistent API enforced with [autosig](http://github.com/piccolbo/autosig);
+*   support for both wide and long format;
+*   data can be provided as a dataframe or as a URL pointing to a csv or json file, just as in `altair`;
+*   all charts produced are valid `altair` charts, can be modified, combined, saved, served, embedded exactly as one;
+*   free software under BSD license.
+
+## Choosing a chart type.
+
+It's nice to have all these famous chart types available as one-liners, but we still have to decide which type of graphics to use and, in certain cases, the association between variables in the data and channels in the graphics (what becomes coordinate, what becomes color etc.). It still is work and things can still go wrong, sometimes in subtle ways. Enter `autoplot`. `autoplot` inspects the data, selects a suitable graphics and generates it. While no claim is made that the result is optimal, it will make reasonable choices and avoid common pitfalls, like [overlapping points](https://liorpachter.files.wordpress.com/2017/08/animerr.gif?w=490) in scatterplots. While there are interesting [research efforts](https://github.com/uwdata/draco) aimed at characterizing the optimal graphics for a given data set, their goal is more ambitious than just selecting from a repertoire of pre-defined chart types and they are fairly complex. Therefore, at this time `autoplot` is based on a set of reasonable heuristics derived from decades of experience such as:
+
+*   use stripplot and scatterplot to display continuous data, barcharts for discrete data
+*   use opacity to counter mark overlap, but not with discrete color maps
+*   switch to summaries (count and averages) when the amount of overlap is too high
+*   use facets for discrete data.
+
+In the following examples, we just have to provide `autoplot` with a dataset and a list of columns to plot. The result is a scatterplot faceted w.r.t. the only discrete column.
+
+```{python results="raw"}
+from altair_recipes import autoplot
+
+show(
+    autoplot(data.iris(), columns=["petalLength", "sepalLength", "species"], width=width),
+    output=Output.pweave_html,
+)
+```
+Opacity is used to prevent some points from completely hiding others. Opacity and discrete color scales don't mix well, hence the use of faceting. In fact, just by displaying a subset of points, we can see the plot type adapt with no other change in the `autoplot` call.
+
+```{python results="raw"}
+show(
+    autoplot(
+        data.iris().sample(20),
+        columns=["petalLength", "sepalLength", "species"],
+        width=width,
+    ),
+    output=Output.pweave_html,
+)
+```
+
+With minimal overlap between points, there is no need to use opacity, which allows to represent the species with color as opposed to faceting. This also allows to keep the chart bigger (but size can also be specified by the user).
+
+`autoplot` is work in progress and perhaps will always be and feedback is most welcome. A large number of charts generated with it is available at the end of the [Examples](https://altair-recipes.readthedocs.io/en/latest/examples.html) page and should give a good idea of what it does. In particular, in this first iteration, we do not make any attempt to detect if a dataset represents a function or a relation, hence scatterplots are preferred over line plots. Moreover there is no support for:
+
+*   evenly spaced data, such as a time series;
+*   more than 3 variables being plotted at the same time;
+*   additional channels such as size, shape and text.
+
+There is no fundamental reason why these features are not included. Suggestions and contributions are welcome.
+
+## Quality
+
+Quality in software is often a matter of opinion, but that's no reason to skip the few measurable activities that improve code quality:
+
+*   [Fully documented](https://altair_recipes.readthedocs.io).
+*   Continuos [integration](https://travis-ci.org/piccolbo/altair_recipes)
+*   Near 100% regression test [coverage](https://codecov.io/gh/piccolbo/altair_recipes).
+*   B maintainability score according to [Codeclimate](https://codeclimate.com/github/piccolbo/altair_recipes). We miss the top mark because the API is "flat", which brings about some function argument inflation. Most have defaults, though.
+*   Dependencies checked with pyup.
+
+## Conclusion
+
+If you are interested in interactive statistical graphics for the web in python and in particular if you are already using `altair`, `altair_recipes` is the path of least resistance to producing the most common plot types. Check it out and feel free to create an [issue](https://github.com/piccolbo/altair_recipes/issues) reporting problems or suggesting features. Or, better yet, come help with development!
