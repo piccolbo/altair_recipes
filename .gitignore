@@ -110,3 +110,4 @@ ENV/
 .mypy_cache/
 
 Pipfile.lock
+.mutmut-cache
