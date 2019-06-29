@@ -23,7 +23,7 @@ recipe = Signature(
         converter=int,
         position=-1,
         docstring="""`int`
-    The height of the chart""",
+    The width of the chart""",
     ),
 )
 
