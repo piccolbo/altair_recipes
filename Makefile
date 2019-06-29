@@ -54,11 +54,11 @@ lint: ## check style with flake8
 	flake8 altair_recipes tests
 
 test: ## run tests quickly with the default Python
-	pipenv run -- py.test  --cov=altair_recipes/
+	pipenv run -- py.test  -n 8 --cov=altair_recipes/
 
 test-reset: ## reset regression tests and run them
 	echo Visually check test outputs after a reset for tests that were failing before the reset.
-	pipenv run -- py.test --cov=altair_recipes/ --regtest-reset
+	pipenv run -- py.test -n 8 --cov=altair_recipes/ --regtest-reset
 
 test-all: ## run tests on every Python version with tox
 	tox
