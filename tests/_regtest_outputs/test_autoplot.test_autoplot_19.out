@@ -1,6 +1,9 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.3.0.json",
   "config": {
+    "mark": {
+      "tooltip": null
+    },
     "view": {
       "height": 300,
       "width": 400
@@ -4027,8 +4030,7 @@
         },
         "y2": {
           "aggregate": "max",
-          "field": "y",
-          "type": "quantitative"
+          "field": "y"
         }
       },
       "height": 600,
@@ -4080,8 +4082,7 @@
         },
         "y2": {
           "aggregate": "median",
-          "field": "y",
-          "type": "quantitative"
+          "field": "y"
         }
       },
       "height": 600,
@@ -4105,8 +4106,7 @@
         },
         "y2": {
           "aggregate": "q3",
-          "field": "y",
-          "type": "quantitative"
+          "field": "y"
         }
       },
       "height": 600,
