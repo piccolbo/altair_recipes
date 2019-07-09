@@ -11,13 +11,13 @@ from autosig import autosig, param, Signature
             default=None,
             position=3,
             docstring="""int
-The size of the smoothing window""",
+    The size of the smoothing window""",
         ),
         interquartile_area=param(
             default=True,
             position=4,
             docstring="""interquartile_area: bool
-Whether to plot the IRQ as an area""",
+    Whether to plot the IRQ as an area""",
         ),
     )
 )

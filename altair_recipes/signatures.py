@@ -81,7 +81,7 @@ use_color = partial(
     default=False,
     converter=bool,
     docstring="""bool
-Whether to also use color to encode the same data as the x coordinate""",
+    Whether to also use color to encode the same data as the x coordinate""",
 )
 
 opacity = partial(
@@ -89,11 +89,11 @@ opacity = partial(
     default=1,
     converter=float,
     docstring="""float
-The value of the constant opacity of the mark (use to counter overlap)""",
+    The value of the constant opacity of the mark (use to counter overlap)""",
 )
 
 tooltip = partial(
     column,
     docstring="""`str` or `int`
-The column containing the data associated with the tooltip text""",
+    The column containing the data associated with the tooltip text""",
 )
