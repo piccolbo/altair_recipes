@@ -73,7 +73,7 @@ multivariate_recipe = recipe + Signature(
 color = partial(
     column,
     docstring="""`str` or `int`
-The column containing the data associated with the color of the mark""",
+    The column containing the data associated with the color of the mark""",
 )
 
 use_color = partial(
