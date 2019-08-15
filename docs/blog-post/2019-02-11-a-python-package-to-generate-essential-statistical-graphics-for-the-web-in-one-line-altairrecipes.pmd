@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "`altair_recipes`: a Python package to generate essential statistical graphics for the web"
-date: "2019-02-11 17:32:04 -0800"
+title: "altair_recipes: a Python package to generate essential statistical graphics for the web"
+date: "2019-02-14 17:32:04 -0800"
 ---
 
 If you don't need the full power of the *grammar of graphics* to generate classical plots for the web `altair_recipes` is the the easy way. Check it out with `pip install altair_recipes`.
@@ -87,9 +87,10 @@ show(
 Opacity is used to prevent some points from completely hiding others. Opacity and discrete color scales don't mix well, hence the use of faceting. In fact, just by displaying a subset of points, we can see the plot type adapt with no other change in the `autoplot` call.
 
 ```{python results="raw"}
+
 show(
     autoplot(
-        data.iris().sample(20),
+        data.iris().sample(30, random_state=1),
         columns=["petalLength", "sepalLength", "species"],
         width=width,
     ),
