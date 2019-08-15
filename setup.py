@@ -11,12 +11,14 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    "altair>=2.2.2",
-    "autosig>=0.6.0",
-    "boltons>=18.0.0",
-    "numpy>=1.5.1",
-    "pandas>=0.23.4",
-    "requests>=2.18.4",
+    "altair>=3.2.0",
+    "autosig>=0.7.0",
+    "boltons>=19.1.0",
+    "ipython==6.5.0",
+    "numpy>=1.17.0",
+    "pandas>=0.25.0",
+    "requests>=2.22.0",
+    "toolz>=0.10.0",
 ]
 
 setup_requirements = ['pytest-runner']
