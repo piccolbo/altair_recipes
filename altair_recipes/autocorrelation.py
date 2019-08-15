@@ -11,6 +11,7 @@ import pandas as pd
     + Signature(
         max_lag=param(
             default=None,
+            converter=int,
             position=2,
             docstring="""int
     Maximum lag to show in the plot, defaults to number of rows in data""",
