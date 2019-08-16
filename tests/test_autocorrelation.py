@@ -7,10 +7,6 @@ import pandas as pd
 
 #' <h2>Autocorrelation</h2>
 
-import altair as alt
-
-alt.data_transformers("json")
-
 
 @viz_reg_test
 def test_autocorrelation():
