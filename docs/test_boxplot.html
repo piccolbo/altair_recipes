@@ -22,11 +22,14 @@
 <script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
- <div id="A87d0d3ae4cbe91e3dd1934f96cf6f03e8d5c2261674413c79ba191bd82241c07"></div>
+ <div id="Ab02ebf6ad70d7b73c5b2181e0f63cf90730d7805aec4d241d493fd667060e31a"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
   "config": {
+    "mark": {
+      "tooltip": null
+    },
     "view": {
       "height": 300,
       "width": 400
@@ -1106,8 +1109,7 @@
         },
         "y2": {
           "aggregate": "max",
-          "field": "petalLength",
-          "type": "quantitative"
+          "field": "petalLength"
         }
       },
       "height": 600,
@@ -1159,8 +1161,7 @@
         },
         "y2": {
           "aggregate": "median",
-          "field": "petalLength",
-          "type": "quantitative"
+          "field": "petalLength"
         }
       },
       "height": 600,
@@ -1184,8 +1185,7 @@
         },
         "y2": {
           "aggregate": "q3",
-          "field": "petalLength",
-          "type": "quantitative"
+          "field": "petalLength"
         }
       },
       "height": 600,
@@ -1199,7 +1199,7 @@
   ]
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A87d0d3ae4cbe91e3dd1934f96cf6f03e8d5c2261674413c79ba191bd82241c07", spec, opt);
+    vegaEmbed("#Ab02ebf6ad70d7b73c5b2181e0f63cf90730d7805aec4d241d493fd667060e31a", spec, opt);
   </script>
   
 
@@ -1217,1521 +1217,24 @@
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_boxplot_cast</span><span class="p">)</span>
 </pre></div>
 
-<div id="A29e0a23167f42e2cc29ccb28638e825345d9087dc362eb94c2ccb1b9e18cee06"></div>
+<div id="Aaa0f49a9fca461e2b7cd3d66fcbcb3e77c50834648b9c24ade102b807d0b9388"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
   "config": {
+    "mark": {
+      "tooltip": null
+    },
     "view": {
       "height": 300,
       "width": 400
     }
   },
   "data": {
-    "name": "data-fa58fc9c75774ed38821a20ba93fdd72"
+    "name": "data-8fedee1713dc830cd0b2aa7e4b1a64ef"
   },
   "datasets": {
-    "data-fa58fc9c75774ed38821a20ba93fdd72": [
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.7000000000000002,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.7000000000000002,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.7000000000000002,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.7000000000000002,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 1.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 5.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 3.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "versicolor",
-        "value": 4.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 4.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.3,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 4.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 4.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 4.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 4.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 6.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.5,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 4.8,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.6,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.9,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.7,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.0,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.2,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.4,
-        "variable": "petalLength"
-      },
-      {
-        "species": "virginica",
-        "value": 5.1,
-        "variable": "petalLength"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.30000000000000004,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.30000000000000004,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.30000000000000004,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.30000000000000004,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.30000000000000004,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.30000000000000004,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.6000000000000001,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.30000000000000004,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "setosa",
-        "value": 0.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.6,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.7000000000000002,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.6,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.6,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "versicolor",
-        "value": 1.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.9,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.7000000000000002,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.9,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.6,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.9,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.2,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.1,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.4,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.9,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.5,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.9,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.0,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 2.3,
-        "variable": "petalWidth"
-      },
-      {
-        "species": "virginica",
-        "value": 1.8,
-        "variable": "petalWidth"
-      },
+    "data-8fedee1713dc830cd0b2aa7e4b1a64ef": [
       {
         "species": "setosa",
         "value": 5.1,
@@ -4231,6 +2734,1506 @@
         "species": "virginica",
         "value": 3.0,
         "variable": "sepalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.7000000000000002,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.7000000000000002,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.7000000000000002,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.7000000000000002,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 1.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 5.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 3.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "versicolor",
+        "value": 4.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 4.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.3,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 4.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 4.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 4.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 4.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 6.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.5,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 4.8,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.6,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.9,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.7,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.0,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.2,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.4,
+        "variable": "petalLength"
+      },
+      {
+        "species": "virginica",
+        "value": 5.1,
+        "variable": "petalLength"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.30000000000000004,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.30000000000000004,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.30000000000000004,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.30000000000000004,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.30000000000000004,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.30000000000000004,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.6000000000000001,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.30000000000000004,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "setosa",
+        "value": 0.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.6,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.7000000000000002,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.6,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.6,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "versicolor",
+        "value": 1.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.9,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.7000000000000002,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.9,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.6,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.9,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.2,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.1,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.4,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.9,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.5,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.9,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.0,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 2.3,
+        "variable": "petalWidth"
+      },
+      {
+        "species": "virginica",
+        "value": 1.8,
+        "variable": "petalWidth"
       }
     ]
   },
@@ -4251,8 +4254,7 @@
         },
         "y2": {
           "aggregate": "max",
-          "field": "value",
-          "type": "quantitative"
+          "field": "value"
         }
       },
       "height": 600,
@@ -4304,8 +4306,7 @@
         },
         "y2": {
           "aggregate": "median",
-          "field": "value",
-          "type": "quantitative"
+          "field": "value"
         }
       },
       "height": 600,
@@ -4329,8 +4330,7 @@
         },
         "y2": {
           "aggregate": "q3",
-          "field": "value",
-          "type": "quantitative"
+          "field": "value"
         }
       },
       "height": 600,
@@ -4344,7 +4344,7 @@
   ]
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A29e0a23167f42e2cc29ccb28638e825345d9087dc362eb94c2ccb1b9e18cee06", spec, opt);
+    vegaEmbed("#Aaa0f49a9fca461e2b7cd3d66fcbcb3e77c50834648b9c24ade102b807d0b9388", spec, opt);
   </script>
   
 
@@ -4368,11 +4368,14 @@
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_boxplot_color</span><span class="p">)</span>
 </pre></div>
 
-<div id="Af8d0f699bd08ab5f2877acd472a85b5335f753a1c7b6d01210331aace90bce37"></div>
+<div id="A5c86e51e19effa98e3b7936cdcefc66e2728e63b5ac91c5ce6c9c460a57adf75"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
   "config": {
+    "mark": {
+      "tooltip": null
+    },
     "view": {
       "height": 300,
       "width": 400
@@ -5133,8 +5136,7 @@
           },
           "y2": {
             "aggregate": "max",
-            "field": "yield",
-            "type": "quantitative"
+            "field": "yield"
           }
         },
         "height": 600,
@@ -5190,8 +5192,7 @@
           },
           "y2": {
             "aggregate": "median",
-            "field": "yield",
-            "type": "quantitative"
+            "field": "yield"
           }
         },
         "height": 600,
@@ -5219,8 +5220,7 @@
           },
           "y2": {
             "aggregate": "q3",
-            "field": "yield",
-            "type": "quantitative"
+            "field": "yield"
           }
         },
         "height": 600,
@@ -5235,6 +5235,6 @@
   }
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Af8d0f699bd08ab5f2877acd472a85b5335f753a1c7b6d01210331aace90bce37", spec, opt);
+    vegaEmbed("#A5c86e51e19effa98e3b7936cdcefc66e2728e63b5ac91c5ce6c9c460a57adf75", spec, opt);
   </script>
   
