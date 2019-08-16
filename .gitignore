@@ -111,3 +111,5 @@ ENV/
 
 Pipfile.lock
 .mutmut-cache
+docs/__init__.html
+*.json
