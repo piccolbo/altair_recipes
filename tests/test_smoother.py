@@ -1,7 +1,7 @@
 """Test smoother."""
 import altair_recipes as ar
 from altair_recipes.common import viz_reg_test
-from altair_recipes.display_altair import show_test
+from altair_recipes.display_pweave import show_test
 import numpy as np
 import pandas as pd
 
