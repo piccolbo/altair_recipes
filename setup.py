@@ -14,14 +14,13 @@ requirements = [
     "altair>=3.2.0",
     "autosig>=0.7.0",
     "boltons>=19.1.0",
-    "ipython==6.5.0",
     "numpy>=1.17.0",
     "pandas>=0.25.0",
     "requests>=2.22.0",
     "toolz>=0.10.0",
 ]
 
-
+extras_requirements = dict(pweave_output="ipython==6.5.0")
 setup_requirements = ["pytest-runner"]
 
 test_requirements = ["pytest"]
@@ -39,6 +38,7 @@ setup(
     ],
     description="A collection of ready-made statistical graphics for vega",
     install_requires=requirements,
+    extras_requires=extras_requirements,
     license="BSD license",
     long_description=readme + "\n\n" + history,
     include_package_data=True,
