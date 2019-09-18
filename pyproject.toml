@@ -10,7 +10,6 @@ classifiers=[
       "Intended Audience :: Developers",
       "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
       "Natural Language :: English",
-      "Programming Language :: Python :: 3.5",
       "Programming Language :: Python :: 3.6",
       "Programming Language :: Python :: 3.7",
   ]
@@ -22,7 +21,7 @@ autosig = ">=0.7.0"
 boltons = ">=19.1.0"
 numpy = ">=1.17.0"
 pandas = ">=0.25.0"
-python = "^3.5.3"
+python = "^3.6.0"
 requests = ">=2.22.0"
 toolz = ">=0.10.0"
 
