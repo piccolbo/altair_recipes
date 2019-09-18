@@ -3,6 +3,11 @@ History
 =======
 
 
+0.6.1 (2019-09-18)
+------------------
+
+* Switched to poetry for package management
+
 0.6.0 (2019-01-25)
 ------------------
 
