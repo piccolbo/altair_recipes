@@ -2,24 +2,24 @@
 
 language: python
 python:
+  - 3.7
   - 3.6
   - 3.5
 
-env:
-  global:
-    - PIPENV_VENV_IN_PROJECT=1
-    - PIPENV_IGNORE_VIRTUALENVS=1
-
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+
+before_install:
+  - pip install poetry
+
 install: make install-dev
 
 # Command to run tests, e.g. python setup.py test
 script: make test
 
 after_success:
-  - pipenv run codecov
+  - poetry run codecov
 
-  
+
 # Assuming you have installed the travis-ci CLI tool, after you
 # create the Github repo and add it to Travis, run the
 # following command to finish PyPI deployment setup:

@@ -92,14 +92,7 @@ Chart types
 
 See Examples_.
 
-Credits
--------
 
-This package was created with Cookiecutter_ and the `elgertam/cookiecutter-pipenv`_ project template, based on `audreyr/cookiecutter-pypackage`_.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`elgertam/cookiecutter-pipenv`: https://github.com/elgertam/cookiecutter-pipenv
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _Examples: https://altair-recipes.readthedocs.io/en/latest/examples.html
 .. _autosig: http://github.com/piccolbo/autosig
 .. _documented: https://altair_recipes.readthedocs.io

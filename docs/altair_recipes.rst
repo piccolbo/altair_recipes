@@ -5,6 +5,6 @@ Module contents
 ---------------
 
 .. automodule:: altair_recipes
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:

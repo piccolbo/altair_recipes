@@ -1,0 +1,55 @@
+[tool.poetry]
+authors = ["Antonio Piccolboni <antonio@piccolboni.info>"]
+description = "A collection of ready-made statistical graphics for vega"
+documentation="https://altair_recipes.readthedocs.io/en/latest/"
+license="GNU General Public License v3"
+name = "altair_recipes"
+version = "0.6.0"
+classifiers=[
+      "Development Status :: 2 - Pre-Alpha",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+      "Natural Language :: English",
+      "Programming Language :: Python :: 3.5",
+      "Programming Language :: Python :: 3.6",
+      "Programming Language :: Python :: 3.7",
+  ]
+
+
+[tool.poetry.dependencies]
+altair = ">=3.2.0"
+autosig = ">=0.7.0"
+boltons = ">=19.1.0"
+numpy = ">=1.17.0"
+pandas = ">=0.25.0"
+python = "^3.5.3"
+requests = ">=2.22.0"
+toolz = ">=0.10.0"
+
+
+[tool.poetry.dev-dependencies]
+bump2version = "^0.5.11"
+codecov = ">=2.0.15"
+coverage = ">=4.5.1"
+flake8 = ">=3.5.0"
+ipdb = "*"
+ipykernel = "<=4.8.2"
+ipython = "==6.5.0"
+pweave = ">=0.30.2"
+pytest = ">=3.4.2"
+pytest-cov = ">=2.6.0"
+pytest-regtest = ">=1.3.0"
+pytest-runner = ">=2.11.1"
+recommonmark = "*"
+Sphinx = ">=1.7.1"
+sphinx-rtd-theme = "*"
+tox = ">=2.9.1"
+twine = ">=1.10.0"
+vega-datasets = ">=0.5.0"
+watchdog = ">=0.8.3"
+wheel = ">=0.30.0"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

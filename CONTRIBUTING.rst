@@ -56,8 +56,7 @@ If you are proposing a feature:
 
 * Explain in detail how it would work.
 * Keep the scope as narrow as possible, to make it easier to implement.
-* Remember that this is a volunteer-only project, and that contributions
- are welcome :)
+* Remember that this is a volunteer-only project, and that contributions are welcome :)
 
 Get Started!
 ------------
@@ -71,9 +70,9 @@ Ready to contribute? Here's how to set up `altair_recipes` for local development
 
 3. Install your local copy into a virtualenv. This is how you set up your fork for local development::
 
-    $ pip install pipenv #if needed
+    $ curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python #if needed, or other method to install poetry
     $ cd altair_recipes/
-    $ pipenv install --dev
+    $ poetry install
 
 4. Create a branch for local development::
 
@@ -84,7 +83,9 @@ Ready to contribute? Here's how to set up `altair_recipes` for local development
 5. When you're done making changes, check that your changes pass flake8 and the
    tests, including testing other Python versions with tox::
 
+    $ flake8 altair_recipes tests
     $ make test
+    $ tox # in the works
 
 6. Commit your changes and push your branch to GitHub::
 
