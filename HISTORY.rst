@@ -3,7 +3,7 @@ History
 =======
 
 
-0.6.3 (2019-09-18)
+0.6.4 (2019-09-18)
 ------------------
 
 * Switched to poetry for package management
