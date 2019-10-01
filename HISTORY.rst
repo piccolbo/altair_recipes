@@ -2,6 +2,10 @@
 History
 =======
 
+0.6.5 (2019-10-01)
+------------------
+
+* Make ipython dep optional (for pweave support). Use piccolbo's pweave fork (upstream doesn't pass its own tests) for doc generation. Adapt to breaking changes in autosig (a dependency).
 
 0.6.4 (2019-09-18)
 ------------------
