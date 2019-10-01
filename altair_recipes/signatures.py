@@ -1,6 +1,6 @@
 """Collection of signatures used throughout the package."""
 
-from .common import to_dataframe, to_column, to_columns
+from .common import to_dataframe, Column, init_cols, Columns
 from autosig import Signature, param
 from functools import partial
 
@@ -25,9 +25,9 @@ recipe = Signature(
         docstring="""`int`
     The width of the chart""",
     ),
-)
+).set_late_init(init_cols)
 
-column = partial(param, validator=to_column)
+column = partial(param, converter=Column)
 
 univariate_recipe = recipe + Signature(
     column=column(
@@ -56,7 +56,7 @@ bivariate_recipe = recipe + Signature(
 multivariate_recipe = recipe + Signature(
     columns=param(
         default=None,
-        validator=to_columns,
+        converter=Columns,
         position=1,
         docstring="""`str` or `int` or `list` thereof
     The column or columns to be used in the graphics, defaults to all""",

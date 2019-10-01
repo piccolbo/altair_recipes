@@ -1,5 +1,6 @@
 """Mini-library for all the other modules."""
 import altair as alt
+from attr import attrs, attrib
 from boltons.iterutils import remap
 from functools import singledispatch
 from numbers import Number
@@ -115,68 +116,85 @@ def gather(data, key, value, columns):
 
 
 # argument manip (may belong to signatures)
-def to_column(inst, attribute, value):
-    """Convert a col specification to a col name and assign it to a given attribute.
+@attrs
+class Column:
+    col = attrib()
 
-    If it's an int, look at  inst.data positionally to find the col name, otherwise convert to str.
-    Parameters
-    ----------
-    inst : any
-        Instance to which attribute belongs.
-    attribute : attr.Attribute
-        The attributed holding the column info.
-    value : `int` or `str`
-        The initial col specification.
+    def to_str(self, inst):
+        """Convert a col specification to a col name and assign it to a given attribute.
 
-    Returns
-    -------
-    NoneType
-        None, works by side-effects on inst.
-
-    """
-    if value is not None:
-        value = inst.data.columns[value] if isinstance(value, Number) else str(value)
-    assert isinstance(value, str) or value is None
-    setattr(inst, attribute.name, value)
+        If it's an int, look at  inst['data'] positionally to find the col name, otherwise convert to str.
+        Parameters
+        ----------
+        inst : any
+            Instance to which attribute belongs.
 
 
-def to_columns(inst, attribute, value):
-    """Convert a col set specification to a list of str.
+        Returns
+        -------
+        str
+            Column name
+            """
 
-    It first promotes value to a list if not Iterable, then applies to_column to each element and assigns result to attribute in inst. If value is None, it is construed as "all columns in inst.data"
+        value = self.col
+        if value is not None:
+            value = (
+                inst["data"].columns[value] if isinstance(value, Number) else str(value)
+            )
+        assert isinstance(value, str) or value is None
+        return value
 
-    Parameters
-    ----------
-    inst : any
-        Instance to which attribute belongs.
-    attribute : attr.Attribute
-        The attributed holding the column info.
-    value : `int`, `str` or Iterable thereof, or None
-        Col or multiple col specification as position or name or iterable thereof. None stand for "all columns"
 
-    Returns
-    -------
-    NoneType
-        None, works by side-effects on inst.
+@attrs
+class Columns:
+    cols = attrib()
 
-    """
-    value = (
-        list(inst.data.columns)
-        if value is None
-        else (
-            [inst.data.columns[value]]
-            if isinstance(value, int)
+    def to_str(self, inst):
+        """Convert a col set specification to a list of str.
+
+        It first promotes value to a list if not Iterable, then applies to_column to each element and assigns result to attribute in inst. If value is None, it is construed as "all columns in inst['data']"
+
+        Parameters
+        ----------
+        inst : any
+            Instance to which attribute belongs.
+
+
+        Returns
+        -------
+        list of str
+            List of column names
+
+        """
+
+        value = self.cols
+        value = (
+            list(inst["data"].columns)
+            if value is None
             else (
-                [value]
-                if isinstance(value, str)
-                else list(
-                    map(lambda x: inst.data.columns[x] if type(x) is int else x, value)
+                [inst["data"].columns[value]]
+                if isinstance(value, int)
+                else (
+                    [value]
+                    if isinstance(value, str)
+                    else list(
+                        map(
+                            lambda x: inst["data"].columns[x] if type(x) is int else x,
+                            value,
+                        )
+                    )
                 )
             )
         )
-    )
+        for v in value:
+            assert isinstance(v, str) or v is None
+        return value
 
-    setattr(inst, attribute.name, value)
+
+def init_cols(inst):
+    for k, arg in inst.items():
+        if isinstance(arg, (Column, Columns)):
+            inst[k] = inst[k].to_str(inst)
 
 
 # TODO: this doesn't cover multiscatterplot which is a multivariate viz but does
