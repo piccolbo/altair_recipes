@@ -18,12 +18,12 @@ altair = ">=3.2.0"
 attrs = "^19.2"
 autosig = ">=0.9.0"
 boltons = ">=19.1.0"
+ipython = {version = ">=6.0", optional = true, extras = ["pweave"]}
 numpy = ">=1.17.0"
 pandas = ">=0.25.0"
 python = "^3.6.0"
 requests = ">=2.22.0"
 toolz = ">=0.10.0"
-ipython = {version = ">=6.0", optional = true, extras = ["pweave"]}
 
 
 [tool.poetry.extras]
@@ -36,7 +36,9 @@ bump2version = "^0.5.11"
 codecov = ">=2.0.15"
 coverage = ">=4.5.1"
 flake8 = ">=3.5.0"
+hypothesis = "^4.39"
 ipdb = "*"
+pweave = {git = "https://github.com/piccolbo/Pweave.git"}
 pytest = ">=3.4.2"
 pytest-cov = ">=2.6.0"
 pytest-regtest = ">=1.3.0"
@@ -49,7 +51,6 @@ twine = ">=1.10.0"
 vega-datasets = ">=0.5.0"
 watchdog = ">=0.8.3"
 wheel = ">=0.30.0"
-pweave = {git = "https://github.com/piccolbo/Pweave.git"}
 
 [build-system]
 requires = ["poetry>=0.12"]

@@ -3,10 +3,15 @@ History
 =======
 
 
-0.7.0 (2019-10-07)
+0.7.1 (2019-10-07)
 ------------------
 
-* Accepts
+* Accepts vector data in addition to dataframe, as in::
+
+    import altair_recipes as ar
+    from numpy.random import normal
+    ar.scatterplot(x=normal(size=100), y=normal(size=100))
+
 
 0.6.5 (2019-10-01)
 ------------------
@@ -22,10 +27,10 @@ History
 ------------------
 
 * Fine tuned API:
-  * no faceting but all returned charts are facet-able
-  * Color made a bool option when separate color dim can't work
-  * Eliminated some special cases from autoplot for very small datasets
-  * Some refactor in boxpolot and autoplot to shrink, clarify code
+    * no faceting but all returned charts are facet-able
+    * Color made a bool option when separate color dim can't work
+    * Eliminated some special cases from autoplot for very small datasets
+    * Some refactor in boxpolot and autoplot to shrink, clarify code
 
 
 0.5.0 (2019-01-17)

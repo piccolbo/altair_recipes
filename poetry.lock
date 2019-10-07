@@ -223,6 +223,17 @@ pycodestyle = ">=2.5.0,<2.6.0"
 pyflakes = ">=2.1.0,<2.2.0"
 
 [[package]]
+category = "dev"
+description = "A library for property based testing"
+name = "hypothesis"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "4.39.0"
+
+[package.dependencies]
+attrs = ">=19.2.0"
+
+[[package]]
 category = "main"
 description = "Internationalized Domain Names in Applications (IDNA)"
 name = "idna"
@@ -589,6 +600,7 @@ pygments = "*"
 reference = "62a740e46c16b3aecce53aa951792b33ac93e1a2"
 type = "git"
 url = "https://github.com/piccolbo/Pweave.git"
+
 [[package]]
 category = "dev"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
@@ -1061,7 +1073,7 @@ more-itertools = "*"
 pweave = ["ipython"]
 
 [metadata]
-content-hash = "80f78d079f6297ced907f06182085e663ae8be1158a29a0e6869ec7e93e29376"
+content-hash = "fdaf58c7751da1441fc3492b20d76086bfb1826398abd23745d9576f38c273c3"
 python-versions = "^3.6.0"
 
 [metadata.hashes]
@@ -1090,6 +1102,7 @@ docutils = ["6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0", 
 entrypoints = ["589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19", "c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"]
 filelock = ["18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59", "929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"]
 flake8 = ["19241c1cbc971b9962473e4438a2ca19749a7dd002dd1a946eaba171b4114548", "8e9dfa3cecb2400b3738a42c54c3043e821682b9c840b0448c0503f781130696"]
+hypothesis = ["6186f742907e7c0173f5476aebe05c4b0d106d9f8d8c8ce68322f1d14f73ea03", "8b399f52ee53bd154f0dbead4e7be60442ce7ff625b1d2d17eeb9cb7194c3989"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
 imagesize = ["3f349de3eb99145973fefb7dbe38554414e5c30abd0c8e4b970a7c9d09f3a1d8", "f3832918bc3c66617f92e35f5d70729187676313caa60c187eb0f28b8fe5e3b5"]
 importlib-metadata = ["aa18d7378b00b40847790e7c27e11673d7fed219354109d0e7b9e5b25dc3ad26", "d5f18a79777f3aa179c145737780282e27b508fc8fd688cb17c7a813e8bd39af"]
