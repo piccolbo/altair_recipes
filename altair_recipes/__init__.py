@@ -31,4 +31,4 @@ __all__ = [
 ]
 __author__ = """Antonio Piccolboni"""
 __email__ = "altair_recipes@piccolboni.info"
-__version__ = "__version__ = '0.8.0'"
+__version__ = "__version__ = '0.7.0'"
