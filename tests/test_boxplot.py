@@ -9,7 +9,7 @@ from vega_datasets import data
 
 @viz_reg_test
 def test_boxplot_melted():
-    return ar.boxplot(data.iris(), columns="petalLength", group_by="species")
+    return ar.boxplot(data.iris(), columns=["petalLength"], group_by="species")
 
 
 show_test(test_boxplot_melted)
@@ -35,7 +35,7 @@ def test_boxplot_color():
     source = data.barley()
     return ar.boxplot(
         source,
-        columns="yield",
+        columns=["yield"],
         group_by="year",
         color=True,
         width=800 // len(source["site"].unique()),

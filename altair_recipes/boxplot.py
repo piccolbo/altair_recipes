@@ -6,7 +6,7 @@ from autosig import autosig, Signature
 
 
 @autosig(multivariate_recipe + Signature(color=use_color(position=3)))
-def boxplot(data, columns=None, group_by=None, color=False, height=600, width=800):
+def boxplot(data=None, columns=None, group_by=None, color=False, height=600, width=800):
     """Generate a boxplot."""
     data, key, value = multivariate_preprocess(data, columns, group_by)
     # long form assumed from here

@@ -72,7 +72,8 @@ Features
 * Fully documented_.
 * Highly consistent API enforced with autosig_
 * Near 100% regression test coverage.
-* Support for both wide and long format.
+* Support for dataframe and vector inputs
+* Support for both wide and long dataframe formats.
 * Data can be provided as a dataframe or as a URL pointing to a csv or json file.
 * All charts produced are valid ``altair`` charts, can be modified, combined, saved, served, embedded exactly as one.
 

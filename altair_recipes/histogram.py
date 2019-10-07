@@ -6,7 +6,7 @@ from autosig import autosig
 
 
 @autosig(univariate_recipe)
-def histogram(data, column=0, height=600, width=800):
+def histogram(data=None, column=0, height=600, width=800):
     """Generate a histogram."""
     return (
         alt.Chart(data, height=height, width=width)
@@ -16,7 +16,7 @@ def histogram(data, column=0, height=600, width=800):
 
 
 @autosig(multivariate_recipe)
-def layered_histogram(data, columns=None, group_by=None, height=600, width=800):
+def layered_histogram(data=None, columns=None, group_by=None, height=600, width=800):
     """Generate multiple overlapping histograms."""
     data, key, value = multivariate_preprocess(data, columns, group_by)
     return (

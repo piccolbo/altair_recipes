@@ -12,7 +12,7 @@
 
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_boxplot_melted</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;petalLength&quot;</span><span class="p">,</span> <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">iris</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;petalLength&quot;</span><span class="p">],</span> <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_boxplot_melted</span><span class="p">)</span>
@@ -4358,7 +4358,7 @@
     <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">barley</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span>
         <span class="n">source</span><span class="p">,</span>
-        <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;yield&quot;</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;yield&quot;</span><span class="p">],</span>
         <span class="n">group_by</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span>
         <span class="n">color</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
         <span class="n">width</span><span class="o">=</span><span class="mi">800</span> <span class="o">//</span> <span class="nb">len</span><span class="p">(</span><span class="n">source</span><span class="p">[</span><span class="s2">&quot;site&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span>

@@ -70,7 +70,7 @@ def is_cat(xx):
 
 
 @autosig(multivariate_recipe)
-def autoplot(data, columns=None, group_by=None, height=600, width=800):
+def autoplot(data=None, columns=None, group_by=None, height=600, width=800):
     """Automatically choose and produce a statistical graphics based on up to three columns of data."""
 
     assert group_by is None, "long data not supported yet"

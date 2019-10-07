@@ -33,7 +33,14 @@ The column containing the data that determines opacity of the mark""",
     )
 )
 def heatmap(
-    data, x=0, y=1, color=2, opacity=None, aggregate="average", height=600, width=800
+    data=None,
+    x=0,
+    y=1,
+    color=2,
+    opacity=None,
+    aggregate="average",
+    height=600,
+    width=800,
 ):
     """Generate a heatmap."""
     data, nx, ny = maxbins(data)
