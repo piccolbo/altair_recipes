@@ -18,7 +18,7 @@ import pandas as pd
         )
     )
 )
-def autocorrelation(data, column=0, max_lag=None, height=600, width=800):
+def autocorrelation(data=None, column=0, max_lag=None, height=600, width=800):
     """Generate an autocorrelation plot."""
     max_lag = data.shape[0] - 1 if max_lag is None else int(max_lag)
     lags = np.arange(0, max_lag + 1)

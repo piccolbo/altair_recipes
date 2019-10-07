@@ -5,7 +5,6 @@ import altair as alt
 from autosig import autosig, Signature, param
 from numbers import Number
 
-
 scatterplot_sig = Signature(
     color=color(default=None, position=3),
     opacity=param(
@@ -21,7 +20,7 @@ A constant value for the opacity of the mark""",
 
 @autosig(bivariate_recipe + scatterplot_sig)
 def scatterplot(
-    data, x=0, y=1, color=None, opacity=1, tooltip=None, height=600, width=800
+    data=None, x=0, y=1, color=None, opacity=1, tooltip=None, height=600, width=800
 ):
     """Generate a scatterplot."""
     if color is not None:
@@ -40,7 +39,7 @@ def scatterplot(
 
 @autosig(multivariate_recipe + scatterplot_sig)
 def multiscatterplot(
-    data,
+    data=None,
     columns=None,
     group_by=None,
     color=None,

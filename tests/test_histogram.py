@@ -49,7 +49,7 @@ def test_layered_histogram_long():
     columns = list(data.columns)
 
     ldata = gather(data, key="key", value="value", columns=columns)
-    return ar.layered_histogram(ldata, columns="value", group_by="key")
+    return ar.layered_histogram(ldata, columns=["value"], group_by="key")
 
 
 show_test(test_layered_histogram_long)

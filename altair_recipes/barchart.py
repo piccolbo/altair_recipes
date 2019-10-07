@@ -5,7 +5,7 @@ from autosig import autosig, Signature
 
 
 @autosig(bivariate_recipe + Signature(color=use_color(position=3)))
-def barchart(data, x=0, y=1, color=False, height=600, width=800):
+def barchart(data=None, x=0, y=1, color=False, height=600, width=800):
     """Generate a barchart."""
     enc_args = dict(x=x + ":N", y=y)
     if color:

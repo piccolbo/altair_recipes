@@ -22,7 +22,7 @@ from autosig import autosig, param, Signature
     )
 )
 def smoother(
-    data, x=0, y=1, window=None, interquartile_area=True, height=600, width=800
+    data=None, x=0, y=1, window=None, interquartile_area=True, height=600, width=800
 ):
     """Generate a smooth line plot with optional IRQ shading area."""
     window = data.shape[0] // 4 if window is None else int(window)
