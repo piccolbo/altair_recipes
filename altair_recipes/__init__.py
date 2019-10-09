@@ -7,6 +7,7 @@ from .boxplot import boxplot
 from .common import layer
 from .heatmap import heatmap
 from .histogram import histogram, layered_histogram
+from .lineplot import lineplot
 from .qqplot import qqplot
 from .scatterplot import scatterplot, multiscatterplot
 from .smoother import smoother
@@ -20,6 +21,7 @@ __all__ = [
     "barchart",
     "boxplot",
     "layer",
+    "lineplot",
     "heatmap",
     "histogram",
     "layered_histogram",
