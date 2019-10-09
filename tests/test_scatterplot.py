@@ -6,7 +6,7 @@ from hypothesis.extra.pandas import columns, data_frames
 from vega_datasets import data
 
 
-#' <h2>scatterplot</h2>
+#' <h2>Scatterplot</h2>
 
 
 @viz_reg_test

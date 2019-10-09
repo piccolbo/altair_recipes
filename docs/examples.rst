@@ -19,6 +19,8 @@ Examples
 .. raw:: html
    :file: test_scatterplot.html
 .. raw:: html
+   :file: test_lineplot.html
+.. raw:: html
    :file: test_stripplot.html
 .. raw:: html
    :file: test_autoplot.html
