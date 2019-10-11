@@ -1,6 +1,7 @@
 """Mini-library for all the other modules."""
 import altair as alt
 from boltons.iterutils import remap
+from logging import warning
 import numpy as np
 import pandas as pd
 from toolz.dicttoolz import keyfilter, valfilter
@@ -73,6 +74,15 @@ def viz_reg_test(test_f):
 
 
 # collections
+
+
+def check_distinct(x):
+    return len(set(x)) == len(x)
+
+
+def warn_not_distinct(x):
+    if not check_distinct(x):
+        warning("The relation to plot is not a function")
 
 
 def choose_kwargs(from_, which):

@@ -7,7 +7,8 @@ from .boxplot import boxplot
 from .common import layer
 from .heatmap import heatmap
 from .histogram import histogram, layered_histogram
-from .lineplot import lineplot
+from .lineplot import lineplot,
+from .areaplot import areaplot
 from .qqplot import qqplot
 from .scatterplot import scatterplot, multiscatterplot
 from .smoother import smoother
@@ -16,6 +17,7 @@ from .stripplot import stripplot
 
 # alphabetically ordered exports
 __all__ = [
+    "areaplot",
     "autocorrelation",
     "autoplot",
     "barchart",

@@ -283,6 +283,6 @@
     }
   },
   "height": 600,
-  "mark": "line",
+  "mark": "area",
   "width": 800
 }
