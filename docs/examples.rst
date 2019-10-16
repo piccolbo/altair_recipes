@@ -5,11 +5,13 @@ Examples
  These examples are taken unedited from the test suite. Look at the body of each test to see how ``altair_recipes`` can be used.
 
 .. raw:: html
+   :file: test_areaplot.html
+.. raw:: html
    :file: test_autocorrelation.html
 .. raw:: html
-   :file: test_boxplot.html
-.. raw:: html
    :file: test_barchart.html
+.. raw:: html
+   :file: test_boxplot.html
 .. raw:: html
    :file: test_heatmap.html
 .. raw:: html

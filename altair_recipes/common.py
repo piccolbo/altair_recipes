@@ -1,6 +1,7 @@
 """Mini-library for all the other modules."""
 import altair as alt
 from boltons.iterutils import remap
+from logging import warning
 import numpy as np
 import pandas as pd
 from toolz.dicttoolz import keyfilter, valfilter
@@ -73,6 +74,23 @@ def viz_reg_test(test_f):
 
 
 # collections
+
+
+def check_distinct(data, col, group=None):
+    if group is None:
+        x = data[col]
+        return x.size == x.nunique()
+    else:
+        x = data.groupby(group)[col]
+        return all(x.size() == x.nunique())
+
+    x = data.groupby(group)[col] if group is not None else data[col]
+    return all((x.size() if group is not None else x.size) == x.nunique())
+
+
+def warn_not_distinct(data, col, group=None):
+    if not check_distinct(data, col, group):
+        warning("The relation to plot is not a function")
 
 
 def choose_kwargs(from_, which):

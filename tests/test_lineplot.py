@@ -8,7 +8,9 @@ from vega_datasets import data
 
 @viz_reg_test
 def test_lineplot():
-    return ar.lineplot(data.iris(), x="petalWidth", y="petalLength")
+    return ar.lineplot(
+        data.iowa_electricity(), x="year", y="net_generation", color="source"
+    )
 
 
 show_test(test_lineplot)

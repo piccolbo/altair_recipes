@@ -28,13 +28,13 @@ def scatterplot(
             color = alt.Color(
                 color, scale=hue_scale_light if opacity == 1 else hue_scale_dark
             )
-    kwargs = choose_kwargs(locals(), ["color", "tooltip"])
+    opt_args = choose_kwargs(locals(), ["color", "tooltip"])
     return alt.Chart(
         data,
         height=height,
         width=width,
         mark=alt.MarkDef(type="point" if opacity == 1 else "circle", opacity=opacity),
-    ).encode(x=x, y=y, **kwargs)
+    ).encode(x=x, y=y, **opt_args)
 
 
 @autosig(multivariate_recipe + scatterplot_sig)
@@ -52,7 +52,7 @@ def multiscatterplot(
 
     Based on several columns, pairwise.
     """
-    kwargs = choose_kwargs(from_=locals(), which=["color", "tooltip"])
+    opt_args = choose_kwargs(locals(), ["color", "tooltip"])
 
     assert group_by is None, "Long format not supported yet"
     return (
@@ -61,7 +61,7 @@ def multiscatterplot(
         .encode(
             alt.X(alt.repeat("column"), type="quantitative"),
             alt.Y(alt.repeat("row"), type="quantitative"),
-            **kwargs
+            **opt_args
         )
         .repeat(row=columns, column=columns)
     )
