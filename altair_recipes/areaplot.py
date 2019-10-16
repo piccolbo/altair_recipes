@@ -1,31 +1,41 @@
 """areaplots."""
-from common import warn_not_distinct
+from .common import warn_not_distinct, choose_kwargs
 from .signatures import bivariate_recipe, color
 import altair as alt
 from autosig import autosig, Signature, param
-from logging import warning
 from enum import Enum
 
 
-StackType = Enum("StackType", "true false  normalize")
+class StackType(Enum):
+    auto = None  # no, must not pass anything
+    true = True
+    false = False
+    normalize = "normalize"
 
 
 @autosig(
     bivariate_recipe
     + Signature(
-        color(default=2, position=3),
+        color=color(default=None, position=3),
         stack=param(
-            default=None,
+            default=StackType.auto,
             position=4,
-            converter=lambda x: StackType(x) if x is not None else x,
+            converter=StackType,
+            docstring="""StackType
+            One of `StackType.auto` (automatic selection), `StackType.true` (force), `StackType.false` (no stacking) and `StackType.normalize` (for normalized stacked)""",
         ),
     )
 )
-def areaplot(data=None, x=0, y=1, color=2, stack=None, height=600, width=800):
+def areaplot(
+    data=None, x=0, y=1, color=None, stack=StackType.auto, height=600, width=800
+):
     """Generate a areaplot."""
-    warn_not_distinct(data[x])
-    if len(set(data[x])) != len(data[x]):
-        warning("The relation to plot is not a function")
-    if stack is not None:
-        x = alt.X(x=x, stack=stack.name)
-    return alt.Chart(data=data, height=height, width=width).mark_area().encode(x=x, y=y)
+    warn_not_distinct(data, x, color)
+    if stack is not StackType.auto:
+        y = alt.Y(y, stack=stack.value)
+    opt_args = choose_kwargs(locals(), ["color"])
+    return (
+        alt.Chart(data=data, height=height, width=width)
+        .mark_area(opacity=1)
+        .encode(x=x, y=y, **opt_args)
+    )
