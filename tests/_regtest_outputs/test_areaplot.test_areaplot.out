@@ -285,7 +285,10 @@
         }
       },
       "height": 600,
-      "mark": "area",
+      "mark": {
+        "opacity": 1,
+        "type": "area"
+      },
       "width": 800
     },
     {
@@ -564,7 +567,10 @@
         }
       },
       "height": 600,
-      "mark": "area",
+      "mark": {
+        "opacity": 1,
+        "type": "area"
+      },
       "width": 800
     },
     {
@@ -843,7 +849,10 @@
         }
       },
       "height": 600,
-      "mark": "area",
+      "mark": {
+        "opacity": 1,
+        "type": "area"
+      },
       "width": 800
     },
     {
@@ -1122,7 +1131,10 @@
         }
       },
       "height": 600,
-      "mark": "area",
+      "mark": {
+        "opacity": 1,
+        "type": "area"
+      },
       "width": 800
     }
   ]
