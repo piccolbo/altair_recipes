@@ -22,17 +22,14 @@
 <script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
- <div id="Ab02ebf6ad70d7b73c5b2181e0f63cf90730d7805aec4d241d493fd667060e31a"></div>
+ <div id="Acd7df3404c9b34535dca362f7f433917beac586aded57d4e1ed370413d482bad"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
   "config": {
-    "mark": {
-      "tooltip": null
-    },
     "view": {
-      "height": 300,
-      "width": 400
+      "continuousHeight": 300,
+      "continuousWidth": 400
     }
   },
   "data": {
@@ -1129,7 +1126,10 @@
         }
       },
       "height": 600,
-      "mark": "tick",
+      "mark": {
+        "color": "black",
+        "type": "tick"
+      },
       "width": 800
     },
     {
@@ -1145,7 +1145,10 @@
         }
       },
       "height": 600,
-      "mark": "tick",
+      "mark": {
+        "color": "black",
+        "type": "tick"
+      },
       "width": 800
     },
     {
@@ -1199,7 +1202,7 @@
   ]
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Ab02ebf6ad70d7b73c5b2181e0f63cf90730d7805aec4d241d493fd667060e31a", spec, opt);
+    vegaEmbed("#Acd7df3404c9b34535dca362f7f433917beac586aded57d4e1ed370413d482bad", spec, opt);
   </script>
   
 
@@ -1217,17 +1220,14 @@
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_boxplot_cast</span><span class="p">)</span>
 </pre></div>
 
-<div id="Aaa0f49a9fca461e2b7cd3d66fcbcb3e77c50834648b9c24ade102b807d0b9388"></div>
+<div id="Ac2c1f8a2d88142b9dec2d829a4dfaf86ab545f4032e13160742cd00c0517debf"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
   "config": {
-    "mark": {
-      "tooltip": null
-    },
     "view": {
-      "height": 300,
-      "width": 400
+      "continuousHeight": 300,
+      "continuousWidth": 400
     }
   },
   "data": {
@@ -4274,7 +4274,10 @@
         }
       },
       "height": 600,
-      "mark": "tick",
+      "mark": {
+        "color": "black",
+        "type": "tick"
+      },
       "width": 800
     },
     {
@@ -4290,7 +4293,10 @@
         }
       },
       "height": 600,
-      "mark": "tick",
+      "mark": {
+        "color": "black",
+        "type": "tick"
+      },
       "width": 800
     },
     {
@@ -4344,7 +4350,7 @@
   ]
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#Aaa0f49a9fca461e2b7cd3d66fcbcb3e77c50834648b9c24ade102b807d0b9388", spec, opt);
+    vegaEmbed("#Ac2c1f8a2d88142b9dec2d829a4dfaf86ab545f4032e13160742cd00c0517debf", spec, opt);
   </script>
   
 
@@ -4368,17 +4374,14 @@
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_boxplot_color</span><span class="p">)</span>
 </pre></div>
 
-<div id="A5c86e51e19effa98e3b7936cdcefc66e2728e63b5ac91c5ce6c9c460a57adf75"></div>
+<div id="Ae33c8d3a9ad31aece415fd3bc30450de16f2b84317c6e24df0d4d1c2989e05d3"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
   "config": {
-    "mark": {
-      "tooltip": null
-    },
     "view": {
-      "height": 300,
-      "width": 400
+      "continuousHeight": 300,
+      "continuousWidth": 400
     }
   },
   "data": {
@@ -5118,10 +5121,6 @@
     "layer": [
       {
         "encoding": {
-          "color": {
-            "field": "year",
-            "type": "nominal"
-          },
           "x": {
             "field": "year",
             "type": "nominal"
@@ -5156,7 +5155,10 @@
           }
         },
         "height": 600,
-        "mark": "tick",
+        "mark": {
+          "color": "black",
+          "type": "tick"
+        },
         "width": 133
       },
       {
@@ -5172,12 +5174,15 @@
           }
         },
         "height": 600,
-        "mark": "tick",
+        "mark": {
+          "color": "black",
+          "type": "tick"
+        },
         "width": 133
       },
       {
         "encoding": {
-          "color": {
+          "fill": {
             "field": "year",
             "type": "nominal"
           },
@@ -5205,7 +5210,7 @@
       },
       {
         "encoding": {
-          "color": {
+          "fill": {
             "field": "year",
             "type": "nominal"
           },
@@ -5235,6 +5240,6 @@
   }
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A5c86e51e19effa98e3b7936cdcefc66e2728e63b5ac91c5ce6c9c460a57adf75", spec, opt);
+    vegaEmbed("#Ae33c8d3a9ad31aece415fd3bc30450de16f2b84317c6e24df0d4d1c2989e05d3", spec, opt);
   </script>
   
