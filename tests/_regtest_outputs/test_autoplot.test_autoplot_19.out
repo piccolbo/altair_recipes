@@ -1,12 +1,9 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
   "config": {
-    "mark": {
-      "tooltip": null
-    },
     "view": {
-      "height": 300,
-      "width": 400
+      "continuousHeight": 300,
+      "continuousWidth": 400
     }
   },
   "data": {
@@ -4050,7 +4047,10 @@
         }
       },
       "height": 600,
-      "mark": "tick",
+      "mark": {
+        "color": "black",
+        "type": "tick"
+      },
       "width": 800
     },
     {
@@ -4066,7 +4066,10 @@
         }
       },
       "height": 600,
-      "mark": "tick",
+      "mark": {
+        "color": "black",
+        "type": "tick"
+      },
       "width": 800
     },
     {

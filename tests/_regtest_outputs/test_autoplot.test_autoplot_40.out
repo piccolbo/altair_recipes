@@ -1,12 +1,9 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v3.4.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
   "config": {
-    "mark": {
-      "tooltip": null
-    },
     "view": {
-      "height": 300,
-      "width": 400
+      "continuousHeight": 300,
+      "continuousWidth": 400
     }
   },
   "data": {
@@ -25023,10 +25020,6 @@
     "layer": [
       {
         "encoding": {
-          "color": {
-            "field": "x_cat",
-            "type": "nominal"
-          },
           "x": {
             "field": "x_cat",
             "type": "nominal"
@@ -25061,7 +25054,10 @@
           }
         },
         "height": 600,
-        "mark": "tick",
+        "mark": {
+          "color": "black",
+          "type": "tick"
+        },
         "width": 72
       },
       {
@@ -25077,12 +25073,15 @@
           }
         },
         "height": 600,
-        "mark": "tick",
+        "mark": {
+          "color": "black",
+          "type": "tick"
+        },
         "width": 72
       },
       {
         "encoding": {
-          "color": {
+          "fill": {
             "field": "x_cat",
             "type": "nominal"
           },
@@ -25110,7 +25109,7 @@
       },
       {
         "encoding": {
-          "color": {
+          "fill": {
             "field": "x_cat",
             "type": "nominal"
           },

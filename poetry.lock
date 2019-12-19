@@ -11,8 +11,8 @@ category = "main"
 description = "Altair: A declarative statistical visualization library for Python."
 name = "altair"
 optional = false
-python-versions = "*"
-version = "3.2.0"
+python-versions = ">=3.5"
+version = "4.0.0"
 
 [package.dependencies]
 entrypoints = "*"
@@ -20,7 +20,6 @@ jinja2 = "*"
 jsonschema = "*"
 numpy = "*"
 pandas = "*"
-six = "*"
 toolz = "*"
 
 [[package]]
@@ -601,6 +600,7 @@ pygments = "*"
 reference = "62a740e46c16b3aecce53aa951792b33ac93e1a2"
 type = "git"
 url = "https://github.com/piccolbo/Pweave.git"
+
 [[package]]
 category = "dev"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
@@ -1078,7 +1078,7 @@ python-versions = "^3.6.0"
 [metadata.hashes]
 Pweave = []
 alabaster = ["446438bdcca0e05bd45ea2de1668c1d9b032e1a9154c2c259092d77031ddd359", "a661d72d58e6ea8a57f7a86e37d86716863ee5e92788398526d58b26a4e4dc02"]
-altair = ["9abe13d88a3694857138ac61512c4f873f762f432cf82623eea4700d2a531525", "bd8f42b487ffb67bdb1d2ae7970df69c0801431c9201742599525037bc8bd56d"]
+altair = ["92dcd7b84c715f8e02bbdf37e36193a4af8138b5b064c05f237e6ed41573880a", "9947ae1e5f99b55c3ffaaf376494cd504bcdbfd33b8326061500c86ec0d89d93"]
 appnope = ["5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0", "8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"]
 argh = ["a9b3aaa1904eeb78e32394cd46c6f37ac0fb4af6dc488daa58971bdc7d7fcaf3", "e9535b8c84dc9571a48999094fda7f33e63c3f1b74f3e5f3ac0105a58405bb65"]
 atomicwrites = ["03472c30eb2c5d1ba9227e4c2ca66ab8287fbfbbda3888aa93dc2e28fc6811b4", "75a9445bac02d8d058d5e1fe689654ba5a6556a1dfd8ce6ec55a0ed79866cfa6"]
