@@ -12,7 +12,7 @@ scatterplot_sig = Signature(
         position=4,
         converter=float,
         docstring="""`float`
-A constant value for the opacity of the mark""",
+    A constant value for the opacity of the mark""",
     ),
     tooltip=tooltip(default=None, position=5),
 )
