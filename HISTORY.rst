@@ -2,6 +2,11 @@
 History
 =======
 
+0.8.1 ()
+------------------
+
+* Fixed color in boxplot
+* Upgrade to altair 4. Mandatory. Let me know if you need compatibility with 3.x.x
 
 0.8.0 (2019-10-16)
 ------------------
