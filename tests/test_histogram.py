@@ -11,7 +11,7 @@ from vega_datasets import data
 
 @viz_reg_test
 def test_histogram():
-    return ar.histogram(data.movies(), column="IMDB_Rating")
+    return ar.histogram(data.movies(), column="IMDB Rating")
 
 
 show_test(test_histogram)
