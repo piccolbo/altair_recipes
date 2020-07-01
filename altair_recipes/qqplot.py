@@ -5,7 +5,7 @@ from autosig import autosig
 import numpy as np
 
 
-@autosig(bivariate_recipe)
+@bivariate_recipe
 def qqplot(data=None, x=0, y=1, height=600, width=800):
     """Generate a quantile-quantile plot."""
     n = data.shape[0]

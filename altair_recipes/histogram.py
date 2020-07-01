@@ -5,7 +5,7 @@ import altair as alt
 from autosig import autosig
 
 
-@autosig(univariate_recipe)
+@univariate_recipe
 def histogram(data=None, column=0, height=600, width=800):
     """Generate a histogram."""
     return (
@@ -15,7 +15,7 @@ def histogram(data=None, column=0, height=600, width=800):
     )
 
 
-@autosig(multivariate_recipe)
+@multivariate_recipe
 def layered_histogram(data=None, columns=None, group_by=None, height=600, width=800):
     """Generate multiple overlapping histograms."""
     data, key, value = multivariate_preprocess(data, columns, group_by)

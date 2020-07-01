@@ -69,7 +69,7 @@ def is_cat(xx):
     return not issubclass(type(xx.iloc[0]), Number)
 
 
-@autosig(multivariate_recipe)
+@multivariate_recipe
 def autoplot(data=None, columns=None, group_by=None, height=600, width=800):
     """Automatically choose and produce a statistical graphics based on up to three columns of data."""
 
