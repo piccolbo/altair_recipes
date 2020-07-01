@@ -1,10 +1,16 @@
 """Collection of signatures used throughout the package."""
 
 from .converters import Column, Columns, to_dataframe, init_cols
-from autosig import Signature, param
+from altair import Chart
+from autosig import Signature, param, Retval
 from functools import partial
 
 recipe = Signature(
+    Retval(
+        validator=Chart,
+        docstring="""type altair.Chart
+    An altair Chart.""",
+    ),
     data=param(
         default=None,
         converter=to_dataframe,
