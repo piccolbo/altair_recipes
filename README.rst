@@ -7,10 +7,6 @@ Introduction to altair_recipes
         :target: https://pypi.python.org/pypi/altair_recipes
         :alt: Version
 
-.. image:: https://img.shields.io/travis/piccolbo/altair_recipes.svg
-        :target: https://travis-ci.org/piccolbo/altair_recipes
-        :alt: Build Status
-
 .. image:: https://codecov.io/gh/piccolbo/altair_recipes/graph/badge.svg
         :target: https://codecov.io/gh/piccolbo/altair_recipes
         :alt: Code Coverage
