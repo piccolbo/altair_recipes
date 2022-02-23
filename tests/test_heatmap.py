@@ -31,7 +31,7 @@ show_test(test_heatmap)
 def test_count_heatmap():
     source = data.movies.url
     return ar.heatmap(
-        source, x="IMDB Rating", y="Rotten Tomatoes Rating", color="", aggregate="count"
+        source, x="IMDB_Rating", y="Rotten_Tomatoes_Rating", color="", aggregate="count"
     )
 
 
