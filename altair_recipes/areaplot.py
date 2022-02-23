@@ -29,7 +29,7 @@ class StackType(Enum):
 def areaplot(
     data=None, x=0, y=1, color=None, stack=StackType.auto, height=600, width=800
 ):
-    """Generate a areaplot."""
+    """Generate an areaplot."""
     warn_not_distinct(data, x, color)
     if stack is not StackType.auto:
         y = alt.Y(y, stack=stack.value)
