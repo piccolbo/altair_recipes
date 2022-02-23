@@ -1,5 +1,5 @@
 
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair_recipes</span> <span class="kn">as</span> <span class="nn">ar</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair_recipes</span> <span class="k">as</span> <span class="nn">ar</span>
 <span class="kn">from</span> <span class="nn">altair_recipes.common</span> <span class="kn">import</span> <span class="n">viz_reg_test</span>
 <span class="kn">from</span> <span class="nn">altair_recipes.display_pweave</span> <span class="kn">import</span> <span class="n">show_test</span>
 <span class="kn">from</span> <span class="nn">vega_datasets</span> <span class="kn">import</span> <span class="n">data</span>
@@ -13,20 +13,30 @@
 <div class="highlight"><pre><span></span><span class="nd">@viz_reg_test</span>
 <span class="k">def</span> <span class="nf">test_barchart_color</span><span class="p">():</span>
     <span class="n">source</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">barley</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">barchart</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mean(yield)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ar</span><span class="o">.</span><span class="n">barchart</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;mean(yield)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 
 <span class="n">show_test</span><span class="p">(</span><span class="n">test_barchart_color</span><span class="p">)</span>
+</pre></div>
+
+<div class="highlight"><pre>
+/Users/antonio/Library/Caches/pypoetry/virtualenvs/altair-recipes-
+WhUvyqF4-py3.9/lib/python3.9/site-
+packages/ipykernel/kernelbase.py:684: RuntimeWarning: coroutine
+&#39;InProcessKernel._abort_queues&#39; was never awaited
+  self._abort_queues()
+RuntimeWarning: Enable tracemalloc to get the object allocation
+traceback
 </pre></div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
- <div id="A6cf803e50bb427b06617b659a42e047dbe24399a9fc340baef500685208de469"></div>
+ <div id="Aa5355e9698a3f021c77e010d205e9b089432794316023c0ea3272f6513d489a6"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
   "config": {
     "view": {
       "continuousHeight": 300,
@@ -780,6 +790,6 @@
   "width": 800
 };
     var opt = {"renderer": "canvas", "actions": false};
-    vegaEmbed("#A6cf803e50bb427b06617b659a42e047dbe24399a9fc340baef500685208de469", spec, opt);
+    vegaEmbed("#Aa5355e9698a3f021c77e010d205e9b089432794316023c0ea3272f6513d489a6", spec, opt);
   </script>
   
