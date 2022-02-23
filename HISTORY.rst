@@ -2,7 +2,7 @@
 History
 =======
 
-0.9.1 (2022-02-23)
+0.9.2 (2022-02-23)
 
 * addressing security vulnerability report (see PR #16, but PR was incomplete)
 
