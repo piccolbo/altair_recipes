@@ -4,6 +4,7 @@ from boltons.iterutils import remap
 from logging import warning
 import numpy as np
 import pandas as pd
+import pytest_regtest
 from toolz.dicttoolz import keyfilter, valfilter
 
 
@@ -73,10 +74,36 @@ def viz_reg_test(test_f):
     return fun
 
 
+@pytest_regtest.register_converter_pre
+def fix_before(txt):
+    """Remove schema information from regression data."""
+
+    # remove lines with passwords:
+    lines = txt.split('\n')
+    lines = [l for l in lines if "https://vega.github.io/schema/vega-lite/" not in l]
+    return '\n'.join(lines)
+
 # collections
 
 
 def check_distinct(data, col, group=None):
+    """Check that a column of data contains unique values, optionally within each group defined by group.
+
+    Parameters
+    ----------
+    data : dataframe
+        The data.
+    col : int or str or other pandas col
+        The column of data to check.
+    group : mapping, function, label, or list of labels
+        optionally group by this and check uniqueness within each group (the default is None or do not group). See pandas.DataFrame.groupby for details.
+
+    Returns
+    -------
+    bool
+        True if all element distinct, for all groups within each group if group is not None.
+
+    """
     if group is None:
         x = data[col]
         return x.size == x.nunique()
@@ -84,11 +111,9 @@ def check_distinct(data, col, group=None):
         x = data.groupby(group)[col]
         return all(x.size() == x.nunique())
 
-    x = data.groupby(group)[col] if group is not None else data[col]
-    return all((x.size() if group is not None else x.size) == x.nunique())
-
-
 def warn_not_distinct(data, col, group=None):
+    """Generate warning if not distinct, see check_distinct."""
+
     if not check_distinct(data, col, group):
         warning("The relation to plot is not a function")
 
