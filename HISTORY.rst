@@ -2,6 +2,10 @@
 History
 =======
 
+0.9.1 (2022-02-23)
+
+* addressing security vulnerability report (see PR #16, but PR was incomplete)
+
 0.9.0 (2020-06-11)
 ------------------
 
