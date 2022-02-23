@@ -7,6 +7,21 @@ from enum import Enum
 
 
 class StackType(Enum):
+    """Type of stacking for areaplot charts.
+
+    Attributes
+    ----------
+    auto : None
+        Automatic stacking.
+    true : bool
+        Stacked.
+    false : bool
+        Not stacked.
+    normalize : string
+        Normalize stacked to 1.
+
+    """
+
     auto = None  # no, must not pass anything
     true = True
     false = False
