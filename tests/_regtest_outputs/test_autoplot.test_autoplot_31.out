@@ -66,10 +66,16 @@
     },
     "x": {
       "field": "z",
+      "scale": {
+        "zero": false
+      },
       "type": "quantitative"
     },
     "y": {
       "field": "y",
+      "scale": {
+        "zero": false
+      },
       "type": "quantitative"
     }
   },

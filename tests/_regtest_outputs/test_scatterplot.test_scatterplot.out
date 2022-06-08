@@ -1077,10 +1077,16 @@
     },
     "x": {
       "field": "petalWidth",
+      "scale": {
+        "zero": false
+      },
       "type": "quantitative"
     },
     "y": {
       "field": "petalLength",
+      "scale": {
+        "zero": false
+      },
       "type": "quantitative"
     }
   },

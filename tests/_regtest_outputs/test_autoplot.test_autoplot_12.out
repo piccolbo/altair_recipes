@@ -212,10 +212,16 @@
   "encoding": {
     "x": {
       "field": "y",
+      "scale": {
+        "zero": false
+      },
       "type": "quantitative"
     },
     "y": {
       "field": "x",
+      "scale": {
+        "zero": false
+      },
       "type": "quantitative"
     }
   },

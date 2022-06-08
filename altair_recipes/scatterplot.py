@@ -34,7 +34,11 @@ def scatterplot(
         height=height,
         width=width,
         mark=alt.MarkDef(type="point" if opacity == 1 else "circle", opacity=opacity),
-    ).encode(x=x, y=y, **opt_args)
+    ).encode(
+        x=alt.X(x, scale=alt.Scale(zero=False)),
+        y=alt.Y(y, scale=alt.Scale(zero=False)),
+        **opt_args
+    )
 
 
 @autosig(multivariate_recipe + scatterplot_sig)
@@ -59,8 +63,10 @@ def multiscatterplot(
         alt.Chart(data, height=height // len(columns), width=width // len(columns))
         .mark_point(size=1 / len(columns), opacity=opacity)
         .encode(
-            alt.X(alt.repeat("column"), type="quantitative"),
-            alt.Y(alt.repeat("row"), type="quantitative"),
+            alt.X(
+                alt.repeat("column"), type="quantitative", scale=alt.Scale(zero=False)
+            ),
+            alt.Y(alt.repeat("row"), type="quantitative", scale=alt.Scale(zero=False)),
             **opt_args
         )
         .repeat(row=columns, column=columns)

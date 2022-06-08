@@ -166,7 +166,7 @@ def autoplot(data=None, columns=None, group_by=None, height=600, width=800):
             color=z if use_color else None,
             opacity=1 / overlap_deg if use_opacity else 1,
             height=height // col_cardinality(data, z, use_facet),
-            width=width // col_cardinality(data, z, use_facet),
+            width=width // col_cardinality(data, z, use_facet)
         )
         if use_facet:
             chart = chart.facet(row=z)
